@@ -1,6 +1,6 @@
 import { APASSSERVER, APASSSERVERBASE, HISTORY_MESSAGE_COUNT, LOGINSMS, USEERVERIFYBYPICTURE } from "./constants";
 import timRenderInstance from "./utils/timRenderInstance";
-import { FriendProfile, GroupInfoCustemString, GroupMemberInfoCustemString } from "im_electron_sdk/dist/interfaces"
+import { FriendProfile, GroupInfoCustemString, GroupMemberInfoCustemString,MsgSendMessageParamsV2 } from "im_electron_sdk/dist/interfaces"
 import axios from 'axios'
 type SendMsgParams<T> = {
   convId: string;
@@ -301,7 +301,6 @@ export const sendMsg = async ({
 }: SendMsgParams<
   TextMsg | FaceMsg | FileMsg | ImageMsg | SoundMsg | VideoMsg | MergeMsg | CustomMsg
 >): Promise<MsgResponse> => {
-  // >): Promise<any> => {
   const res = await timRenderInstance.TIMMsgSendMessageV2({
     conv_id: convId,
     conv_type: convType,
@@ -330,7 +329,7 @@ export const sendReferenceMessage = async ({
   TextMsg | FaceMsg | FileMsg | ImageMsg | SoundMsg | VideoMsg | MergeMsg | CustomMsg
 >): Promise<MsgResponse> => {
   // >): Promise<any> => {
-  const res = await timRenderInstance.TIMMsgSendMessageV2({
+  let param :MsgSendMessageParamsV2 = {
     conv_id: convId,
     conv_type: convType,
     params: {
@@ -341,7 +340,8 @@ export const sendReferenceMessage = async ({
     },
     callback,
     user_data: userData,
-  });
+  }
+  const res = await timRenderInstance.TIMMsgSendMessageV2(param);
   return {data:{code:0,desc:"",json_params:res,user_data:""}};
 };
 
