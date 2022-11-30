@@ -1,4 +1,4 @@
-import { CLOSE, DOWNLOADFILE, MAXSIZEWIN, MINSIZEWIN, RENDERPROCESSCALL, SHOWDIALOG, CHECK_FILE_EXIST, OPEN_CALL_WINDOW, CALL_WINDOW_CLOSE_REPLY, CLOSE_CALL_WINDOW, SELECT_FILES, GET_VIDEO_INFO } from "../../app/const/const";
+import { CLOSE, DOWNLOADFILE, MAXSIZEWIN, MINSIZEWIN, SCREENSHOTWINDOWS,SCREENCAPTURE,RENDERPROCESSCALL, SHOWDIALOG, CHECK_FILE_EXIST, OPEN_CALL_WINDOW, CALL_WINDOW_CLOSE_REPLY, CLOSE_CALL_WINDOW, SELECT_FILES, GET_VIDEO_INFO } from "../../app/const/const";
 
 import  { ipcRenderer } from 'electron';
 import { v4 as uuidv4 } from 'uuid';
@@ -71,6 +71,19 @@ const selectImageMessage = () => {
         }
     })
 }
+
+const readScreenShot = () => {
+    ipcRenderer.send(RENDERPROCESSCALL,{
+        type: SCREENCAPTURE,
+    })
+}
+
+const readScreenShotWindows = () => {
+    ipcRenderer.send(RENDERPROCESSCALL,{
+        type: SCREENSHOTWINDOWS,
+    })
+}
+
 const getVideoInfo = (path)=>{
     ipcRenderer.send(RENDERPROCESSCALL,{
         type: GET_VIDEO_INFO,
@@ -94,5 +107,6 @@ export {
     selectImageMessage,
     getVideoInfo,
     SUPPORT_IMAGE_TYPE,
-    SUPPORT_VIDEO_TYPE
+    SUPPORT_VIDEO_TYPE,
+    readScreenShot,readScreenShotWindows
 }

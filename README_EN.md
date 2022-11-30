@@ -121,6 +121,8 @@ Electron Demo basically implements nearly all the functions provided by Electron
 - 2: White screen appears when you run `npm run start` on macOS. This is because the rendering process code is not completely built and the port 3000 opened by the main process points to an empty page. The error will be resolved after the rendering process code is completely built and you refresh the window. Alternatively, you can run `cd src/client && npm run dev:react` and `npm run dev:electron` to start the rendering process and main process separately.
 - 3: For macOS signature and notarization, see [link](https://xingzx.org/blog/electron-builder-macos).
 - 4: For some development issues on Windows, see [link](https://blog.csdn.net/Yoryky/article/details/106780254).
+- 5: In order to `npm install` correctly, you need to install python2 first.
+- 6: After the MacOS M1 project is builded and installed, it may prompt that the project is damaged. It may be because it has assigned the attribute `com.apple.quarantine` in the app. You can execute `sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app` to delete the attribute after executing the command `xattr /path/to/MyApp.app` in the terminal to check the attribute.
 
 ## References
 - [IM SDK Documentation for Electron](https://comm.qq.com/toc-electron-sdk-doc/index.html)

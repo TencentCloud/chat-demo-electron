@@ -118,6 +118,8 @@ Electron Demo 基本实现了Electron SDK提供的几乎所有功能，包含会
 - 2: Mac 端执行`npm run start` 会出现白屏，原因是渲染进程的代码还没有build完成，主进程打开的3000端口为空页面，当渲染进程代码build 完成重新刷新窗口后即可解决问题。或者执行`cd src/client && npm run dev:react`, `npm run dev:electron`, 分开启动渲染进程和主进程。
 - 3: Macos 签名公证参考[链接](https://xingzx.org/blog/electron-builder-macos)
 - 4: Windows 下开发一些问题参考[链接](https://blog.csdn.net/Yoryky/article/details/106780254);
+- 5: 此项目需要python2。
+- 6: MacOS M1 项目打包安装后提示`项目已损坏`，可能是由于电脑对app赋予了`com.apple.quarantine`属性。可以在终端执行命令`xattr /path/to/MyApp.app`检查该属性后执行`sudo xattr -r -d com.apple.quarantine /path/to/MyApp.app`删除属性。
 
 ## 文档链接
 - [IM Electron SDK 文档](https://comm.qq.com/toc-electron-sdk-doc/index.html)

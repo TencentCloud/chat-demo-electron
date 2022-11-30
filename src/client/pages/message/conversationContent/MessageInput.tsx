@@ -15,8 +15,12 @@ import { ipcRenderer } from 'electron';
 import { SUPPORT_IMAGE_TYPE } from '../../../../app/const/const';
 import { blockRendererFn, blockExportFn } from './CustomBlock';
 import { bufferToBase64Url, fileImgToBase64Url, getMessageElemArray, getPasteText, fileReaderAsBuffer, generateTemplateElement, getFileByPath } from '../../../utils/message-input-util';
-import { SUPPORT_VIDEO_TYPE,getVideoInfo, selectImageMessage, selectFileMessage, selectVideoMessage } from '../../../utils/tools';
+import { SUPPORT_VIDEO_TYPE,getVideoInfo, selectImageMessage, selectFileMessage, selectVideoMessage,readScreenShot,readScreenShotWindows } from '../../../utils/tools';
 import { getGlobal } from '@electron/remote'
+import { execFile } from "child_process";
+const path = require("path");
+import { clipboard } from "electron"; 
+const fs = require('fs');
 var JSONbig = require('json-bigint');
 type Props = {
     convId: string,
@@ -289,14 +293,18 @@ export const MessageInput = (props: Props): JSX.Element => {
         if(file) {
             const fileSize = file.size;
             const type = file.type;
+            console.log(type)
             const size = file.size;
             if(size === 0){
                 message.error({content: "文件大小异常"})
                 return
             }
             if (SUPPORT_IMAGE_TYPE.find(v => type.includes(v))) {
+                console.log("support_image_type")
                 if(fileSize > 28 * 1024 * 1024) return message.error({content: "image size can not exceed 28m"})
                 const imgUrl = file instanceof File ? await fileImgToBase64Url(file) : bufferToBase64Url(file.fileContent, type);
+                console.log(file);
+                console.log(imgUrl);
                 setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: file.name, path: file.path, size: file.size, base64URL: imgUrl }));
             } else if (SUPPORT_VIDEO_TYPE.find(v=> type.includes(v))){
                 if(fileSize > 100 * 1024 * 1024) return message.error({content: "video size can not exceed 100m"})
@@ -346,9 +354,32 @@ export const MessageInput = (props: Props): JSX.Element => {
     const handleSendPhoneMessage = ()=> {
         setShowCallMenu(true);
     }
-    const handleScreenShot = () => {
-        const captureView = getGlobal('captureView');
-        captureView.open();
+    const dataURLtoBlob = (data)=>{
+        // console.log(typeof(data))
+        var arr = data.split(','),
+        img = arr[0].match(/:(.*?);/)[1],
+        bstr = atob(arr[1]),
+        n = bstr.length,
+        u8arr = new Uint8Array(n);
+        while(n--){
+            u8arr[n] = bstr.charCodeAt(n);
+        }
+        return new Blob([u8arr],{type:img});
+    }
+    const blobToFile=(blob) =>{
+        blob.lastModifiedData = new Date();
+        blob.name = 'screenshot';
+        return blob;
+    }
+    const handleScreenShot = async () => {
+        // const captureView = getGlobal('captureView');
+        // captureView.open();
+        let file;
+    　　if (process.platform == "darwin") {  //判断当前操作系统，"darwin" 是mac系统     "win32" 是window系统
+            readScreenShot();
+    　　} else {
+            readScreenShotWindows();
+        }
         console.log('========screenshot====')
     };
     const handleFeatureClick = (featureId) => {
@@ -557,6 +588,15 @@ export const MessageInput = (props: Props): JSX.Element => {
         setGroupSenderProfile(currentUserSetting);
     }
 
+    const processScreenShotImage=(data)=>{
+        console.log("in processcreenshotimage")
+        const imgUrl = bufferToBase64Url(data._img, "image/png");
+        const blob = dataURLtoBlob(imgUrl);
+        const fileimg = blobToFile(blob);
+        console.log(fileimg)
+        setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
+    }
+
     useEffect(() => {
         // setGroupSenderProfile(undefined);
         // convType === 2 && getGroupSenderProfile();
@@ -572,6 +612,11 @@ export const MessageInput = (props: Props): JSX.Element => {
                 case 'GET_VIDEO_INFO': {
                     setAnalysizeVideoInfoStatus(false);
                     setVideoInfos(pre => [...pre, data]);
+                    break;
+                }
+                case 'SCREENSHOTMAC':{
+                    console.log("messageinputscreenshot");
+                    processScreenShotImage(data);
                     break;
                 }
             }
