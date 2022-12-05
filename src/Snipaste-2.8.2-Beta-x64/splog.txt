@@ -1,0 +1,576 @@
+[2022-12-05 12:02:13.112] [I] ***************************************************************
+[2022-12-05 12:02:13.113] [I] Snipaste 2.8.2-Beta x64 (Desktop) (Qt 6.2.4)
+[2022-12-05 12:02:13.114] [I] OS: Windows 10 Version 2009 [10.0.19044]
+[2022-12-05 12:02:13.114] [I] Cores: 8
+[2022-12-05 12:02:13.114] [I] Elevated: true
+[2022-12-05 12:02:13.114] [I] Log level: 2
+[2022-12-05 12:02:13.114] [I] Application dir: C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64
+[2022-12-05 12:02:13.115] [I] Working dir: C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64
+[2022-12-05 12:02:13.115] [I] Config: C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 12:02:13.115] [I] Library paths: (C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64)
+[2022-12-05 12:02:13.115] [I] Screen scale: 1.25
+[2022-12-05 12:02:13.115] [I] Retina factor: 1
+[2022-12-05 12:02:13.115] [I] Screens: 1
+[2022-12-05 12:02:13.115] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 12:02:13.261] [I] Desktops: 1
+[2022-12-05 12:02:13.261] [I] Compatability layer: DetectorsAppHealth
+[2022-12-05 12:02:13.261] [I] About to import settings from: C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 12:02:13.268] [I] Settings imported
+[2022-12-05 12:02:13.292] [I] Breakpad initialized
+[2022-12-05 12:02:14.450] [I] OpenGL acceleration: false
+[2022-12-05 12:02:14.452] [I] Process priority: 1
+[2022-12-05 12:02:14.452] [I] Initializing Snipaste...
+[2022-12-05 12:02:15.071] [I] Prefetch...
+[2022-12-05 12:02:15.086] [I] Preloaded 28 files: 13 ms
+[2022-12-05 12:02:15.157] [I] Load default ssl configuration: 85 ms
+[2022-12-05 12:02:15.270] [I] About to apply settings...
+[2022-12-05 12:02:15.324] [I] Settings applied
+[2022-12-05 12:02:15.339] [I] Log level set to: 2
+[2022-12-05 12:02:15.384] [I] History dir: C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64/history
+[2022-12-05 12:02:15.386] [W] Failed to open history file "C:/Users/Administrator/Downloads/Snipaste-2.8.2-Beta-x64/history/.sp0" for reading
+[2022-12-05 12:02:15.386] [I] Add group
+[2022-12-05 12:02:15.390] [I] Request to switch to group 0
+[2022-12-05 12:02:15.525] [I] About to restore pasters...
+[2022-12-05 12:02:15.525] [I] Group 0 [KH9MTN]: "Default"
+[2022-12-05 12:02:15.525] [I] Record version: 195
+[2022-12-05 12:02:15.525] [I] To restore: 0
+[2022-12-05 12:02:15.525] [I] Pasters touched
+[2022-12-05 12:02:15.525] [I] All pasters activated: true
+[2022-12-05 12:02:15.535] [I] Unref images: 0 (0 removed)
+[2022-12-05 12:02:15.535] [I] Unref dirs: 0 (0 removed)
+[2022-12-05 12:02:15.536] [I] Empty history info files: 0 (0 removed)
+[2022-12-05 12:02:15.536] [I] Pasters restored
+[2022-12-05 12:02:15.539] [I] Launch time: 2427 ms
+[2022-12-05 12:02:26.601] [I] Second instance: 1
+[2022-12-05 12:02:31.810] [I] Parsing command arguments [0]: (sp, snip)
+[2022-12-05 12:02:31.810] [I] Snip request: 0 (dest: 0)
+[2022-12-05 12:02:31.810] [I] Snipper: preparing...
+[2022-12-05 12:02:31.810] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 12:02:31.932] [I] Background size: QSize(2560, 1440)
+[2022-12-05 12:02:31.932] [I] Screens: 1
+[2022-12-05 12:02:31.932] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 12:02:31.939] [I] Focus set
+[2022-12-05 12:02:31.943] [I] Snipper: preparation done (0)
+[2022-12-05 12:02:31.944] [I] Snipper: about to appear...
+[2022-12-05 12:02:31.944] [I] Snipper: prepare to show...
+[2022-12-05 12:02:31.947] [I] Snipper: shown
+[2022-12-05 12:02:31.969] [I] Snipper: focus in
+[2022-12-05 12:02:31.969] [I] Snipper: ready [0.159 s]
+[2022-12-05 12:02:51.713] [I] Screenshot (86, 141, 1249 x 1194) destination: clipboard, 
+[2022-12-05 12:02:51.746] [I] Screenshot successfully saved: clipboard, 
+[2022-12-05 12:02:51.747] [I] Snipper: about to quit...
+[2022-12-05 12:02:51.758] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 12:02:51.762] [I] Snipper: hidden
+[2022-12-05 12:02:51.764] [I] Snipper: quit
+[2022-12-05 12:02:51.986] [I] Snipper: scene saved
+[2022-12-05 12:03:16.914] [I] Silent feed checking finished
+[2022-12-05 12:03:16.914] [I] No available update
+[2022-12-05 14:41:27.325] [I] ***************************************************************
+[2022-12-05 14:41:27.330] [I] Snipaste 2.8.2-Beta x64 (Desktop) (Qt 6.2.4)
+[2022-12-05 14:41:27.330] [I] OS: Windows 10 Version 2009 [10.0.19044]
+[2022-12-05 14:41:27.330] [I] Cores: 8
+[2022-12-05 14:41:27.330] [I] Elevated: true
+[2022-12-05 14:41:27.331] [I] Log level: 2
+[2022-12-05 14:41:27.331] [I] Application dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64
+[2022-12-05 14:41:27.338] [I] Working dir: D:/work/im_electron_demo
+[2022-12-05 14:41:27.338] [I] Config: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 14:41:27.338] [I] Library paths: (D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64)
+[2022-12-05 14:41:27.338] [I] Screen scale: 1.25
+[2022-12-05 14:41:27.338] [I] Retina factor: 1
+[2022-12-05 14:41:27.338] [I] Screens: 1
+[2022-12-05 14:41:27.338] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:41:27.444] [I] Desktops: 1
+[2022-12-05 14:41:27.444] [I] Compatability layer: 
+[2022-12-05 14:41:27.444] [I] About to import settings from: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 14:41:27.469] [I] Settings imported
+[2022-12-05 14:41:27.482] [I] Breakpad initialized
+[2022-12-05 14:41:28.943] [I] OpenGL acceleration: false
+[2022-12-05 14:41:28.946] [I] Process priority: 1
+[2022-12-05 14:41:28.946] [I] Initializing Snipaste...
+[2022-12-05 14:41:30.331] [I] Prefetch...
+[2022-12-05 14:41:30.374] [I] Preloaded 28 files: 39 ms
+[2022-12-05 14:41:30.575] [I] Load default ssl configuration: 240 ms
+[2022-12-05 14:41:30.847] [I] About to apply settings...
+[2022-12-05 14:41:30.969] [W] QxtGlobalShortcut failed to register: QKeySequence("F1")  [ 3 ]
+[2022-12-05 14:41:30.969] [W] QxtGlobalShortcut failed to register: QKeySequence("Ctrl+F1")  [ 3 ]
+[2022-12-05 14:41:30.970] [W] QxtGlobalShortcut failed to register: QKeySequence("Shift+F1")  [ 3 ]
+[2022-12-05 14:41:30.970] [W] QxtGlobalShortcut failed to register: QKeySequence("F3")  [ 3 ]
+[2022-12-05 14:41:30.971] [W] QxtGlobalShortcut failed to register: QKeySequence("Shift+F3")  [ 3 ]
+[2022-12-05 14:41:30.971] [W] QxtGlobalShortcut failed to register: QKeySequence("Ctrl+F3")  [ 3 ]
+[2022-12-05 14:41:30.980] [I] Settings applied
+[2022-12-05 14:41:31.023] [I] Log level set to: 2
+[2022-12-05 14:41:31.134] [I] History dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/history
+[2022-12-05 14:41:31.140] [I] Header version: 195
+[2022-12-05 14:41:31.141] [I] About to restore pasters...
+[2022-12-05 14:41:31.141] [I] Group 0 [KH9MTN]: "Default"
+[2022-12-05 14:41:31.142] [I] Record version: 195
+[2022-12-05 14:41:31.142] [I] To restore: 0
+[2022-12-05 14:41:31.142] [I] Pasters touched
+[2022-12-05 14:41:31.142] [I] All pasters activated: true
+[2022-12-05 14:41:31.295] [I] Unref images: 0 (0 removed)
+[2022-12-05 14:41:31.295] [I] Unref dirs: 0 (0 removed)
+[2022-12-05 14:41:31.297] [I] Empty history info files: 0 (0 removed)
+[2022-12-05 14:41:31.297] [I] Pasters restored
+[2022-12-05 14:41:31.301] [I] Launch time: 3976 ms
+[2022-12-05 14:41:38.248] [I] Second instance: 1
+[2022-12-05 14:41:43.979] [I] Parsing command arguments [0]: (sp, snip)
+[2022-12-05 14:41:43.980] [I] Snip request: 0 (dest: 0)
+[2022-12-05 14:41:43.980] [I] Snipper: preparing...
+[2022-12-05 14:41:43.980] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 14:41:44.269] [I] Background size: QSize(2560, 1440)
+[2022-12-05 14:41:44.269] [I] Screens: 1
+[2022-12-05 14:41:44.269] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:41:44.294] [I] Focus set
+[2022-12-05 14:41:44.308] [I] Snipper: preparation done (0)
+[2022-12-05 14:41:44.311] [I] Snipper: about to appear...
+[2022-12-05 14:41:44.311] [I] Snipper: prepare to show...
+[2022-12-05 14:41:44.337] [I] Snipper: shown
+[2022-12-05 14:41:44.418] [I] Snipper: focus in
+[2022-12-05 14:41:44.419] [I] Snipper: ready [0.439 s]
+[2022-12-05 14:41:48.291] [I] Screenshot (680, 295, 992 x 923) destination: none
+[2022-12-05 14:41:48.291] [I] Snipper: about to quit...
+[2022-12-05 14:41:48.302] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 14:41:48.307] [I] Snipper: hidden
+[2022-12-05 14:41:48.309] [I] Snipper: quit
+[2022-12-05 14:41:51.112] [I] Second instance: 1
+[2022-12-05 14:45:10.091] [I] ***************************************************************
+[2022-12-05 14:45:10.095] [I] Snipaste 2.8.2-Beta x64 (Desktop) (Qt 6.2.4)
+[2022-12-05 14:45:10.095] [I] OS: Windows 10 Version 2009 [10.0.19044]
+[2022-12-05 14:45:10.096] [I] Cores: 8
+[2022-12-05 14:45:10.096] [I] Elevated: true
+[2022-12-05 14:45:10.096] [I] Log level: 2
+[2022-12-05 14:45:10.096] [I] Application dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64
+[2022-12-05 14:45:10.099] [I] Working dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64
+[2022-12-05 14:45:10.099] [I] Config: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 14:45:10.099] [I] Library paths: (D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64)
+[2022-12-05 14:45:10.099] [I] Screen scale: 1.25
+[2022-12-05 14:45:10.099] [I] Retina factor: 1
+[2022-12-05 14:45:10.099] [I] Screens: 1
+[2022-12-05 14:45:10.099] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:45:10.146] [I] Desktops: 1
+[2022-12-05 14:45:10.146] [I] Compatability layer: DetectorsAppHealth
+[2022-12-05 14:45:10.146] [I] About to import settings from: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2022-12-05 14:45:10.170] [I] Settings imported
+[2022-12-05 14:45:10.177] [I] Breakpad initialized
+[2022-12-05 14:45:10.237] [I] OpenGL acceleration: false
+[2022-12-05 14:45:10.242] [I] Process priority: 1
+[2022-12-05 14:45:10.242] [I] Initializing Snipaste...
+[2022-12-05 14:45:11.383] [I] Prefetch...
+[2022-12-05 14:45:11.428] [I] Preloaded 28 files: 38 ms
+[2022-12-05 14:45:11.498] [I] Load default ssl configuration: 108 ms
+[2022-12-05 14:45:11.620] [I] About to apply settings...
+[2022-12-05 14:45:11.747] [W] QxtGlobalShortcut failed to register: QKeySequence("F1")  [ 3 ]
+[2022-12-05 14:45:11.748] [W] QxtGlobalShortcut failed to register: QKeySequence("Ctrl+F1")  [ 3 ]
+[2022-12-05 14:45:11.748] [W] QxtGlobalShortcut failed to register: QKeySequence("Shift+F1")  [ 3 ]
+[2022-12-05 14:45:11.749] [W] QxtGlobalShortcut failed to register: QKeySequence("F3")  [ 3 ]
+[2022-12-05 14:45:11.749] [W] QxtGlobalShortcut failed to register: QKeySequence("Shift+F3")  [ 3 ]
+[2022-12-05 14:45:11.750] [W] QxtGlobalShortcut failed to register: QKeySequence("Ctrl+F3")  [ 3 ]
+[2022-12-05 14:45:11.755] [I] Settings applied
+[2022-12-05 14:45:11.807] [I] Log level set to: 2
+[2022-12-05 14:45:11.955] [I] History dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/history
+[2022-12-05 14:45:11.957] [I] Header version: 195
+[2022-12-05 14:45:11.957] [I] About to restore pasters...
+[2022-12-05 14:45:11.957] [I] Group 0 [KH9MTN]: "Default"
+[2022-12-05 14:45:11.957] [I] Record version: 195
+[2022-12-05 14:45:11.957] [I] To restore: 0
+[2022-12-05 14:45:11.957] [I] Pasters touched
+[2022-12-05 14:45:11.957] [I] All pasters activated: true
+[2022-12-05 14:45:12.115] [I] Unref images: 0 (0 removed)
+[2022-12-05 14:45:12.115] [I] Unref dirs: 0 (0 removed)
+[2022-12-05 14:45:12.115] [I] Empty history info files: 0 (0 removed)
+[2022-12-05 14:45:12.115] [I] Pasters restored
+[2022-12-05 14:45:12.121] [I] Launch time: 2029 ms
+[2022-12-05 14:45:19.242] [I] Second instance: 2
+[2022-12-05 14:45:19.242] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip)
+[2022-12-05 14:45:19.244] [I] Snip request: 0 (dest: 0)
+[2022-12-05 14:45:19.245] [I] Snipper: preparing...
+[2022-12-05 14:45:19.245] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 14:45:19.450] [I] Background size: QSize(2560, 1440)
+[2022-12-05 14:45:19.450] [I] Screens: 1
+[2022-12-05 14:45:19.450] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:45:19.454] [W] Focus cannot be set: 参数错误。
+[2022-12-05 14:45:19.461] [I] Snipper: preparation done (0)
+[2022-12-05 14:45:19.463] [I] Snipper: about to appear...
+[2022-12-05 14:45:19.463] [I] Snipper: prepare to show...
+[2022-12-05 14:45:19.471] [I] Snipper: shown
+[2022-12-05 14:45:19.582] [I] Snipper: focus in
+[2022-12-05 14:45:19.583] [I] Snipper: ready [0.338 s]
+[2022-12-05 14:45:27.598] [I] Screenshot (346, 248, 1114 x 609) destination: clipboard, 
+[2022-12-05 14:45:27.617] [I] Screenshot successfully saved: clipboard, 
+[2022-12-05 14:45:27.619] [I] Snipper: about to quit...
+[2022-12-05 14:45:27.626] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 14:45:27.639] [I] Snipper: hidden
+[2022-12-05 14:45:27.639] [I] Snipper: quit
+[2022-12-05 14:45:28.104] [I] Snipper: scene saved
+[2022-12-05 14:46:13.250] [I] Silent feed checking finished
+[2022-12-05 14:46:13.250] [I] No available update
+[2022-12-05 14:52:56.979] [I] Preloaded 28 files: 32 ms [every 7.8 m]
+[2022-12-05 14:57:06.982] [I] Second instance: 4
+[2022-12-05 14:57:06.982] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:/Users/Public/Desktop/screenshot2022-12-05T06:57:06.015Z.png)
+[2022-12-05 14:57:06.983] [I] Snip request: 0 (dest: 0)
+[2022-12-05 14:57:06.983] [I] Snipper: preparing...
+[2022-12-05 14:57:06.983] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 14:57:07.225] [I] Background size: QSize(2560, 1440)
+[2022-12-05 14:57:07.225] [I] Screens: 1
+[2022-12-05 14:57:07.225] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:57:07.249] [I] Focus set
+[2022-12-05 14:57:07.261] [I] Snipper: preparation done (0)
+[2022-12-05 14:57:07.268] [I] Snipper: about to appear...
+[2022-12-05 14:57:07.268] [I] Snipper: prepare to show...
+[2022-12-05 14:57:07.289] [I] Snipper: shown
+[2022-12-05 14:57:07.395] [I] Snipper: focus in
+[2022-12-05 14:57:07.396] [I] Snipper: ready [0.41300000000000003 s]
+[2022-12-05 14:57:16.742] [I] Screenshot (680, 295, 1531 x 948) destination: clipboard, 
+[2022-12-05 14:57:16.757] [I] Screenshot successfully saved: clipboard, 
+[2022-12-05 14:57:16.760] [I] Snipper: about to quit...
+[2022-12-05 14:57:16.770] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 14:57:16.787] [I] Snipper: hidden
+[2022-12-05 14:57:16.788] [I] Snipper: quit
+[2022-12-05 14:57:17.376] [I] Snipper: scene saved
+[2022-12-05 14:59:46.998] [I] Second instance: 4
+[2022-12-05 14:59:46.998] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot.png)
+[2022-12-05 14:59:47.000] [I] Snip request: 0 (dest: 64)
+[2022-12-05 14:59:47.000] [I] Snipper: preparing...
+[2022-12-05 14:59:47.000] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 14:59:47.159] [I] Background size: QSize(2560, 1440)
+[2022-12-05 14:59:47.159] [I] Screens: 1
+[2022-12-05 14:59:47.159] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 14:59:47.159] [W] Focus cannot be set: 参数错误。
+[2022-12-05 14:59:47.165] [I] Snipper: preparation done (0)
+[2022-12-05 14:59:47.166] [I] Snipper: about to appear...
+[2022-12-05 14:59:47.166] [I] Snipper: prepare to show...
+[2022-12-05 14:59:47.174] [I] Snipper: shown
+[2022-12-05 14:59:47.228] [I] Snipper: focus in
+[2022-12-05 14:59:47.262] [I] Snipper: ready [0.262 s]
+[2022-12-05 14:59:48.313] [I] Screenshot (1332, 361, 1200 x 600) destination: file: C:\Users\Public\Desktop\screenshot.png 
+[2022-12-05 14:59:48.314] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot.png 
+[2022-12-05 14:59:48.314] [I] Save with file names: C:\Users\Public\Desktop\screenshot.png
+[2022-12-05 14:59:48.316] [I] Snipper: about to quit...
+[2022-12-05 14:59:48.326] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 14:59:48.339] [I] Snipper: hidden
+[2022-12-05 14:59:48.341] [I] Snipper: quit
+[2022-12-05 14:59:48.418] [I] Image saved to: C:/Users/Public/Desktop/screenshot.png
+[2022-12-05 14:59:48.663] [I] Snipper: scene saved
+[2022-12-05 15:01:33.853] [I] Second instance: 4
+[2022-12-05 15:01:33.853] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T07:01:32.981Z.png)
+[2022-12-05 15:01:33.855] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:01:33.855] [I] Snipper: preparing...
+[2022-12-05 15:01:33.855] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:01:34.075] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:01:34.075] [I] Screens: 1
+[2022-12-05 15:01:34.075] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:01:34.090] [I] Focus set
+[2022-12-05 15:01:34.094] [I] Snipper: preparation done (0)
+[2022-12-05 15:01:34.095] [I] Snipper: about to appear...
+[2022-12-05 15:01:34.095] [I] Snipper: prepare to show...
+[2022-12-05 15:01:34.101] [I] Snipper: shown
+[2022-12-05 15:01:34.142] [I] Snipper: focus in
+[2022-12-05 15:01:34.142] [I] Snipper: ready [0.28600000000000003 s]
+[2022-12-05 15:01:42.830] [I] Screenshot (680, 295, 1556 x 922) destination: file dialog, 
+[2022-12-05 15:01:44.059] [I] Snipper: focus out [3] (Foreground window: 图像另存为)
+[2022-12-05 15:01:45.792] [I] Snipper: focus in
+[2022-12-05 15:01:49.104] [I] Screenshot (718, 352, 1556 x 922) destination: clipboard, 
+[2022-12-05 15:01:49.121] [I] Screenshot successfully saved: clipboard, 
+[2022-12-05 15:01:49.123] [I] Snipper: about to quit...
+[2022-12-05 15:01:49.132] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:01:49.145] [I] Snipper: hidden
+[2022-12-05 15:01:49.146] [I] Snipper: quit
+[2022-12-05 15:01:49.730] [I] Snipper: scene saved
+[2022-12-05 15:02:38.039] [I] Preloaded 28 files: 52 ms [every 9.7 m]
+[2022-12-05 15:02:42.216] [I] Second instance: 4
+[2022-12-05 15:02:42.216] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T07:01:32.981Z.png)
+[2022-12-05 15:02:42.217] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:02:42.217] [I] Snipper: preparing...
+[2022-12-05 15:02:42.217] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:02:42.381] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:02:42.381] [I] Screens: 1
+[2022-12-05 15:02:42.381] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:02:42.382] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:02:42.386] [I] Snipper: preparation done (0)
+[2022-12-05 15:02:42.386] [I] Snipper: about to appear...
+[2022-12-05 15:02:42.386] [I] Snipper: prepare to show...
+[2022-12-05 15:02:42.391] [I] Snipper: shown
+[2022-12-05 15:02:42.424] [I] Snipper: focus in
+[2022-12-05 15:02:42.446] [I] Snipper: ready [0.229 s]
+[2022-12-05 15:02:49.625] [I] Screenshot (1723, 660, 587 x 464) destination: clipboard, 
+[2022-12-05 15:02:49.629] [I] Screenshot successfully saved: clipboard, 
+[2022-12-05 15:02:49.634] [I] Snipper: about to quit...
+[2022-12-05 15:02:49.642] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:02:49.654] [I] Snipper: hidden
+[2022-12-05 15:02:49.655] [I] Snipper: quit
+[2022-12-05 15:02:50.142] [I] Snipper: scene saved
+[2022-12-05 15:03:17.730] [I] Second instance: 4
+[2022-12-05 15:03:17.730] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot.1.png)
+[2022-12-05 15:03:17.731] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:03:17.731] [I] Snipper: preparing...
+[2022-12-05 15:03:17.731] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:03:17.843] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:03:17.843] [I] Screens: 1
+[2022-12-05 15:03:17.843] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:03:17.843] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:03:17.852] [I] Snipper: preparation done (0)
+[2022-12-05 15:03:17.852] [I] Snipper: about to appear...
+[2022-12-05 15:03:17.852] [I] Snipper: prepare to show...
+[2022-12-05 15:03:17.861] [I] Snipper: shown
+[2022-12-05 15:03:17.911] [I] Snipper: focus in
+[2022-12-05 15:03:17.931] [I] Snipper: ready [0.2 s]
+[2022-12-05 15:03:19.106] [I] Screenshot (1973, 744, 587 x 257) destination: file: C:\Users\Public\Desktop\screenshot.1.png 
+[2022-12-05 15:03:19.107] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot.1.png 
+[2022-12-05 15:03:19.107] [I] Save with file names: C:\Users\Public\Desktop\screenshot.1.png
+[2022-12-05 15:03:19.108] [I] Snipper: about to quit...
+[2022-12-05 15:03:19.117] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:03:19.124] [I] Snipper: hidden
+[2022-12-05 15:03:19.125] [I] Image saved to: C:/Users/Public/Desktop/screenshot.1.png
+[2022-12-05 15:03:19.125] [I] Snipper: quit
+[2022-12-05 15:03:19.422] [I] Snipper: scene saved
+[2022-12-05 15:03:44.547] [I] Second instance: 4
+[2022-12-05 15:03:44.547] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T07:01:32.981Z.png)
+[2022-12-05 15:03:44.547] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:03:44.547] [I] Snipper: preparing...
+[2022-12-05 15:03:44.547] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:03:44.680] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:03:44.680] [I] Screens: 1
+[2022-12-05 15:03:44.680] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:03:44.680] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:03:44.687] [I] Snipper: preparation done (0)
+[2022-12-05 15:03:44.687] [I] Snipper: about to appear...
+[2022-12-05 15:03:44.687] [I] Snipper: prepare to show...
+[2022-12-05 15:03:44.695] [I] Snipper: shown
+[2022-12-05 15:03:44.733] [I] Snipper: focus in
+[2022-12-05 15:03:44.751] [I] Snipper: ready [0.203 s]
+[2022-12-05 15:03:47.854] [I] Screenshot (1332, 361, 1200 x 600) destination: none
+[2022-12-05 15:03:47.854] [I] Snipper: about to quit...
+[2022-12-05 15:03:47.875] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:03:47.911] [I] Snipper: hidden
+[2022-12-05 15:03:47.916] [I] Snipper: quit
+[2022-12-05 15:04:07.592] [I] Second instance: 4
+[2022-12-05 15:04:07.592] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T07:01:32981Z.png)
+[2022-12-05 15:04:07.593] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:04:07.593] [I] Snipper: preparing...
+[2022-12-05 15:04:07.593] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:04:07.724] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:04:07.724] [I] Screens: 1
+[2022-12-05 15:04:07.724] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:04:07.725] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:04:07.734] [I] Snipper: preparation done (0)
+[2022-12-05 15:04:07.734] [I] Snipper: about to appear...
+[2022-12-05 15:04:07.734] [I] Snipper: prepare to show...
+[2022-12-05 15:04:07.743] [I] Snipper: shown
+[2022-12-05 15:04:07.797] [I] Snipper: focus in
+[2022-12-05 15:04:07.828] [I] Snipper: ready [0.23500000000000001 s]
+[2022-12-05 15:04:11.377] [I] Screenshot (1332, 361, 1200 x 600) destination: none
+[2022-12-05 15:04:11.377] [I] Snipper: about to quit...
+[2022-12-05 15:04:11.388] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:04:11.403] [I] Snipper: hidden
+[2022-12-05 15:04:11.405] [I] Snipper: quit
+[2022-12-05 15:04:19.640] [I] Second instance: 4
+[2022-12-05 15:04:19.640] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T070132.981Z.png)
+[2022-12-05 15:04:19.642] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:04:19.642] [I] Snipper: preparing...
+[2022-12-05 15:04:19.642] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:04:19.734] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:04:19.734] [I] Screens: 1
+[2022-12-05 15:04:19.734] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:04:19.735] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:04:19.741] [I] Snipper: preparation done (0)
+[2022-12-05 15:04:19.742] [I] Snipper: about to appear...
+[2022-12-05 15:04:19.742] [I] Snipper: prepare to show...
+[2022-12-05 15:04:19.748] [I] Snipper: shown
+[2022-12-05 15:04:19.770] [I] Snipper: focus in
+[2022-12-05 15:04:19.778] [I] Snipper: ready [0.136 s]
+[2022-12-05 15:04:20.652] [I] Screenshot (1973, 744, 587 x 257) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T070132.981Z.png 
+[2022-12-05 15:04:20.652] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T070132.981Z.png 
+[2022-12-05 15:04:20.652] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T070132.981Z.png
+[2022-12-05 15:04:20.653] [I] Snipper: about to quit...
+[2022-12-05 15:04:20.664] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:04:20.677] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T070132.981Z.png
+[2022-12-05 15:04:20.683] [I] Snipper: hidden
+[2022-12-05 15:04:20.684] [I] Snipper: quit
+[2022-12-05 15:04:21.015] [I] Snipper: scene saved
+[2022-12-05 15:04:30.225] [I] Second instance: 4
+[2022-12-05 15:04:30.225] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T070:132.981Z.png)
+[2022-12-05 15:04:30.226] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:04:30.226] [I] Snipper: preparing...
+[2022-12-05 15:04:30.226] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:04:30.369] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:04:30.369] [I] Screens: 1
+[2022-12-05 15:04:30.369] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:04:30.369] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:04:30.372] [I] Snipper: preparation done (0)
+[2022-12-05 15:04:30.372] [I] Snipper: about to appear...
+[2022-12-05 15:04:30.372] [I] Snipper: prepare to show...
+[2022-12-05 15:04:30.380] [I] Snipper: shown
+[2022-12-05 15:04:30.429] [I] Snipper: focus in
+[2022-12-05 15:04:30.447] [I] Snipper: ready [0.221 s]
+[2022-12-05 15:04:32.515] [I] Screenshot (1973, 744, 587 x 257) destination: none
+[2022-12-05 15:04:32.515] [I] Snipper: about to quit...
+[2022-12-05 15:04:32.526] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:04:32.534] [I] Snipper: hidden
+[2022-12-05 15:04:32.536] [I] Snipper: quit
+[2022-12-05 15:07:50.848] [I] Second instance: 4
+[2022-12-05 15:07:50.848] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T070749.997Z.png)
+[2022-12-05 15:07:50.850] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:07:50.850] [I] Snipper: preparing...
+[2022-12-05 15:07:50.850] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:07:51.108] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:07:51.108] [I] Screens: 1
+[2022-12-05 15:07:51.109] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:07:51.137] [I] Focus set
+[2022-12-05 15:07:51.140] [I] Snipper: preparation done (0)
+[2022-12-05 15:07:51.142] [I] Snipper: about to appear...
+[2022-12-05 15:07:51.142] [I] Snipper: prepare to show...
+[2022-12-05 15:07:51.165] [I] Snipper: shown
+[2022-12-05 15:07:51.204] [I] Snipper: focus in
+[2022-12-05 15:07:51.204] [I] Snipper: ready [0.354 s]
+[2022-12-05 15:07:52.389] [I] Screenshot (680, 295, 1754 x 971) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T070749.997Z.png 
+[2022-12-05 15:07:52.393] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T070749.997Z.png 
+[2022-12-05 15:07:52.393] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T070749.997Z.png
+[2022-12-05 15:07:52.394] [I] Snipper: about to quit...
+[2022-12-05 15:07:52.404] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:07:52.413] [I] Snipper: hidden
+[2022-12-05 15:07:52.415] [I] Snipper: quit
+[2022-12-05 15:07:52.582] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T070749.997Z.png
+[2022-12-05 15:07:52.761] [I] Snipper: scene saved
+[2022-12-05 15:10:47.728] [I] Second instance: 4
+[2022-12-05 15:10:47.728] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T071047.133Z.png)
+[2022-12-05 15:10:47.728] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:10:47.728] [I] Snipper: preparing...
+[2022-12-05 15:10:47.729] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:10:47.890] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:10:47.890] [I] Screens: 1
+[2022-12-05 15:10:47.890] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:10:47.993] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:10:47.996] [I] Snipper: preparation done (0)
+[2022-12-05 15:10:47.997] [I] Snipper: about to appear...
+[2022-12-05 15:10:47.997] [I] Snipper: prepare to show...
+[2022-12-05 15:10:48.027] [I] Snipper: shown
+[2022-12-05 15:10:48.074] [I] Snipper: focus in
+[2022-12-05 15:10:48.092] [I] Snipper: ready [0.363 s]
+[2022-12-05 15:10:48.671] [I] Screenshot (680, 295, 1709 x 983) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T071047.133Z.png 
+[2022-12-05 15:10:48.674] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T071047.133Z.png 
+[2022-12-05 15:10:48.674] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T071047.133Z.png
+[2022-12-05 15:10:48.677] [I] Snipper: about to quit...
+[2022-12-05 15:10:48.686] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:10:48.695] [I] Snipper: hidden
+[2022-12-05 15:10:48.697] [I] Snipper: quit
+[2022-12-05 15:10:48.964] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T071047.133Z.png
+[2022-12-05 15:10:49.211] [I] Snipper: scene saved
+[2022-12-05 15:11:55.938] [I] Second instance: 4
+[2022-12-05 15:11:55.938] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T07:01:32981Z.png)
+[2022-12-05 15:11:55.940] [I] Snip request: 0 (dest: 0)
+[2022-12-05 15:11:55.940] [I] Snipper: preparing...
+[2022-12-05 15:11:55.940] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:11:56.110] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:11:56.110] [I] Screens: 1
+[2022-12-05 15:11:56.110] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:11:56.110] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:11:56.111] [I] Snipper: preparation done (0)
+[2022-12-05 15:11:56.112] [I] Snipper: about to appear...
+[2022-12-05 15:11:56.112] [I] Snipper: prepare to show...
+[2022-12-05 15:11:56.116] [I] Snipper: shown
+[2022-12-05 15:11:56.142] [I] Snipper: focus in
+[2022-12-05 15:11:56.158] [I] Snipper: ready [0.217 s]
+[2022-12-05 15:11:59.955] [I] Screenshot (1332, 361, 1200 x 600) destination: none
+[2022-12-05 15:11:59.955] [I] Snipper: about to quit...
+[2022-12-05 15:11:59.967] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:11:59.982] [I] Snipper: hidden
+[2022-12-05 15:11:59.985] [I] Snipper: quit
+[2022-12-05 15:13:03.778] [I] Second instance: 4
+[2022-12-05 15:13:03.778] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T071303.044Z.png)
+[2022-12-05 15:13:03.780] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:13:03.780] [I] Snipper: preparing...
+[2022-12-05 15:13:03.780] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:13:03.962] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:13:03.962] [I] Screens: 1
+[2022-12-05 15:13:03.962] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:13:04.042] [W] Focus cannot be set: 参数错误。
+[2022-12-05 15:13:04.047] [I] Snipper: preparation done (0)
+[2022-12-05 15:13:04.052] [I] Snipper: about to appear...
+[2022-12-05 15:13:04.052] [I] Snipper: prepare to show...
+[2022-12-05 15:13:04.071] [I] Snipper: shown
+[2022-12-05 15:13:04.114] [I] Snipper: focus in
+[2022-12-05 15:13:04.138] [I] Snipper: ready [0.358 s]
+[2022-12-05 15:13:04.706] [I] Screenshot (680, 295, 1732 x 1000) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T071303.044Z.png 
+[2022-12-05 15:13:04.710] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T071303.044Z.png 
+[2022-12-05 15:13:04.710] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T071303.044Z.png
+[2022-12-05 15:13:04.711] [I] Snipper: about to quit...
+[2022-12-05 15:13:04.723] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:13:04.730] [I] Snipper: hidden
+[2022-12-05 15:13:04.732] [I] Snipper: quit
+[2022-12-05 15:13:04.954] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T071303.044Z.png
+[2022-12-05 15:13:05.265] [I] Snipper: scene saved
+[2022-12-05 15:14:45.116] [I] Preloaded 28 files: 69 ms [every 12.1 m]
+[2022-12-05 15:15:45.862] [I] Second instance: 4
+[2022-12-05 15:15:45.862] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T071545.278Z.png)
+[2022-12-05 15:15:45.863] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:15:45.863] [I] Snipper: preparing...
+[2022-12-05 15:15:45.863] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:15:45.977] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:15:45.977] [I] Screens: 1
+[2022-12-05 15:15:45.977] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:15:45.985] [I] Focus set
+[2022-12-05 15:15:45.986] [I] Snipper: preparation done (0)
+[2022-12-05 15:15:45.987] [I] Snipper: about to appear...
+[2022-12-05 15:15:45.987] [I] Snipper: prepare to show...
+[2022-12-05 15:15:45.994] [I] Snipper: shown
+[2022-12-05 15:15:46.031] [I] Snipper: focus in
+[2022-12-05 15:15:46.031] [I] Snipper: ready [0.167 s]
+[2022-12-05 15:15:46.535] [I] Screenshot (680, 295, 1645 x 954) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T071545.278Z.png 
+[2022-12-05 15:15:46.539] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T071545.278Z.png 
+[2022-12-05 15:15:46.539] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T071545.278Z.png
+[2022-12-05 15:15:46.540] [I] Snipper: about to quit...
+[2022-12-05 15:15:46.550] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:15:46.558] [I] Snipper: hidden
+[2022-12-05 15:15:46.561] [I] Snipper: quit
+[2022-12-05 15:15:46.741] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T071545.278Z.png
+[2022-12-05 15:15:46.904] [I] Snipper: scene saved
+[2022-12-05 15:16:40.846] [I] Second instance: 4
+[2022-12-05 15:16:40.846] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T071640.371Z.png)
+[2022-12-05 15:16:40.848] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:16:40.848] [I] Snipper: preparing...
+[2022-12-05 15:16:40.848] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:16:41.061] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:16:41.061] [I] Screens: 1
+[2022-12-05 15:16:41.061] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:16:41.073] [I] Focus set
+[2022-12-05 15:16:41.074] [I] Snipper: preparation done (0)
+[2022-12-05 15:16:41.074] [I] Snipper: about to appear...
+[2022-12-05 15:16:41.074] [I] Snipper: prepare to show...
+[2022-12-05 15:16:41.079] [I] Snipper: shown
+[2022-12-05 15:16:41.111] [I] Snipper: focus in
+[2022-12-05 15:16:41.111] [I] Snipper: ready [0.262 s]
+[2022-12-05 15:16:42.010] [I] Screenshot (680, 295, 1017 x 954) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T071640.371Z.png 
+[2022-12-05 15:16:42.012] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T071640.371Z.png 
+[2022-12-05 15:16:42.012] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T071640.371Z.png
+[2022-12-05 15:16:42.013] [I] Snipper: about to quit...
+[2022-12-05 15:16:42.024] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:16:42.030] [I] Snipper: hidden
+[2022-12-05 15:16:42.031] [I] Snipper: quit
+[2022-12-05 15:16:42.129] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T071640.371Z.png
+[2022-12-05 15:16:42.427] [I] Snipper: scene saved
+[2022-12-05 15:24:43.816] [I] Second instance: 4
+[2022-12-05 15:24:43.816] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T072442.882Z.png)
+[2022-12-05 15:24:43.818] [I] Snip request: 0 (dest: 64)
+[2022-12-05 15:24:43.818] [I] Snipper: preparing...
+[2022-12-05 15:24:43.818] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 15:24:44.047] [I] Background size: QSize(2560, 1440)
+[2022-12-05 15:24:44.047] [I] Screens: 1
+[2022-12-05 15:24:44.047] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 15:24:44.067] [I] Focus set
+[2022-12-05 15:24:44.070] [I] Snipper: preparation done (0)
+[2022-12-05 15:24:44.071] [I] Snipper: about to appear...
+[2022-12-05 15:24:44.071] [I] Snipper: prepare to show...
+[2022-12-05 15:24:44.082] [I] Snipper: shown
+[2022-12-05 15:24:44.148] [I] Snipper: focus in
+[2022-12-05 15:24:44.148] [I] Snipper: ready [0.329 s]
+[2022-12-05 15:24:45.246] [I] Screenshot (680, 295, 1604 x 938) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T072442.882Z.png 
+[2022-12-05 15:24:45.249] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T072442.882Z.png 
+[2022-12-05 15:24:45.249] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T072442.882Z.png
+[2022-12-05 15:24:45.250] [I] Snipper: about to quit...
+[2022-12-05 15:24:45.263] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 15:24:45.273] [I] Snipper: hidden
+[2022-12-05 15:24:45.274] [I] Snipper: quit
+[2022-12-05 15:24:45.402] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T072442.882Z.png
+[2022-12-05 15:24:45.565] [I] Snipper: scene saved
+[2022-12-05 15:29:53.151] [I] Preloaded 28 files: 35 ms [every 15.1 m]
+[2022-12-05 15:48:48.234] [I] Preloaded 28 files: 87 ms [every 18.9 m]

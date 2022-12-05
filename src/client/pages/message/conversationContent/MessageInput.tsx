@@ -594,7 +594,12 @@ export const MessageInput = (props: Props): JSX.Element => {
         const blob = dataURLtoBlob(imgUrl);
         const fileimg = blobToFile(blob);
         console.log(fileimg)
-        setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
+        if (process.platform == "darwin") {  //判断当前操作系统，"darwin" 是mac系统     "win32" 是window系统
+            setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
+    　　} else {
+        setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:"C:\\Users\\Public\\Desktop\\screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
+        }
+        // setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
     }
 
     useEffect(() => {

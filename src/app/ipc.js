@@ -1,4 +1,4 @@
-const { DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE } = require("./const/const");
+const { DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENSHOTWINDOWS,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE } = require("./const/const");
 const { ipcMain, BrowserWindow, dialog } = require('electron')
 const fs = require('fs')
 const os = require('os')
@@ -12,6 +12,7 @@ const FFmpeg = require("fluent-ffmpeg")
 const sizeOf = require('image-size')
 const FileType = require('file-type')
 const ffprobe = require('ffprobe-static');
+const execFile = require('child_process').execFile;
 
 const setPath = isDev => {
     const ffprobePath = isDev ? ffprobe.path : ffprobe.path.replace('app.asar', 'app.asar.unpacked');
@@ -62,14 +63,7 @@ class IPC {
         let ex = "screencapture -i ~/desktop/screenshot"+date+".png"
         child_process.exec(`screencapture -i ~/desktop/screenshot`+date+`.png`,(error, stdout, stderr) => {　　　　　　if (!error) {
             var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
-            console.log(_img);
-            // const imgUrl = base
-// 　　　　　　　file = clipboard.readImage().toPNG();
-            // const imgUrl = this.bufferToBase64Url(_img, "image/png");
-            // const blob = this.dataURLtoBlob(imgUrl);
-            // const fileimg = this.blobToFile(blob);
-            // console.log(fileimg)
-            // setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot.png",size: imgUrl.length, base64URL: imgUrl }));
+            // console.log(_img);
             event.reply(GET_FILE_INFO_CALLBACK, {
                 triggerType: SCREENSHOTMAC,
                 data:{_img:_img,date}
@@ -80,26 +74,55 @@ class IPC {
 
     async screenshotWindows(event){
         const newdate = new Date();
-        const date = newdate.toISOString();
-        let url = path.resolve(__dirname, "../../static/qq/PrintScr.exe");
-    // 　　　　if (isDevelopment && !process.env.IS_TEST) {
-    // 　　　　　　// 生产环境
-    // 　　　　　　url = path.join(__dirname, "../../../../extraResources/PrintScr.exe" );
-    // 　　　　}
-    　　　　let screen_window = execFile(url);
-    　　　　screen_window.on("exit", (code) => {
-    　　　　　　if (code) {
-    　　　　　　　file=clipboard.readImage().toPNG();
-                fs.createWriteStream(process.env.HOME+"/desktop/screenshot"+date+".png").write(file);
-                var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
-                console.log(_img);
-                event.reply(GET_FILE_INFO_CALLBACK, {
-                    triggerType: SCREENSHOTMAC,
-                    data:{_img,date}
-                })
+        const date = newdate.toISOString().replaceAll(":","");
+        let url = path.resolve(__dirname, "../Snipaste-2.8.2-Beta-x64/Snipaste.exe");
+        let command = url+" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
+        // console.log(command);
+        var id = setInterval(dealFile, 300);
+        child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
+            console.log("done capture");
+            
 
-    　　　　　　}
-    　　　　});
+        }})
+        function dealFile(){
+                try{
+                    var _img = fs.readFileSync("C:\\Users\\Public\\Desktop\\screenshot"+date+".png");
+                    clearInterval(id);
+                    console.log("file exists");
+                    console.log(_img);
+                    event.reply(GET_FILE_INFO_CALLBACK, {
+                        triggerType: SCREENSHOTMAC,
+                        data:{_img:_img,date}
+                    })
+                } catch(err){
+                    if(err.code == 'ENOENT'){
+                        // console.log("file doesn't exist yet")
+                    } else{
+                        throw err;
+                    }
+                }
+                
+            
+        }
+    // // 　　　　if (isDevelopment && !process.env.IS_TEST) {
+    // // 　　　　　　// 生产环境
+    // // 　　　　　　url = path.join(__dirname, "../../../../extraResources/PrintScr.exe" );
+    // // 　　　　}
+    // 　　　　let screen_window = execFile(url);
+    //         console.log("execute");
+    // 　　　　screen_window.on("exit", (code) => {
+    // 　　　　　　if (code) {
+    // 　　　　　　　file=clipboard.readImage().toPNG();
+    //             fs.createWriteStream(process.env.HOME+"/desktop/screenshot"+date+".png").write(file);
+    //             var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
+    //             console.log(_img);
+    //             event.reply(GET_FILE_INFO_CALLBACK, {
+    //                 triggerType: SCREENSHOTMAC,
+    //                 data:{_img,date}
+    //             })
+
+    // 　　　　　　}
+    // 　　　　});
     }
 
     showDialog() {
