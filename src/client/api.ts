@@ -430,8 +430,9 @@ export const cancelSendMsg = async (params: CancelSendMsgParams): Promise<MsgRes
 
 export const getConversionList = async () => {
   const { json_param }= await timRenderInstance.TIMConvGetConvList({});
-  const conversitionList = json_param;
-  const hasLastMessageList = conversitionList.filter(
+  // //@ts-ignore
+  // const {conversation_list_result_conv_list:conversitionList} = json_param;
+  const hasLastMessageList = json_param.filter(
     (item) => item.conv_type != 0
   );
   const conversitionListProfile = addProfileForConversition(hasLastMessageList);
@@ -622,6 +623,7 @@ export const modifyGroupInfo = async (params: {
 
   const fetchList = modifyFlags.map((currentFlag) =>
     timRenderInstance.TIMGroupModifyGroupInfo({
+      //@ts-ignore
       params: {
         group_modify_info_param_group_id: groupId,
         group_modify_info_param_modify_flag: currentFlag,
@@ -668,6 +670,7 @@ export const modifyGroupMemberInfo = async (params: {
   );
 
   const  data  = await timRenderInstance.TIMGroupModifyMemberInfo({
+    //@ts-ignore
     params: {
       group_modify_member_info_group_id: groupId,
       group_modify_member_info_identifier: userId,

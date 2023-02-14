@@ -16,6 +16,7 @@ import { loginParam } from 'im_electron_sdk/dist/interfaces';
 import { useSettingConfig } from '../../utils/react-use/useSettingConfig';
 import { getApassConfig, loginSms, reloginSms, userVerifyByPicture } from '../../api';
 import { ipcRenderer } from 'electron';
+import { RENDERPROCESSCALL,GETDEVICETOKEN } from '../../../app/const/const';
 const store = new Store();
 
 const tabs = [
@@ -61,6 +62,12 @@ export const LoginContent = (): JSX.Element => {
         if (activedTab === 'verifyCodeLogin') {
             handleSmsLogin()
         }
+        getDeviceToken()
+    }
+    const getDeviceToken =async () => {
+        ipcRenderer.send(RENDERPROCESSCALL,{
+            type: GETDEVICETOKEN,
+        })   
     }
     const handleSmsLogin = async () => {
         if (smsLoginToken && smsLoginUserId) {

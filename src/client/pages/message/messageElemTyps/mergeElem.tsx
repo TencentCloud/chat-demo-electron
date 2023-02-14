@@ -13,7 +13,7 @@ const MergeElem = (props: any): JSX.Element => {
         if(props.merge_elem_message_array) {
             setMergedMsg(props.merge_elem_message_array);
         } else {
-            const { data: {code, json_params} } = await downloadMergedMsg(props.message);
+            const {code, json_params} = await downloadMergedMsg(props.message);
             const mergedMsg = JSON.parse(json_params);
             setMergedMsg(mergedMsg);
         }

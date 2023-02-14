@@ -73,6 +73,7 @@ export const ConversationMessageInput = (props: { currentSelectedConversation })
             senderID: userId,
             data: JSON.stringify({ "businessID": "av_call", "call_type": Number(callType), "room_id": roomId, "version": 4 })
         })
+        //@ts-ignore
         const { code, json_params } = data;
         if (code === 0) {
             const customerData = JSON.parse(json_params)?.message_elem_array[0].custom_elem_data;
@@ -129,6 +130,7 @@ export const ConversationMessageInput = (props: { currentSelectedConversation })
             senderID: userId,
             data: JSON.stringify({ "businessID": "av_call", "call_type": Number(callType), "room_id": roomId, "version": 4 }),
         });
+        //@ts-ignore
         const  { code, json_params }= data;
         if (code === 0) {
             const customerData = JSON.parse(json_params)?.message_elem_array[0].custom_elem_data;

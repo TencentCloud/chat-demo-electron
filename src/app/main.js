@@ -1,12 +1,14 @@
-const { app, BrowserWindow, ipcMain } = require('electron');
+const { app, BrowserWindow, ipcMain,globalShortcut } = require('electron');
 const Store = require('electron-store');
 const CaptureView = require('./electron-captureview/main/captureview').default;
 const path = require('path');
 const url = require('url');
 const TimMain = require('im_electron_sdk/dist/main');
-const { SDK_APP_ID } = require('./const/const');
+const { SDK_APP_ID,GET_FILE_INFO_CALLBACK,SCREENSHOTMAC } = require('./const/const');
 const IPC = require('./ipc');
 const CallWindowIpc = require('./callWindowIpc');
+const child_process = require('child_process')
+const fs = require('fs')
 const store = new Store();
 Store.initRenderer();
 
@@ -88,24 +90,71 @@ const createWindow = () => {
       })
     );
   }
-  const capture = new CaptureView({
-    devTools: false,
-    Mosaic: false,
-    Text: false,
-    // onShow: () => {
-    //   console.log('start screenshot');
-    // },
-    onClose: () => {
-     const png = clipboard.readImage().toBitmap();
-     const fileExample = new File([png], 'xxx.png', { type: 'image/jpeg' });
-      console.log('结束截图', fileExample);
-    },
-    onShowByShortCut: () => {
-      console.log('shortcut key to start screenshot')
-    }
-  });
-  capture.setMultiScreen(true);
-  capture.updateShortCutKey('shift+option+c');
+  // const capture = new CaptureView({
+  //   devTools: false,
+  //   Mosaic: false,
+  //   Text: false,
+  //   // onShow: () => {
+  //   //   console.log('start screenshot');
+  //   // },
+  //   onClose: () => {
+  //    const png = clipboard.readImage().toBitmap();
+  //    const fileExample = new File([png], 'xxx.png', { type: 'image/jpeg' });
+  //     console.log('结束截图', fileExample);
+  //   },
+  //   onShowByShortCut: () => {
+  //     console.log('shortcut key to start screenshot')
+  //   }
+  // });
+  // capture.setMultiScreen(true);
+  // capture.updateShortCutKey('shift+option+c');
+  globalShortcut.register('Shift+CommandOrControl+C',function(){
+    console.log("i am shortcut~~~~~~~~~");
+    const newdate = new Date();
+    const date = newdate.toISOString().replaceAll(":","");
+        // console.log(date.toISOString());
+        if (process.platform == "darwin") {
+          let ex = "screencapture -i ~/desktop/screenshot"+date+".png"
+          child_process.exec(`screencapture -i ~/desktop/screenshot`+date+`.png`,(error, stdout, stderr) => {　　　　　　if (!error) {
+              var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
+              // console.log(_img);
+              mainWindow.webContents.send(GET_FILE_INFO_CALLBACK, {
+                  triggerType: SCREENSHOTMAC,
+                  data:{_img:_img,date}
+              })
+            }
+    　　　　});
+        }else{
+          let url = path.resolve(__dirname, "../Snipaste-2.8.2-Beta-x64/Snipaste.exe");
+          let command = url+" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
+          // console.log(command);
+          var id = setInterval(dealFile, 300);
+          child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
+              console.log("done capture");
+          }})
+          function dealFile(){
+                  try{
+                      var _img = fs.readFileSync("C:\\Users\\Public\\Desktop\\screenshot"+date+".png");
+                      clearInterval(id);
+                      console.log("file exists");
+                      console.log(_img);
+                      event.reply(GET_FILE_INFO_CALLBACK, {
+                          triggerType: SCREENSHOTMAC,
+                          data:{_img:_img,date}
+                      })
+                  } catch(err){
+                      if(err.code == 'ENOENT'){
+                          // console.log("file doesn't exist yet")
+                      } else{
+                          throw err;
+                      }
+                  }
+                  
+              
+          }
+        }
+        
+  })
   // mainWindow.loadURL(`http://localhost:3000`);
   // mainWindow.webContents.openDevTools();
 };

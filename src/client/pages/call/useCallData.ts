@@ -27,6 +27,7 @@ export const useCallData = () => {
 
     useEffect(() => {
         eventEmiter.on('getData', (data) => {
+            console.log(data,"========useCallData========")
             const { convInfo, convId, callType, windowType, roomId, inviteID,userID,inviteList, sdkAppid, userSig, inviteListWithInfo, isInviter, isVoiceOpen, isVideoOpen } = data;
             setData({
                 windowType,

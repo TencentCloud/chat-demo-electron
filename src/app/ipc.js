@@ -1,5 +1,6 @@
-const { DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENSHOTWINDOWS,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE } = require("./const/const");
-const { ipcMain, BrowserWindow, dialog } = require('electron')
+const { GETDEVICETOKEN,DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENSHOTWINDOWS,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE } = require("./const/const");
+const { ipcMain, BrowserWindow, dialog,pushNotifications, Notification } = require('electron')
+// const {  } = require('electron')
 const fs = require('fs')
 const os = require('os')
 const path = require('path')
@@ -51,14 +52,25 @@ class IPC {
                 case SCREENSHOTWINDOWS:
                     this.screenshotWindows(event);
                     break;
+                case GETDEVICETOKEN:
+                    this.getDeviceToken(event);
+                    break;
             }
         });
 
 
     }
+
+    async getDeviceToken(){
+        
+        pushNotifications.registerForAPNSNotifications().then((token) => {
+            // forward token to your remote notification server
+            console.log(token,"device token");
+          })
+    }
     async screenshotMac(event) {
         const newdate = new Date();
-        const date = newdate.toISOString();
+        const date = newdate.toISOString().replaceAll(":","");
         // console.log(date.toISOString());
         let ex = "screencapture -i ~/desktop/screenshot"+date+".png"
         child_process.exec(`screencapture -i ~/desktop/screenshot`+date+`.png`,(error, stdout, stderr) => {　　　　　　if (!error) {
@@ -104,25 +116,6 @@ class IPC {
                 
             
         }
-    // // 　　　　if (isDevelopment && !process.env.IS_TEST) {
-    // // 　　　　　　// 生产环境
-    // // 　　　　　　url = path.join(__dirname, "../../../../extraResources/PrintScr.exe" );
-    // // 　　　　}
-    // 　　　　let screen_window = execFile(url);
-    //         console.log("execute");
-    // 　　　　screen_window.on("exit", (code) => {
-    // 　　　　　　if (code) {
-    // 　　　　　　　file=clipboard.readImage().toPNG();
-    //             fs.createWriteStream(process.env.HOME+"/desktop/screenshot"+date+".png").write(file);
-    //             var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
-    //             console.log(_img);
-    //             event.reply(GET_FILE_INFO_CALLBACK, {
-    //                 triggerType: SCREENSHOTMAC,
-    //                 data:{_img,date}
-    //             })
-
-    // 　　　　　　}
-    // 　　　　});
     }
 
     showDialog() {

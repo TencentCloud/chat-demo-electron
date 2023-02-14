@@ -65,7 +65,7 @@ const FEATURE_LIST_GROUP = [{
     title: '通话'
 }, {
     id: 'screenShot',
-    title: '截图 (shift+option+c)'
+    title: '截图 (Shift+CommandOrControl+C)'
 }]
 const FEATURE_LIST_C2C = [{
     id: 'face',
@@ -82,7 +82,7 @@ const FEATURE_LIST_C2C = [{
     title: '通话'
 }, {
     id: 'screenShot',
-    title: '截图 (shift+option+c)'
+    title: '截图 (Shift+CommandOrControl+C)'
 }]
 const FEATURE_LIST = {
     1: FEATURE_LIST_C2C, 2: FEATURE_LIST_GROUP
@@ -123,6 +123,7 @@ export const MessageInput = (props: Props): JSX.Element => {
     const dispatch = useDispatch();
     const placeHolderText = isShutUpAll ? '已全员禁言' : '';
     let editorInstance;
+
 
     const handleSendMsg = async () => {
         try {
