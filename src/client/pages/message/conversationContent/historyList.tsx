@@ -14,8 +14,8 @@ export const HistoryMessageList = (props:{currentSelectedConversation}): JSX.Ele
     const dispatch = useDispatch();
     const msgList = historyMessageList.get(convId || '');
     const {
-        group_detial_info_group_type: groupType,
-        group_detial_info_add_option: addOption,
+        group_detail_info_group_type: groupType,
+        group_detail_info_add_option: addOption,
     } = convProfile || {};
 
     

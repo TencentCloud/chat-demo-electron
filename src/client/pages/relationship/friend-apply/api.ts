@@ -6,7 +6,7 @@ interface FriendShipPendency {
     friend_add_pendency_info_add_source: string;
     friend_add_pendency_info_add_time: number;
     friend_add_pendency_info_add_wording: string;
-    friend_add_pendency_info_idenitifer: string;
+    friend_add_pendency_info_identifier: string;
     friend_add_pendency_info_nick_name: string;
     friend_add_pendency_info_type: number;
   }[];
@@ -56,13 +56,13 @@ export const getFriendShipPendencyList = async (params: {
   if (code === 0) {
     const result: FriendShipPendency = (json_params || {}) as unknown as FriendShipPendency;
     const { pendency_page_pendency_info_array: applys, ...others } = result;
-    const userIds = applys.map((v) => v.friend_add_pendency_info_idenitifer);
+    const userIds = applys.map((v) => v.friend_add_pendency_info_identifier);
     if (userIds.length) {
       const userInfos = await getUserInfoList(userIds || []);
       const applyList = userInfos.map((v) => {
         const apply = applys.find(
           (item) =>
-            item.friend_add_pendency_info_idenitifer ===
+            item.friend_add_pendency_info_identifier ===
             v.user_profile_identifier
         );
         return { ...apply, ...v };

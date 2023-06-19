@@ -74,8 +74,8 @@ export const MessageResult = (props) => {
                         {
                             result.map((item, index) => {
                                 const { conv_profile, conv_id, messageCount } = item;
-                                const faceUrl = conv_profile.user_profile_face_url ?? conv_profile.group_detial_info_face_url;
-                                const nickName = (conv_profile.user_profile_nick_name ?? conv_profile.group_detial_info_group_name)|| conv_id;
+                                const faceUrl = conv_profile.user_profile_face_url ?? conv_profile.group_detail_info_face_url;
+                                const nickName = (conv_profile.user_profile_nick_name ?? conv_profile.group_detail_info_group_name)|| conv_id;
         
                                 return (
                                     <div  key={index} className={`message-result__content-item ${activedItem?.conv_id === conv_id ? 'is-active' : ''}`} onClick={() => handleItemClick(item)}>

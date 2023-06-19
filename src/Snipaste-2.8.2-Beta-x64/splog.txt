@@ -574,3 +574,859 @@
 [2022-12-05 15:24:45.565] [I] Snipper: scene saved
 [2022-12-05 15:29:53.151] [I] Preloaded 28 files: 35 ms [every 15.1 m]
 [2022-12-05 15:48:48.234] [I] Preloaded 28 files: 87 ms [every 18.9 m]
+[2022-12-05 16:12:27.280] [I] Preloaded 28 files: 49 ms [every 23.7 m]
+[2022-12-05 16:16:01.155] [I] Second instance: 4
+[2022-12-05 16:16:01.155] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T081600.485Z.png)
+[2022-12-05 16:16:01.157] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:16:01.157] [I] Snipper: preparing...
+[2022-12-05 16:16:01.157] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:16:01.246] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:16:01.246] [I] Screens: 1
+[2022-12-05 16:16:01.246] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:16:01.253] [I] Focus set
+[2022-12-05 16:16:01.256] [I] Snipper: preparation done (0)
+[2022-12-05 16:16:01.260] [I] Snipper: about to appear...
+[2022-12-05 16:16:01.260] [I] Snipper: prepare to show...
+[2022-12-05 16:16:01.263] [I] Snipper: shown
+[2022-12-05 16:16:01.298] [I] Snipper: focus in
+[2022-12-05 16:16:01.299] [I] Snipper: ready [0.14200000000000002 s]
+[2022-12-05 16:16:02.356] [I] Screenshot (680, 295, 1534 x 930) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T081600.485Z.png 
+[2022-12-05 16:16:02.359] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T081600.485Z.png 
+[2022-12-05 16:16:02.359] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T081600.485Z.png
+[2022-12-05 16:16:02.360] [I] Snipper: about to quit...
+[2022-12-05 16:16:02.367] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:16:02.370] [I] Snipper: hidden
+[2022-12-05 16:16:02.373] [I] Snipper: quit
+[2022-12-05 16:16:02.455] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T081600.485Z.png
+[2022-12-05 16:16:02.586] [I] Snipper: scene saved
+[2022-12-05 16:26:34.349] [I] Second instance: 4
+[2022-12-05 16:26:34.349] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T082633.823Z.png)
+[2022-12-05 16:26:34.350] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:26:34.350] [I] Snipper: preparing...
+[2022-12-05 16:26:34.350] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:26:34.440] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:26:34.440] [I] Screens: 1
+[2022-12-05 16:26:34.440] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:26:34.449] [I] Focus set
+[2022-12-05 16:26:34.449] [I] Snipper: preparation done (0)
+[2022-12-05 16:26:34.450] [I] Snipper: about to appear...
+[2022-12-05 16:26:34.450] [I] Snipper: prepare to show...
+[2022-12-05 16:26:34.455] [I] Snipper: shown
+[2022-12-05 16:26:34.482] [I] Snipper: focus in
+[2022-12-05 16:26:34.482] [I] Snipper: ready [0.132 s]
+[2022-12-05 16:26:35.088] [I] Screenshot (680, 295, 1723 x 925) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T082633.823Z.png 
+[2022-12-05 16:26:35.092] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T082633.823Z.png 
+[2022-12-05 16:26:35.092] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T082633.823Z.png
+[2022-12-05 16:26:35.093] [I] Snipper: about to quit...
+[2022-12-05 16:26:35.099] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:26:35.104] [I] Snipper: hidden
+[2022-12-05 16:26:35.106] [I] Snipper: quit
+[2022-12-05 16:26:35.207] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T082633.823Z.png
+[2022-12-05 16:26:35.317] [I] Snipper: scene saved
+[2022-12-05 16:28:02.951] [I] Second instance: 4
+[2022-12-05 16:28:02.951] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T082802.602Z.png)
+[2022-12-05 16:28:02.952] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:28:02.952] [I] Snipper: preparing...
+[2022-12-05 16:28:02.952] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:28:03.041] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:28:03.041] [I] Screens: 1
+[2022-12-05 16:28:03.041] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:28:03.051] [I] Focus set
+[2022-12-05 16:28:03.052] [I] Snipper: preparation done (0)
+[2022-12-05 16:28:03.054] [I] Snipper: about to appear...
+[2022-12-05 16:28:03.054] [I] Snipper: prepare to show...
+[2022-12-05 16:28:03.060] [I] Snipper: shown
+[2022-12-05 16:28:03.086] [I] Snipper: focus in
+[2022-12-05 16:28:03.086] [I] Snipper: ready [0.134 s]
+[2022-12-05 16:28:03.587] [I] Screenshot (680, 295, 1608 x 960) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T082802.602Z.png 
+[2022-12-05 16:28:03.592] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T082802.602Z.png 
+[2022-12-05 16:28:03.592] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T082802.602Z.png
+[2022-12-05 16:28:03.592] [I] Snipper: about to quit...
+[2022-12-05 16:28:03.601] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:28:03.610] [I] Snipper: hidden
+[2022-12-05 16:28:03.612] [I] Snipper: quit
+[2022-12-05 16:28:03.709] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T082802.602Z.png
+[2022-12-05 16:28:03.822] [I] Snipper: scene saved
+[2022-12-05 16:29:51.728] [I] Second instance: 4
+[2022-12-05 16:29:51.728] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T082951.199Z.png)
+[2022-12-05 16:29:51.729] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:29:51.729] [I] Snipper: preparing...
+[2022-12-05 16:29:51.729] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:29:51.809] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:29:51.809] [I] Screens: 1
+[2022-12-05 16:29:51.809] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:29:51.819] [I] Focus set
+[2022-12-05 16:29:51.820] [I] Snipper: preparation done (0)
+[2022-12-05 16:29:51.820] [I] Snipper: about to appear...
+[2022-12-05 16:29:51.820] [I] Snipper: prepare to show...
+[2022-12-05 16:29:51.825] [I] Snipper: shown
+[2022-12-05 16:29:51.858] [I] Snipper: focus in
+[2022-12-05 16:29:51.858] [I] Snipper: ready [0.129 s]
+[2022-12-05 16:29:52.433] [I] Screenshot (680, 295, 1702 x 924) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T082951.199Z.png 
+[2022-12-05 16:29:52.435] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T082951.199Z.png 
+[2022-12-05 16:29:52.435] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T082951.199Z.png
+[2022-12-05 16:29:52.436] [I] Snipper: about to quit...
+[2022-12-05 16:29:52.443] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:29:52.451] [I] Snipper: hidden
+[2022-12-05 16:29:52.452] [I] Snipper: quit
+[2022-12-05 16:29:52.556] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T082951.199Z.png
+[2022-12-05 16:29:52.683] [I] Snipper: scene saved
+[2022-12-05 16:34:10.800] [I] Second instance: 4
+[2022-12-05 16:34:10.800] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T083410.264Z.png)
+[2022-12-05 16:34:10.801] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:34:10.801] [I] Snipper: preparing...
+[2022-12-05 16:34:10.801] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:34:10.883] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:34:10.883] [I] Screens: 1
+[2022-12-05 16:34:10.883] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:34:10.891] [I] Focus set
+[2022-12-05 16:34:10.892] [I] Snipper: preparation done (0)
+[2022-12-05 16:34:10.892] [I] Snipper: about to appear...
+[2022-12-05 16:34:10.892] [I] Snipper: prepare to show...
+[2022-12-05 16:34:10.896] [I] Snipper: shown
+[2022-12-05 16:34:10.917] [I] Snipper: focus in
+[2022-12-05 16:34:10.918] [I] Snipper: ready [0.116 s]
+[2022-12-05 16:34:12.088] [I] Screenshot (680, 295, 1074 x 924) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T083410.264Z.png 
+[2022-12-05 16:34:12.090] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T083410.264Z.png 
+[2022-12-05 16:34:12.090] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T083410.264Z.png
+[2022-12-05 16:34:12.090] [I] Snipper: about to quit...
+[2022-12-05 16:34:12.097] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:34:12.104] [I] Snipper: hidden
+[2022-12-05 16:34:12.105] [I] Snipper: quit
+[2022-12-05 16:34:12.178] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T083410.264Z.png
+[2022-12-05 16:34:12.361] [I] Snipper: scene saved
+[2022-12-05 16:34:26.631] [I] Second instance: 4
+[2022-12-05 16:34:26.631] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T083426.357Z.png)
+[2022-12-05 16:34:26.631] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:34:26.631] [I] Snipper: preparing...
+[2022-12-05 16:34:26.631] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:34:26.701] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:34:26.701] [I] Screens: 1
+[2022-12-05 16:34:26.701] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:34:26.711] [I] Focus set
+[2022-12-05 16:34:26.712] [I] Snipper: preparation done (0)
+[2022-12-05 16:34:26.713] [I] Snipper: about to appear...
+[2022-12-05 16:34:26.713] [I] Snipper: prepare to show...
+[2022-12-05 16:34:26.716] [I] Snipper: shown
+[2022-12-05 16:34:26.742] [I] Snipper: focus in
+[2022-12-05 16:34:26.743] [I] Snipper: ready [0.111 s]
+[2022-12-05 16:34:28.126] [I] Screenshot (0, 0, 2560 x 1390) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T083426.357Z.png 
+[2022-12-05 16:34:28.134] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T083426.357Z.png 
+[2022-12-05 16:34:28.134] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T083426.357Z.png
+[2022-12-05 16:34:28.136] [I] Snipper: about to quit...
+[2022-12-05 16:34:28.143] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:34:28.150] [I] Snipper: hidden
+[2022-12-05 16:34:28.151] [I] Snipper: quit
+[2022-12-05 16:34:28.399] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T083426.357Z.png
+[2022-12-05 16:34:28.406] [I] Snipper: scene saved
+[2022-12-05 16:40:58.607] [I] Second instance: 4
+[2022-12-05 16:40:58.607] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084058.082Z.png)
+[2022-12-05 16:40:58.608] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:40:58.608] [I] Snipper: preparing...
+[2022-12-05 16:40:58.608] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:40:58.696] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:40:58.696] [I] Screens: 1
+[2022-12-05 16:40:58.696] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:40:58.707] [I] Focus set
+[2022-12-05 16:40:58.709] [I] Snipper: preparation done (0)
+[2022-12-05 16:40:58.709] [I] Snipper: about to appear...
+[2022-12-05 16:40:58.709] [I] Snipper: prepare to show...
+[2022-12-05 16:40:58.717] [I] Snipper: shown
+[2022-12-05 16:40:58.748] [I] Snipper: focus in
+[2022-12-05 16:40:58.748] [I] Snipper: ready [0.14 s]
+[2022-12-05 16:40:59.346] [I] Screenshot (680, 295, 1673 x 1002) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084058.082Z.png 
+[2022-12-05 16:40:59.351] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084058.082Z.png 
+[2022-12-05 16:40:59.351] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084058.082Z.png
+[2022-12-05 16:40:59.352] [I] Snipper: about to quit...
+[2022-12-05 16:40:59.362] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:40:59.368] [I] Snipper: hidden
+[2022-12-05 16:40:59.369] [I] Snipper: quit
+[2022-12-05 16:40:59.475] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084058.082Z.png
+[2022-12-05 16:40:59.597] [I] Snipper: scene saved
+[2022-12-05 16:41:42.762] [I] Second instance: 4
+[2022-12-05 16:41:42.763] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084142.196Z.png)
+[2022-12-05 16:41:42.764] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:41:42.764] [I] Snipper: preparing...
+[2022-12-05 16:41:42.764] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:41:43.041] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:41:43.041] [I] Screens: 1
+[2022-12-05 16:41:43.041] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:41:43.055] [I] Focus set
+[2022-12-05 16:41:43.057] [I] Snipper: preparation done (0)
+[2022-12-05 16:41:43.058] [I] Snipper: about to appear...
+[2022-12-05 16:41:43.058] [I] Snipper: prepare to show...
+[2022-12-05 16:41:43.063] [I] Snipper: shown
+[2022-12-05 16:41:43.110] [I] Snipper: focus in
+[2022-12-05 16:41:43.111] [I] Snipper: ready [0.34600000000000003 s]
+[2022-12-05 16:41:43.498] [I] Second instance: 4
+[2022-12-05 16:41:43.498] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084142.878Z.png)
+[2022-12-05 16:41:43.499] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:41:43.499] [W] Snipper has already started: 2
+[2022-12-05 16:41:48.801] [I] Screenshot (565, 523, 561 x 360) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084142.196Z.png 
+[2022-12-05 16:41:48.802] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084142.196Z.png 
+[2022-12-05 16:41:48.802] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084142.196Z.png
+[2022-12-05 16:41:48.805] [I] Snipper: about to quit...
+[2022-12-05 16:41:48.832] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:41:48.853] [I] Snipper: hidden
+[2022-12-05 16:41:48.859] [I] Snipper: quit
+[2022-12-05 16:41:48.898] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084142.196Z.png
+[2022-12-05 16:41:49.373] [I] Snipper: scene saved
+[2022-12-05 16:42:01.342] [I] Preloaded 28 files: 57 ms [every 29.6 m]
+[2022-12-05 16:42:10.825] [I] Second instance: 4
+[2022-12-05 16:42:10.826] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084210.086Z.png)
+[2022-12-05 16:42:10.829] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:42:10.829] [I] Snipper: preparing...
+[2022-12-05 16:42:10.829] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:42:11.032] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:42:11.032] [I] Screens: 1
+[2022-12-05 16:42:11.032] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:42:11.060] [I] Focus set
+[2022-12-05 16:42:11.062] [I] Snipper: preparation done (0)
+[2022-12-05 16:42:11.064] [I] Snipper: about to appear...
+[2022-12-05 16:42:11.064] [I] Snipper: prepare to show...
+[2022-12-05 16:42:11.081] [I] Snipper: shown
+[2022-12-05 16:42:11.170] [I] Snipper: focus in
+[2022-12-05 16:42:11.170] [I] Snipper: ready [0.34 s]
+[2022-12-05 16:42:13.215] [I] Screenshot (380, 115, 2180 x 1248) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084210.086Z.png 
+[2022-12-05 16:42:13.226] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084210.086Z.png 
+[2022-12-05 16:42:13.226] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084210.086Z.png
+[2022-12-05 16:42:13.233] [I] Snipper: about to quit...
+[2022-12-05 16:42:13.263] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:42:13.291] [I] Snipper: hidden
+[2022-12-05 16:42:13.296] [I] Snipper: quit
+[2022-12-05 16:42:13.679] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084210.086Z.png
+[2022-12-05 16:42:13.756] [I] Snipper: scene saved
+[2022-12-05 16:42:22.352] [I] Second instance: 4
+[2022-12-05 16:42:22.352] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084221.869Z.png)
+[2022-12-05 16:42:22.353] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:42:22.353] [I] Snipper: preparing...
+[2022-12-05 16:42:22.353] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:42:22.469] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:42:22.469] [I] Screens: 1
+[2022-12-05 16:42:22.469] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:42:22.480] [I] Focus set
+[2022-12-05 16:42:22.481] [I] Snipper: preparation done (0)
+[2022-12-05 16:42:22.482] [I] Snipper: about to appear...
+[2022-12-05 16:42:22.482] [I] Snipper: prepare to show...
+[2022-12-05 16:42:22.487] [I] Snipper: shown
+[2022-12-05 16:42:22.525] [I] Snipper: focus in
+[2022-12-05 16:42:22.525] [I] Snipper: ready [0.17200000000000001 s]
+[2022-12-05 16:42:41.031] [I] Screenshot (454, 156, 217 x 661) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084221.869Z.png 
+[2022-12-05 16:42:41.032] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084221.869Z.png 
+[2022-12-05 16:42:41.032] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084221.869Z.png
+[2022-12-05 16:42:41.037] [I] Snipper: about to quit...
+[2022-12-05 16:42:41.066] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:42:41.071] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084221.869Z.png
+[2022-12-05 16:42:41.109] [I] Snipper: hidden
+[2022-12-05 16:42:41.114] [I] Snipper: quit
+[2022-12-05 16:42:41.860] [I] Snipper: scene saved
+[2022-12-05 16:42:50.097] [I] Second instance: 4
+[2022-12-05 16:42:50.097] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084249.560Z.png)
+[2022-12-05 16:42:50.102] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:42:50.102] [I] Snipper: preparing...
+[2022-12-05 16:42:50.102] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:42:50.268] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:42:50.268] [I] Screens: 1
+[2022-12-05 16:42:50.268] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:42:50.283] [I] Focus set
+[2022-12-05 16:42:50.285] [I] Snipper: preparation done (0)
+[2022-12-05 16:42:50.285] [I] Snipper: about to appear...
+[2022-12-05 16:42:50.285] [I] Snipper: prepare to show...
+[2022-12-05 16:42:50.297] [I] Snipper: shown
+[2022-12-05 16:42:50.329] [I] Snipper: focus in
+[2022-12-05 16:42:50.329] [I] Snipper: ready [0.226 s]
+[2022-12-05 16:42:58.174] [I] Screenshot (723, 126, 270 x 383) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084249.560Z.png 
+[2022-12-05 16:42:58.175] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084249.560Z.png 
+[2022-12-05 16:42:58.175] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084249.560Z.png
+[2022-12-05 16:42:58.176] [I] Snipper: about to quit...
+[2022-12-05 16:42:58.202] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:42:58.212] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084249.560Z.png
+[2022-12-05 16:42:58.229] [I] Snipper: hidden
+[2022-12-05 16:42:58.234] [I] Snipper: quit
+[2022-12-05 16:42:58.709] [I] Snipper: scene saved
+[2022-12-05 16:44:09.101] [I] Second instance: 4
+[2022-12-05 16:44:09.101] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2022-12-05T084408.488Z.png)
+[2022-12-05 16:44:09.102] [I] Snip request: 0 (dest: 64)
+[2022-12-05 16:44:09.102] [I] Snipper: preparing...
+[2022-12-05 16:44:09.102] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2022-12-05 16:44:09.326] [I] Background size: QSize(2560, 1440)
+[2022-12-05 16:44:09.326] [I] Screens: 1
+[2022-12-05 16:44:09.326] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2022-12-05 16:44:09.369] [I] Focus set
+[2022-12-05 16:44:09.375] [I] Snipper: preparation done (0)
+[2022-12-05 16:44:09.384] [I] Snipper: about to appear...
+[2022-12-05 16:44:09.384] [I] Snipper: prepare to show...
+[2022-12-05 16:44:09.395] [I] Snipper: shown
+[2022-12-05 16:44:09.436] [I] Snipper: focus in
+[2022-12-05 16:44:09.436] [I] Snipper: ready [0.333 s]
+[2022-12-05 16:44:17.705] [I] Screenshot (0, 1073, 635 x 318) destination: file: C:\Users\Public\Desktop\screenshot2022-12-05T084408.488Z.png 
+[2022-12-05 16:44:17.706] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2022-12-05T084408.488Z.png 
+[2022-12-05 16:44:17.706] [I] Save with file names: C:\Users\Public\Desktop\screenshot2022-12-05T084408.488Z.png
+[2022-12-05 16:44:17.711] [I] Snipper: about to quit...
+[2022-12-05 16:44:17.740] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2022-12-05 16:44:17.767] [I] Snipper: hidden
+[2022-12-05 16:44:17.768] [I] Image saved to: C:/Users/Public/Desktop/screenshot2022-12-05T084408.488Z.png
+[2022-12-05 16:44:17.774] [I] Snipper: quit
+[2022-12-05 16:44:18.251] [I] Snipper: scene saved
+[2023-02-02 19:16:55.667] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-02 19:16:55.669] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-02 19:16:55.672] [E] 下载更新源失败。
+网络错误：3
+[2023-02-02 19:16:55.688] [I] Preloaded 28 files: 70 ms [every 30.0 m]
+[2023-02-02 19:45:51.095] [I] Preloaded 28 files: 90 ms [every 30.0 m]
+[2023-02-10 18:33:21.219] [I] Preloaded 28 files: 123 ms [every 30.0 m]
+[2023-02-10 18:33:21.302] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-10 18:33:21.310] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-10 18:33:21.344] [E] 下载更新源失败。
+网络错误：3
+[2023-02-10 19:03:21.334] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-13 10:02:56.414] [I] Preloaded 28 files: 214 ms [every 30.0 m]
+[2023-02-13 10:02:56.570] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-13 10:02:56.572] [W] Feed error: 下载更新源失败。
+网络错误：3
+[2023-02-13 10:02:56.573] [E] 下载更新源失败。
+网络错误：3
+[2023-02-13 10:25:26.615] [I] Preloaded 28 files: 58 ms [every 22.5 m]
+[2023-02-13 10:53:34.647] [I] Preloaded 28 files: 27 ms [every 28.1 m]
+[2023-02-13 11:23:34.691] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-13 11:53:34.724] [I] Preloaded 28 files: 27 ms [every 30.0 m]
+[2023-02-13 12:23:34.819] [I] Preloaded 28 files: 90 ms [every 30.0 m]
+[2023-02-13 12:53:34.845] [I] Preloaded 28 files: 35 ms [every 30.0 m]
+[2023-02-13 13:23:34.877] [I] Preloaded 28 files: 31 ms [every 30.0 m]
+[2023-02-13 13:53:34.910] [I] Preloaded 28 files: 32 ms [every 30.0 m]
+[2023-02-13 14:23:34.945] [I] Preloaded 28 files: 33 ms [every 30.0 m]
+[2023-02-13 14:53:34.968] [I] Preloaded 28 files: 25 ms [every 30.0 m]
+[2023-02-13 15:23:35.003] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-13 15:53:35.053] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-13 16:23:35.105] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-13 16:53:35.133] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-13 17:23:35.190] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-13 17:53:35.254] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-13 18:23:35.314] [I] Preloaded 28 files: 65 ms [every 30.0 m]
+[2023-02-13 18:53:35.391] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-13 19:23:35.433] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-13 19:53:35.494] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-13 20:23:35.553] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-13 20:53:35.576] [I] Preloaded 28 files: 30 ms [every 30.0 m]
+[2023-02-13 21:23:35.688] [I] Preloaded 28 files: 86 ms [every 30.0 m]
+[2023-02-13 21:53:35.738] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-13 22:23:35.779] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-13 22:53:35.834] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-13 23:23:35.879] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-13 23:53:35.929] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-14 00:23:36.038] [I] Preloaded 28 files: 101 ms [every 30.0 m]
+[2023-02-14 00:53:36.088] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-14 01:23:36.147] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-14 01:53:36.192] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 02:23:36.242] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-14 02:53:36.309] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-14 03:23:36.394] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-14 03:53:36.464] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-14 04:23:36.529] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-14 04:53:36.580] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-14 05:23:36.629] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-14 05:53:36.671] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-14 06:23:36.738] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-14 06:53:36.784] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-14 07:23:36.849] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-14 07:53:36.909] [I] Preloaded 28 files: 68 ms [every 30.0 m]
+[2023-02-14 08:23:36.963] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 08:53:37.030] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 09:23:37.132] [I] Preloaded 28 files: 84 ms [every 30.0 m]
+[2023-02-14 09:53:37.192] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-14 10:02:57.481] [I] Silent feed checking finished
+[2023-02-14 10:02:57.481] [I] No available update
+[2023-02-14 10:23:37.237] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-14 10:53:37.274] [I] Preloaded 28 files: 41 ms [every 30.0 m]
+[2023-02-14 11:23:37.312] [I] Preloaded 28 files: 38 ms [every 30.0 m]
+[2023-02-14 11:53:37.364] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-14 12:23:37.407] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-14 12:53:37.447] [I] Preloaded 28 files: 33 ms [every 30.0 m]
+[2023-02-14 13:23:37.504] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-14 13:53:37.553] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 14:23:37.597] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-14 14:53:37.647] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 15:23:37.682] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-14 15:53:37.749] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-14 16:23:37.765] [I] Preloaded 28 files: 15 ms [every 30.0 m]
+[2023-02-14 16:53:37.807] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-14 17:23:37.896] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-14 17:53:37.947] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-14 18:23:38.054] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-14 18:53:38.109] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-14 19:23:38.179] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-14 19:53:38.231] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-14 20:23:38.290] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-14 20:53:38.311] [I] Preloaded 28 files: 11 ms [every 30.0 m]
+[2023-02-14 21:23:38.382] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-14 21:53:38.447] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-14 22:23:38.509] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-14 22:53:38.574] [I] Preloaded 28 files: 65 ms [every 30.0 m]
+[2023-02-14 23:23:38.646] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-14 23:53:38.722] [I] Preloaded 28 files: 74 ms [every 30.0 m]
+[2023-02-15 00:23:38.768] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-15 00:53:38.852] [I] Preloaded 28 files: 71 ms [every 30.0 m]
+[2023-02-15 01:23:38.886] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-15 01:53:38.965] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-02-15 02:23:39.019] [I] Preloaded 28 files: 37 ms [every 30.0 m]
+[2023-02-15 02:53:39.095] [I] Preloaded 28 files: 74 ms [every 30.0 m]
+[2023-02-15 03:23:39.169] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-15 03:53:39.254] [I] Preloaded 28 files: 67 ms [every 30.0 m]
+[2023-02-15 04:23:39.292] [I] Preloaded 28 files: 36 ms [every 30.0 m]
+[2023-02-15 04:53:39.480] [I] Preloaded 28 files: 185 ms [every 30.0 m]
+[2023-02-15 05:16:09.541] [I] Preloaded 28 files: 50 ms [every 22.5 m]
+[2023-02-15 05:44:17.602] [I] Preloaded 28 files: 48 ms [every 28.1 m]
+[2023-02-15 06:14:17.653] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-15 06:44:17.706] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-15 07:14:17.784] [I] Preloaded 28 files: 68 ms [every 30.0 m]
+[2023-02-15 07:44:17.833] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-15 08:14:17.878] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-15 08:44:17.957] [I] Preloaded 28 files: 77 ms [every 30.0 m]
+[2023-02-15 09:14:18.046] [I] Preloaded 28 files: 80 ms [every 30.0 m]
+[2023-02-15 09:44:18.097] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-15 10:02:57.530] [I] Silent feed checking finished
+[2023-02-15 10:02:57.531] [I] No available update
+[2023-02-15 10:14:18.154] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-15 10:44:18.219] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-15 11:14:18.332] [I] Preloaded 28 files: 89 ms [every 30.0 m]
+[2023-02-15 11:44:18.397] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-15 12:14:18.461] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-15 12:44:18.516] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-15 13:14:18.586] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-15 13:44:18.638] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-15 14:14:18.675] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-15 14:44:18.719] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-15 15:14:18.799] [I] Preloaded 28 files: 70 ms [every 30.0 m]
+[2023-02-15 15:44:18.856] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-15 16:14:18.945] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-15 16:44:19.024] [I] Preloaded 28 files: 73 ms [every 30.0 m]
+[2023-02-15 17:14:19.092] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-15 17:44:19.142] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-15 18:14:19.209] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-15 18:44:19.250] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-15 19:14:19.307] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-15 19:44:19.379] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-15 20:14:19.416] [I] Preloaded 28 files: 35 ms [every 30.0 m]
+[2023-02-15 20:44:19.483] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-15 21:14:19.532] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-15 21:44:19.568] [I] Preloaded 28 files: 39 ms [every 30.0 m]
+[2023-02-15 22:14:19.652] [I] Preloaded 28 files: 65 ms [every 30.0 m]
+[2023-02-15 22:44:19.715] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-15 23:14:19.788] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-15 23:44:19.846] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-16 00:14:19.897] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-16 00:44:19.958] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-16 01:14:20.004] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-16 01:44:20.039] [I] Preloaded 28 files: 31 ms [every 30.0 m]
+[2023-02-16 02:14:20.071] [I] Preloaded 28 files: 32 ms [every 30.0 m]
+[2023-02-16 02:44:20.149] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-16 03:14:20.218] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-16 03:44:20.297] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-16 04:14:20.392] [I] Preloaded 28 files: 88 ms [every 30.0 m]
+[2023-02-16 04:44:20.454] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-16 05:14:20.512] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-16 05:44:20.564] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-16 06:14:20.633] [I] Preloaded 28 files: 70 ms [every 30.0 m]
+[2023-02-16 06:44:20.696] [I] Preloaded 28 files: 72 ms [every 30.0 m]
+[2023-02-16 07:14:20.737] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-16 07:44:20.783] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-16 08:14:20.845] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-16 08:44:20.906] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-16 09:14:20.962] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-16 09:44:21.005] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-16 10:02:57.496] [I] Silent feed checking finished
+[2023-02-16 10:02:57.496] [I] No available update
+[2023-02-16 10:14:21.035] [I] Preloaded 28 files: 33 ms [every 30.0 m]
+[2023-02-16 10:44:21.146] [I] Preloaded 28 files: 83 ms [every 30.0 m]
+[2023-02-16 11:14:21.217] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-16 11:44:21.278] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-16 12:14:21.338] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-16 12:44:21.413] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-02-16 13:14:21.421] [I] Preloaded 28 files: 9 ms [every 30.0 m]
+[2023-02-16 13:44:21.457] [I] Preloaded 28 files: 24 ms [every 30.0 m]
+[2023-02-16 14:14:21.511] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-16 14:44:21.553] [I] Preloaded 28 files: 37 ms [every 30.0 m]
+[2023-02-16 15:14:21.586] [I] Preloaded 28 files: 35 ms [every 30.0 m]
+[2023-02-16 15:44:21.646] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-16 16:14:21.692] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-16 16:44:21.758] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-16 17:14:21.829] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-16 17:44:21.894] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-16 18:14:21.976] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-16 18:44:22.014] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-16 19:14:22.064] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-16 19:44:22.136] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-16 20:14:22.192] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-16 20:44:22.252] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-16 21:14:22.320] [I] Preloaded 28 files: 67 ms [every 30.0 m]
+[2023-02-16 21:44:22.394] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-16 22:14:22.438] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-16 22:44:22.524] [I] Preloaded 28 files: 85 ms [every 30.0 m]
+[2023-02-16 23:14:22.587] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-16 23:44:22.650] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-17 00:14:22.736] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-17 00:44:22.789] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-17 01:14:22.831] [I] Preloaded 28 files: 41 ms [every 30.0 m]
+[2023-02-17 01:44:22.862] [I] Preloaded 28 files: 32 ms [every 30.0 m]
+[2023-02-17 02:14:22.907] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-17 02:44:22.982] [I] Preloaded 28 files: 68 ms [every 30.0 m]
+[2023-02-17 03:14:23.050] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-17 03:44:23.101] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-17 04:14:23.182] [I] Preloaded 28 files: 70 ms [every 30.0 m]
+[2023-02-17 04:44:23.303] [I] Preloaded 28 files: 74 ms [every 30.0 m]
+[2023-02-17 05:14:23.349] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-17 05:44:23.397] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-17 06:14:23.456] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-17 06:44:23.530] [I] Preloaded 28 files: 77 ms [every 30.0 m]
+[2023-02-17 07:14:23.601] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-17 07:44:23.664] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-17 08:14:23.712] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-17 08:44:23.792] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-17 09:14:23.842] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-17 09:44:23.897] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-17 10:02:57.638] [I] Silent feed checking finished
+[2023-02-17 10:02:57.638] [I] No available update
+[2023-02-17 10:14:23.933] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-17 10:44:23.999] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-17 11:14:24.072] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-17 11:44:24.152] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-17 12:14:24.221] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-17 12:44:24.263] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-17 13:14:24.299] [I] Preloaded 28 files: 29 ms [every 30.0 m]
+[2023-02-17 13:44:24.329] [I] Preloaded 28 files: 36 ms [every 30.0 m]
+[2023-02-17 14:14:24.361] [I] Preloaded 28 files: 30 ms [every 30.0 m]
+[2023-02-17 14:44:24.443] [I] Preloaded 28 files: 65 ms [every 30.0 m]
+[2023-02-17 15:14:24.509] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-17 15:44:24.543] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-17 16:14:24.610] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-17 16:44:24.650] [I] Preloaded 28 files: 39 ms [every 30.0 m]
+[2023-02-17 17:14:24.725] [I] Preloaded 28 files: 65 ms [every 30.0 m]
+[2023-02-17 17:44:24.782] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-17 18:14:24.835] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-17 18:44:24.871] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-17 19:14:24.933] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-17 19:44:24.991] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-17 20:14:25.034] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-17 20:44:25.093] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-17 21:14:25.154] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-17 21:44:25.201] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-17 22:14:25.244] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-17 22:44:25.301] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-17 23:14:25.391] [I] Preloaded 28 files: 76 ms [every 30.0 m]
+[2023-02-17 23:44:25.451] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-18 00:14:25.515] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-18 00:44:25.575] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 01:14:25.650] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-18 01:44:25.735] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-18 02:14:25.788] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 02:44:25.853] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-18 03:14:25.904] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-18 03:44:25.985] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-18 04:14:26.057] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-18 04:44:26.120] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-18 05:14:26.189] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-18 05:44:26.278] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-02-18 06:14:26.330] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-18 06:44:26.390] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-18 07:14:26.435] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-18 07:44:26.499] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-18 08:14:26.545] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-18 08:44:26.605] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-18 09:14:26.670] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-18 09:44:26.737] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-18 10:02:57.636] [I] Silent feed checking finished
+[2023-02-18 10:02:57.636] [I] No available update
+[2023-02-18 10:14:26.788] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-18 10:44:26.844] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-18 11:14:26.895] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 11:44:26.975] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-18 12:14:27.031] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-18 12:44:27.090] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-18 13:14:27.168] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-18 13:44:27.222] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 14:14:27.266] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 14:44:27.310] [I] Preloaded 28 files: 36 ms [every 30.0 m]
+[2023-02-18 15:14:27.369] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-18 15:44:27.421] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-18 16:14:27.499] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-18 16:44:27.561] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-18 17:14:27.608] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-18 17:44:27.688] [I] Preloaded 28 files: 67 ms [every 30.0 m]
+[2023-02-18 18:14:27.740] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-18 18:44:27.782] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-18 19:14:27.829] [I] Preloaded 28 files: 41 ms [every 30.0 m]
+[2023-02-18 19:44:27.872] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-18 20:14:27.917] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-18 20:44:27.987] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-18 21:14:28.050] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-18 21:44:28.099] [I] Preloaded 28 files: 50 ms [every 30.0 m]
+[2023-02-18 22:14:28.139] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-18 22:44:28.190] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-18 23:14:28.279] [I] Preloaded 28 files: 72 ms [every 30.0 m]
+[2023-02-18 23:44:28.345] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-19 00:14:28.395] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-19 00:44:28.468] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-19 01:14:28.524] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-19 01:44:28.563] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-19 02:14:28.637] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-19 02:44:28.711] [I] Preloaded 28 files: 52 ms [every 30.0 m]
+[2023-02-19 03:14:28.766] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-19 03:44:28.807] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-19 04:14:28.875] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-19 04:44:28.944] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-19 05:14:29.001] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-19 05:44:29.046] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-19 06:14:29.146] [I] Preloaded 28 files: 73 ms [every 30.0 m]
+[2023-02-19 06:44:29.187] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-19 07:14:29.245] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-19 07:44:29.311] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-19 08:14:29.362] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-19 08:44:29.403] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-19 09:14:29.450] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-19 09:44:29.510] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-19 10:02:57.678] [I] Silent feed checking finished
+[2023-02-19 10:02:57.678] [I] No available update
+[2023-02-19 10:14:29.563] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-19 10:44:29.621] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-19 11:14:29.690] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-19 11:44:29.736] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-19 12:14:29.810] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-19 12:44:29.880] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-19 13:14:29.923] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-19 13:44:29.975] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-19 14:14:30.039] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-19 14:44:30.083] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-19 15:14:30.137] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-19 15:44:30.189] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-19 16:14:30.254] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-19 16:44:30.308] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-19 17:14:30.374] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-19 17:44:30.428] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-19 18:14:30.515] [I] Preloaded 28 files: 77 ms [every 30.0 m]
+[2023-02-19 18:44:30.597] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-19 19:14:30.649] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-19 19:44:30.708] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-19 20:14:30.763] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-19 20:44:30.839] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-19 21:14:30.911] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-19 21:44:30.952] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-19 22:14:31.014] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-19 22:44:31.080] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-19 23:14:31.127] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-19 23:44:31.193] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-20 00:14:31.250] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-20 00:44:31.361] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-20 01:14:31.404] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-20 01:44:31.484] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-20 02:14:31.536] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-20 02:44:31.582] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-20 03:14:31.659] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-02-20 03:44:31.710] [I] Preloaded 28 files: 41 ms [every 30.0 m]
+[2023-02-20 04:14:31.765] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-20 04:44:31.810] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-20 05:14:31.848] [I] Preloaded 28 files: 36 ms [every 30.0 m]
+[2023-02-20 05:44:31.926] [I] Preloaded 28 files: 66 ms [every 30.0 m]
+[2023-02-20 06:14:31.983] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-20 06:44:32.079] [I] Preloaded 28 files: 78 ms [every 30.0 m]
+[2023-02-20 07:14:32.146] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-20 07:44:32.194] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-20 08:14:32.248] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-20 08:44:32.293] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-20 09:14:32.355] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-20 09:44:32.420] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-20 10:02:57.690] [I] Silent feed checking finished
+[2023-02-20 10:02:57.690] [I] No available update
+[2023-02-20 10:14:32.476] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-20 10:44:32.501] [I] Preloaded 28 files: 32 ms [every 30.0 m]
+[2023-02-20 11:14:32.561] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-20 11:44:32.613] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-20 12:14:32.661] [I] Preloaded 28 files: 44 ms [every 30.0 m]
+[2023-02-20 12:44:32.723] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-20 13:14:32.802] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-02-20 13:44:32.874] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-20 14:14:32.955] [I] Preloaded 28 files: 64 ms [every 30.0 m]
+[2023-02-20 14:44:32.985] [I] Preloaded 28 files: 31 ms [every 30.0 m]
+[2023-02-20 15:14:33.019] [I] Preloaded 28 files: 29 ms [every 30.0 m]
+[2023-02-20 15:44:33.071] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-20 16:14:33.108] [I] Preloaded 28 files: 40 ms [every 30.0 m]
+[2023-02-20 16:44:33.177] [I] Preloaded 28 files: 59 ms [every 30.0 m]
+[2023-02-20 17:14:33.220] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-20 17:44:33.255] [I] Preloaded 28 files: 35 ms [every 30.0 m]
+[2023-02-20 18:14:33.295] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-02-20 18:44:33.361] [I] Preloaded 28 files: 56 ms [every 30.0 m]
+[2023-02-20 19:14:33.415] [I] Preloaded 28 files: 49 ms [every 30.0 m]
+[2023-02-20 19:44:33.464] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-20 20:14:33.524] [I] Preloaded 28 files: 42 ms [every 30.0 m]
+[2023-02-20 20:44:33.548] [I] Preloaded 28 files: 29 ms [every 30.0 m]
+[2023-02-20 21:14:33.579] [I] Preloaded 28 files: 34 ms [every 30.0 m]
+[2023-02-20 21:44:33.649] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-20 22:14:33.706] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-20 22:44:33.754] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-20 23:14:33.791] [I] Preloaded 28 files: 36 ms [every 30.0 m]
+[2023-02-20 23:44:33.846] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-21 00:14:33.911] [I] Preloaded 28 files: 47 ms [every 30.0 m]
+[2023-02-21 00:44:33.958] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-21 01:14:34.048] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-21 01:44:34.119] [I] Preloaded 28 files: 67 ms [every 30.0 m]
+[2023-02-21 02:14:34.180] [I] Preloaded 28 files: 41 ms [every 30.0 m]
+[2023-02-21 02:44:34.241] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-21 03:14:34.282] [I] Preloaded 28 files: 46 ms [every 30.0 m]
+[2023-02-21 03:44:34.336] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-21 04:14:34.388] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-21 04:44:34.457] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-21 05:14:34.520] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-21 05:44:34.553] [I] Preloaded 28 files: 37 ms [every 30.0 m]
+[2023-02-21 06:14:34.604] [I] Preloaded 28 files: 55 ms [every 30.0 m]
+[2023-02-21 06:44:34.666] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-21 07:14:34.763] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-21 07:44:34.843] [I] Preloaded 28 files: 60 ms [every 30.0 m]
+[2023-02-21 08:14:34.890] [I] Preloaded 28 files: 43 ms [every 30.0 m]
+[2023-02-21 08:44:34.978] [I] Preloaded 28 files: 69 ms [every 30.0 m]
+[2023-02-21 09:14:35.050] [I] Preloaded 28 files: 61 ms [every 30.0 m]
+[2023-02-21 09:44:35.110] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-21 10:02:57.715] [I] Silent feed checking finished
+[2023-02-21 10:02:57.715] [I] No available update
+[2023-02-21 10:14:35.169] [I] Preloaded 28 files: 53 ms [every 30.0 m]
+[2023-02-21 10:44:35.230] [I] Preloaded 28 files: 54 ms [every 30.0 m]
+[2023-02-21 11:14:35.266] [I] Preloaded 28 files: 29 ms [every 30.0 m]
+[2023-02-21 11:44:35.357] [I] Preloaded 28 files: 70 ms [every 30.0 m]
+[2023-02-21 12:14:35.449] [I] Preloaded 28 files: 68 ms [every 30.0 m]
+[2023-02-21 12:44:35.507] [I] Preloaded 28 files: 51 ms [every 30.0 m]
+[2023-02-21 13:14:35.557] [I] Preloaded 28 files: 48 ms [every 30.0 m]
+[2023-02-21 13:44:35.642] [I] Preloaded 28 files: 58 ms [every 30.0 m]
+[2023-02-21 14:14:35.708] [I] Preloaded 28 files: 57 ms [every 30.0 m]
+[2023-02-21 14:44:35.773] [I] Preloaded 28 files: 63 ms [every 30.0 m]
+[2023-02-21 15:14:35.806] [I] Preloaded 28 files: 30 ms [every 30.0 m]
+[2023-02-21 15:44:35.844] [I] Preloaded 28 files: 31 ms [every 30.0 m]
+[2023-02-21 16:14:35.882] [I] Preloaded 28 files: 33 ms [every 30.0 m]
+[2023-04-28 11:41:18.805] [I] ***************************************************************
+[2023-04-28 11:41:18.806] [I] Snipaste 2.8.2-Beta x64 (Desktop) (Qt 6.2.4)
+[2023-04-28 11:41:18.806] [I] OS: Windows 11 Version 2009 [10.0.22621]
+[2023-04-28 11:41:18.807] [I] Cores: 8
+[2023-04-28 11:41:18.807] [I] Elevated: true
+[2023-04-28 11:41:18.807] [I] Log level: 2
+[2023-04-28 11:41:18.807] [I] Application dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64
+[2023-04-28 11:41:18.807] [I] Working dir: D:/work/im_electron_demo
+[2023-04-28 11:41:18.807] [I] Config: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2023-04-28 11:41:18.807] [I] Library paths: (D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64)
+[2023-04-28 11:41:18.807] [I] Screen scale: 1.25
+[2023-04-28 11:41:18.807] [I] Retina factor: 1
+[2023-04-28 11:41:18.807] [I] Screens: 1
+[2023-04-28 11:41:18.807] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2023-04-28 11:41:18.882] [I] Desktops: -1
+[2023-04-28 11:41:18.882] [I] Compatability layer: 
+[2023-04-28 11:41:18.882] [I] About to import settings from: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/config.ini
+[2023-04-28 11:41:18.888] [I] Settings imported
+[2023-04-28 11:41:18.910] [I] Breakpad initialized
+[2023-04-28 11:41:19.943] [I] OpenGL acceleration: false
+[2023-04-28 11:41:19.946] [I] Process priority: 1
+[2023-04-28 11:41:19.946] [I] Initializing Snipaste...
+[2023-04-28 11:41:20.530] [I] Prefetch...
+[2023-04-28 11:41:20.550] [I] Preloaded 28 files: 18 ms
+[2023-04-28 11:41:20.716] [I] Load default ssl configuration: 184 ms
+[2023-04-28 11:41:20.882] [I] About to apply settings...
+[2023-04-28 11:41:20.911] [I] Settings applied
+[2023-04-28 11:41:20.921] [I] Log level set to: 2
+[2023-04-28 11:41:20.970] [I] History dir: D:/work/im_electron_demo/src/Snipaste-2.8.2-Beta-x64/history
+[2023-04-28 11:41:20.971] [I] Header version: 195
+[2023-04-28 11:41:20.971] [I] About to restore pasters...
+[2023-04-28 11:41:20.972] [I] Group 0 [KH9MTN]: "Default"
+[2023-04-28 11:41:20.972] [I] Record version: 195
+[2023-04-28 11:41:20.972] [I] To restore: 0
+[2023-04-28 11:41:20.972] [I] Pasters touched
+[2023-04-28 11:41:20.972] [I] All pasters activated: true
+[2023-04-28 11:41:21.084] [I] Unref images: 0 (0 removed)
+[2023-04-28 11:41:21.084] [I] Unref dirs: 0 (0 removed)
+[2023-04-28 11:41:21.085] [I] Empty history info files: 0 (0 removed)
+[2023-04-28 11:41:21.085] [I] Pasters restored
+[2023-04-28 11:41:21.085] [I] Launch time: 2280 ms
+[2023-04-28 11:41:21.405] [I] Second instance: 4
+[2023-04-28 11:41:21.405] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2023-04-28T034120.962Z.png)
+[2023-04-28 11:41:21.406] [I] Snip request: 0 (dest: 64)
+[2023-04-28 11:41:21.406] [I] Snipper: preparing...
+[2023-04-28 11:41:21.406] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2023-04-28 11:41:21.506] [I] Background size: QSize(2560, 1440)
+[2023-04-28 11:41:21.506] [I] Screens: 1
+[2023-04-28 11:41:21.506] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2023-04-28 11:41:21.513] [I] Focus set
+[2023-04-28 11:41:21.515] [I] Snipper: preparation done (0)
+[2023-04-28 11:41:21.515] [I] Snipper: about to appear...
+[2023-04-28 11:41:21.515] [I] Snipper: prepare to show...
+[2023-04-28 11:41:21.520] [I] Snipper: shown
+[2023-04-28 11:41:21.545] [I] Snipper: focus in
+[2023-04-28 11:41:21.545] [I] Snipper: ready [0.139 s]
+[2023-04-28 11:41:23.456] [I] Screenshot (638, 197, 1766 x 1039) destination: file: C:\Users\Public\Desktop\screenshot2023-04-28T034120.962Z.png 
+[2023-04-28 11:41:23.459] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2023-04-28T034120.962Z.png 
+[2023-04-28 11:41:23.459] [I] Save with file names: C:\Users\Public\Desktop\screenshot2023-04-28T034120.962Z.png
+[2023-04-28 11:41:23.460] [I] Snipper: about to quit...
+[2023-04-28 11:41:23.466] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2023-04-28 11:41:23.472] [I] Snipper: hidden
+[2023-04-28 11:41:23.474] [I] Snipper: quit
+[2023-04-28 11:41:23.677] [I] Image saved to: C:/Users/Public/Desktop/screenshot2023-04-28T034120.962Z.png
+[2023-04-28 11:41:23.835] [I] Snipper: scene saved
+[2023-04-28 11:41:49.766] [I] Second instance: 4
+[2023-04-28 11:41:49.766] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2023-04-28T034149.323Z.png)
+[2023-04-28 11:41:49.767] [I] Snip request: 0 (dest: 64)
+[2023-04-28 11:41:49.767] [I] Snipper: preparing...
+[2023-04-28 11:41:49.767] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2023-04-28 11:41:49.841] [I] Background size: QSize(2560, 1440)
+[2023-04-28 11:41:49.841] [I] Screens: 1
+[2023-04-28 11:41:49.841] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2023-04-28 11:41:49.851] [I] Focus set
+[2023-04-28 11:41:49.852] [I] Snipper: preparation done (0)
+[2023-04-28 11:41:49.853] [I] Snipper: about to appear...
+[2023-04-28 11:41:49.853] [I] Snipper: prepare to show...
+[2023-04-28 11:41:49.856] [I] Snipper: shown
+[2023-04-28 11:41:49.880] [I] Snipper: focus in
+[2023-04-28 11:41:49.880] [I] Snipper: ready [0.112 s]
+[2023-04-28 11:41:51.527] [I] Screenshot (0, 0, 2560 x 1380) destination: file: C:\Users\Public\Desktop\screenshot2023-04-28T034149.323Z.png 
+[2023-04-28 11:41:51.532] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2023-04-28T034149.323Z.png 
+[2023-04-28 11:41:51.532] [I] Save with file names: C:\Users\Public\Desktop\screenshot2023-04-28T034149.323Z.png
+[2023-04-28 11:41:51.533] [I] Snipper: about to quit...
+[2023-04-28 11:41:51.539] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2023-04-28 11:41:51.545] [I] Snipper: hidden
+[2023-04-28 11:41:51.546] [I] Snipper: quit
+[2023-04-28 11:41:51.883] [I] Image saved to: C:/Users/Public/Desktop/screenshot2023-04-28T034149.323Z.png
+[2023-04-28 11:41:51.908] [I] Snipper: scene saved
+[2023-04-28 11:42:21.887] [I] Silent feed checking finished
+[2023-04-28 11:42:21.887] [I] No available update
+[2023-04-28 11:49:06.037] [I] Preloaded 28 files: 54 ms [every 7.8 m]
+[2023-04-28 11:58:47.089] [I] Preloaded 28 files: 49 ms [every 9.7 m]
+[2023-04-28 12:10:54.135] [I] Preloaded 28 files: 49 ms [every 12.1 m]
+[2023-04-28 12:26:02.145] [I] Preloaded 28 files: 10 ms [every 15.1 m]
+[2023-04-28 12:44:57.200] [I] Preloaded 28 files: 53 ms [every 18.9 m]
+[2023-04-28 13:08:36.232] [I] Preloaded 28 files: 41 ms [every 23.7 m]
+[2023-04-28 13:38:10.291] [I] Preloaded 28 files: 59 ms [every 29.6 m]
+[2023-04-28 14:08:10.347] [I] Preloaded 28 files: 62 ms [every 30.0 m]
+[2023-04-28 14:38:10.428] [I] Preloaded 28 files: 75 ms [every 30.0 m]
+[2023-04-28 15:08:10.469] [I] Preloaded 28 files: 45 ms [every 30.0 m]
+[2023-04-28 15:36:52.644] [I] Second instance: 4
+[2023-04-28 15:36:52.646] [I] Parsing command arguments [3]: (D:\work\im_electron_demo\src\Snipaste-2.8.2-Beta-x64\Snipaste.exe, snip, -o, C:\Users\Public\Desktop\screenshot2023-04-28T073652.308Z.png)
+[2023-04-28 15:36:52.651] [I] Snip request: 0 (dest: 64)
+[2023-04-28 15:36:52.651] [I] Snipper: preparing...
+[2023-04-28 15:36:52.652] [I] Desktop: QRect(0, 0, 2560 x 1440)
+[2023-04-28 15:36:52.768] [I] Background size: QSize(2560, 1440)
+[2023-04-28 15:36:52.768] [I] Screens: 1
+[2023-04-28 15:36:52.768] [I]     QRect(0, 0, 2560 x 1440), DPI = 120 , DPR = 1
+[2023-04-28 15:36:52.780] [I] Focus set
+[2023-04-28 15:36:52.784] [I] Snipper: preparation done (0)
+[2023-04-28 15:36:52.794] [I] Snipper: about to appear...
+[2023-04-28 15:36:52.794] [I] Snipper: prepare to show...
+[2023-04-28 15:36:52.798] [I] Snipper: shown
+[2023-04-28 15:36:52.831] [I] Snipper: focus in
+[2023-04-28 15:36:52.831] [I] Snipper: ready [0.18 s]
+[2023-04-28 15:36:54.154] [I] Screenshot (680, 290, 1576 x 927) destination: file: C:\Users\Public\Desktop\screenshot2023-04-28T073652.308Z.png 
+[2023-04-28 15:36:54.157] [I] Screenshot successfully saved: file: C:\Users\Public\Desktop\screenshot2023-04-28T073652.308Z.png 
+[2023-04-28 15:36:54.157] [I] Save with file names: C:\Users\Public\Desktop\screenshot2023-04-28T073652.308Z.png
+[2023-04-28 15:36:54.160] [I] Snipper: about to quit...
+[2023-04-28 15:36:54.169] [I] Snipper: focus out [3] (Foreground window: Snipper - Snipaste)
+[2023-04-28 15:36:54.181] [I] Snipper: hidden
+[2023-04-28 15:36:54.184] [I] Snipper: quit
+[2023-04-28 15:36:54.307] [I] Image saved to: C:/Users/Public/Desktop/screenshot2023-04-28T073652.308Z.png
+[2023-04-28 15:36:54.521] [I] Snipper: scene saved
+[2023-04-28 15:38:10.493] [I] Preloaded 28 files: 19 ms [every 30.0 m]

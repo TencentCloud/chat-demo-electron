@@ -304,8 +304,8 @@ export const ConversationList = (): JSX.Element => {
                 {
                     conversationList.map((item) => {
                         const { conv_profile, conv_id, conv_last_msg, conv_unread_num, conv_type, conv_is_pinned, conv_group_at_info_array, conv_recv_opt, conv_is_has_draft, conv_draft } = item;
-                        const faceUrl = conv_profile.user_profile_face_url ?? conv_profile.group_detial_info_face_url;
-                        const nickName = conv_profile.user_profile_nick_name ?? conv_profile.group_detial_info_group_name;
+                        const faceUrl = conv_profile.user_profile_face_url ?? conv_profile.group_detail_info_face_url;
+                        const nickName = conv_profile.user_profile_nick_name ?? conv_profile.group_detail_info_group_name;
 
                         return (
                             <div ref={setRef(conv_id)} className={`conversion-list__item ${conv_id === currentSelectedConversation?.conv_id ? 'is-active' : ''} ${conv_is_pinned ? 'is-pinned' : ''}`} key={conv_id} onClick={() => handleConvListClick(item)} onContextMenu={(e) => { handleContextMenuEvent(e, item) }}>

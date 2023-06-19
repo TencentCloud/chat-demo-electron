@@ -7,22 +7,36 @@ import { displayDiffMessage } from "../conversationContent/MessageView";
 import withMemo from "../../../utils/componentWithMemo";
 
 const MergeElem = (props: any): JSX.Element => {
+    const {message,showModal2,callback} = props;
     const [showModal, setShowModal ] = useState(false);
     const [ mergedMsg, setMergedMsg ] = useState([]); 
+    
+    useEffect(()=>{
+        console.log("in effect");
+        console.log(showModal2);
+        if(showModal2 == true){
+            showMergeDitail();
+        }
+    },[props])
+    
     const showMergeDitail = async () => {
-        if(props.merge_elem_message_array) {
-            setMergedMsg(props.merge_elem_message_array);
+        console.log("showMergeDetail")
+        console.log(showModal2);
+        if(message.merge_elem_message_array) {
+            setMergedMsg(message.merge_elem_message_array);
         } else {
             const {code, json_params} = await downloadMergedMsg(props.message);
             const mergedMsg = JSON.parse(json_params);
             setMergedMsg(mergedMsg);
         }
         setShowModal(true);
+        callback(true);
      }
      
 
      const handleModalClose = () => {
          setShowModal(false);
+         callback(false);
      }
 
 
@@ -40,7 +54,7 @@ const MergeElem = (props: any): JSX.Element => {
                 <Modal 
                     className="message-info-modal" 
                     disableEscape 
-                    visible={showModal} 
+                    visible={showModal2} 
                     size="85%"
                     onClose={handleModalClose}
                 >
@@ -71,7 +85,7 @@ const MergeElem = (props: any): JSX.Element => {
                                                         return (
                                                             <div className="message-view__item--element" key={index} >
                                                                 {
-                                                                    displayDiffMessage(item, elment, index)
+                                                                    displayDiffMessage(item, elment, index,showModal2,null)
                                                                 }
                                                             </div>
                                                             )

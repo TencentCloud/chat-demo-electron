@@ -9,7 +9,7 @@ import {
     animation
 } from 'react-contexify';
 import '../scss/message-view.scss';
-import { revokeMsg, deleteMsg, sendMsg, getLoginUserID, sendMergeMsg,  getMsgList, deleteMsgList, sendForwardMessage } from '../../../api';
+import { revokeMsg, deleteMsg, sendMsg, getLoginUserID, sendMergeMsg,  getMsgList, deleteMsgList, sendForwardMessage, downloadMsg } from '../../../api';
 import { markeMessageAsRevoke, deleteMessage, reciMessage,  addMoreMessage, updateMessages } from '../../../store/actions/message';
 import { 
     getMessageId,
@@ -38,6 +38,10 @@ import { setReplyMsg } from '../../../store/actions/message'
 import timRenderInstance from '../../../utils/timRenderInstance';
 import ReplyElem from '../messageElemTyps/replyElem';
 import useDynamicRef from '../../../utils/react-use/useDynamicRef';
+import { show } from 'tea-component/lib/modal/ModalShow';
+import { chooseFileToDownload } from '../../../utils/tools';
+import { ipcRenderer } from 'electron';
+import { MsgDownloadElemToPathParams } from 'im_electron_sdk/dist/interfaces';
 
 
 const MESSAGE_MENU_ID = 'MESSAGE_MENU_ID';
@@ -65,6 +69,10 @@ const RIGHT_CLICK_MENU_LIST = [{
     text: '回复'
 },
 {
+    id:'download',
+    text:'下载'
+},
+{
     id: 'multiSelect',
     text: '多选'
 }];
@@ -74,7 +82,9 @@ enum ForwardType {
     combine
 }
 
-export const displayDiffMessage = (message, element, index) => {
+
+
+export const displayDiffMessage = (message, element, index, mergeElemShowModal,handleMergeMsgDialog) => {
    
     const { elem_type, ...res } = element;
     let resp
@@ -118,7 +128,7 @@ export const displayDiffMessage = (message, element, index) => {
             resp = <div>资料消息</div>
             break;
         case 12:
-            resp = <MergeElem { ...res } message={message}/>
+            resp = <MergeElem { ...res } message={message} showModal2={mergeElemShowModal} callback={handleMergeMsgDialog}/>
             break;
         default:
             resp = null;
@@ -136,10 +146,12 @@ export const MessageView = (props: Props): JSX.Element => {
     const [isMultiSelect, setMultiSelect] = useState(false);
     const [forwardType, setForwardType] = useState<ForwardType>(ForwardType.divide);
     const [seletedMessage, setSeletedMessage] = useState<State.message[]>([]);
+    const [downloadMessage,setDownloadMessage] = useState<State.message>();
     const [noMore,setNoMore] = useState(messageList.length < HISTORY_MESSAGE_COUNT ? true : false)
     const dispatch = useDispatch();
     const [anchor , setAnchor] = useState('');
     const [setRef, getRef] = useDynamicRef<HTMLDivElement>();
+    const [mergeElemShowModal,setmergeElemShowModal] =useState(false);
 
     const [rightClickMenuList, setRightClickMenuList] = useState(RIGHT_CLICK_MENU_LIST);
     
@@ -157,6 +169,10 @@ export const MessageView = (props: Props): JSX.Element => {
             setMultiSelect(false);
         }
     }, [convId]);
+
+    const handleMergeMsgDialog = (showModal) => {
+        setmergeElemShowModal(showModal);
+    }
 
     const handleRevokeMsg = async (params) => {
         const { convId, msgId, convType } = params;
@@ -195,12 +211,66 @@ export const MessageView = (props: Props): JSX.Element => {
         setSeletedMessage([message])
     }
 
+    const handleDownloadMsg = (params) => {
+        const {message} = params;
+        setDownloadMessage(message);
+        const downloadElem = [1,2,4,9]
+        if(downloadElem.find(v => message.message_elem_array[0].elem_type == v)){
+            chooseFileToDownload();
+        }else{
+            alert('该类型消息不支持下载')
+        }
+        
+    }
+
     const handleReplyMsg = (params) => {
         const { message } = params;
         dispatch(setReplyMsg({
             message: message
         }));
     }
+
+    useEffect(()=>{
+        const listener = (evnet,param) => {
+            const {data} = param;
+            console.log("in listener")
+            const message = downloadMessage.message_elem_array[0]
+            const type = message.elem_type;
+            let downloadParam:MsgDownloadElemToPathParams = {
+                params:{
+                    msg_download_elem_param_id:'',
+                    msg_download_elem_param_url:''
+                },
+                callback:()=>{},
+                path:''
+            };
+            switch(type){
+                case(1):
+                    downloadParam.params.msg_download_elem_param_id = message.image_elem_orig_id
+                    downloadParam.params.msg_download_elem_param_url = message.image_elem_orig_url
+                    break;
+                case(2):
+                    downloadParam.params.msg_download_elem_param_id = message.sound_elem_file_id
+                    downloadParam.params.msg_download_elem_param_url = message.sound_elem_url
+                    break;
+                case(4):
+                    downloadParam.params.msg_download_elem_param_id = message.file_elem_file_id
+                    downloadParam.params.msg_download_elem_param_url = message.file_elem_url
+                    break;
+                case(9):
+                    downloadParam.params.msg_download_elem_param_id = message.video_elem_video_id
+                    downloadParam.params.msg_download_elem_param_url = message.video_elem_video_url
+                    break;
+            }
+            downloadParam.path = data.path+`/${downloadParam.params.msg_download_elem_param_id}`;
+            console.log(downloadParam);
+            downloadMsg({param:downloadParam.params,path:downloadParam.path});
+        }
+        ipcRenderer.on('CHOOSE_FILE_CALLBACK',listener);
+        return ()=>{
+            ipcRenderer.off('CHOOSE_FILE_CALLBACK',listener);
+        }
+    },[downloadMessage])
 
     const handleForwardPopupSuccess = async (convItemGroup) => {
         const userId = await getLoginUserID();
@@ -326,6 +396,9 @@ export const MessageView = (props: Props): JSX.Element => {
                 break;
             case 'multiSelect':
                 handleMultiSelectMsg(data);
+                break;
+            case 'download':
+                handleDownloadMsg(data);
                 break;
         }
     }
@@ -528,7 +601,7 @@ export const MessageView = (props: Props): JSX.Element => {
                                                                     item.message_cloud_custom_str !== "" && item.message_cloud_custom_str.includes("messageReply") && tryparse(item.message_cloud_custom_str) && <ReplyElem convId={message_conv_id} convType={message_conv_type} originalMsg={ JSON.parse(item.message_cloud_custom_str)} getRef={getRef} />
                                                                 }
                                                                 {
-                                                                    displayDiffMessage(item, elment, index)
+                                                                    displayDiffMessage(item, elment, index,mergeElemShowModal,handleMergeMsgDialog)
                                                                 }
                                                             </div>
                                                         )

@@ -69,7 +69,8 @@ const createWindow = () => {
   mainWindow.on('ready-to-show',() => {
     mainWindow.show();
     if(!ipc) ipc = new IPC(mainWindow);
-    if(!callWindowIpc) callWindowIpc = new CallWindowIpc(mainInstance);
+    mainWindow.openDevTools();
+    // if(!callWindowIpc) callWindowIpc = new CallWindowIpc(mainInstance);
   });
   mainWindow.on('close', () => {
     mainWindow.webContents.send('updateHistoryMessage');

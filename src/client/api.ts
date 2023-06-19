@@ -86,7 +86,7 @@ type MemberInfo = {
   group_get_memeber_info_list_result_info_array: {
     group_member_info_identifier: string;
   }[];
-  group_get_memeber_info_list_result_next_seq: number;
+  group_get_member_info_list_result_next_seq: number;
 };
 
 type CancelSendMsgParams = {
@@ -180,8 +180,8 @@ export const addProfileForConversition = async (conversitionList) => {
     let profile;
     if (conv_type === 2) {
       profile = groupInfoList.find((group) => {
-        const { group_detial_info_group_id } = group;
-        return group_detial_info_group_id === conv_id;
+        const { group_detail_info_group_id } = group;
+        return group_detail_info_group_id === conv_id;
       });
     } else if (conv_type === 1) {
       profile = userInfoList.find(
@@ -465,6 +465,16 @@ export const deleteMsg = async ({ convId, convType, msgId }) => {
   return code;
 };
 
+export const downloadMsg = async ({param,path}) =>{
+  await timRenderInstance.TIMMsgDownloadElemToPath({
+    params:param,
+    callback:(code:number,desc:string,json_param:string,userdata)=>{
+      console.log("下载进度",code,desc,json_param,userdata);
+  },
+    path:path
+  })
+}
+
 export const inviteMemberGroup = async (params: {
   UID: string;
   groupId: string;
@@ -566,7 +576,7 @@ export const getGroupMemberInfoList = async (params: {
   try {
     const { groupId, nextSeq, userIds } = params;
     const res = await getGroupMemberList({ groupId, nextSeq, userIds });
-    const { group_get_memeber_info_list_result_info_array: memberList, group_get_memeber_info_list_result_next_seq: seq } = res;
+    const { group_get_memeber_info_list_result_info_array: memberList, group_get_member_info_list_result_next_seq: seq } = res;
     const userIdList = memberList?.map((v) => v.group_member_info_identifier) || [];
     if (userIdList.length) {
       const result = await getUserInfoList(userIdList);
@@ -738,7 +748,7 @@ export type GroupList = {
   group_base_info_face_url: string;
   group_base_info_group_id: string;
   group_base_info_group_name: string;
-  group_detial_info_owener_identifier: string;
+  group_detail_info_owener_identifier: string;
   group_base_info_group_type: number;
 }[];
 

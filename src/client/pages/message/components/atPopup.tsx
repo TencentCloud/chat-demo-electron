@@ -18,7 +18,7 @@ interface AtPopupProps {
 
 export const AtPopup: FC<AtPopupProps> = ({ callback, group_id, atUserNameInput }): JSX.Element => {
     const [list, setList] = useState([])
-    const [currentSelectMember, setCurrentSelectMember] = useState<{memberId?: string; memberName?: string}>({memberId: '__kImSDK_MesssageAtALL__', memberName: '所有人' })
+    const [currentSelectMember, setCurrentSelectMember] = useState<{memberId?: string; memberName?: string}>({memberId: '__kImSDK_MessageAtALL__', memberName: '所有人' })
     const [coords, setCoords] = useState({x: 0, y: 0})
     const [displayList, setDisplayList] = useState([]);
     const refPopup = useRef(null)
@@ -35,7 +35,7 @@ export const AtPopup: FC<AtPopupProps> = ({ callback, group_id, atUserNameInput 
             nextSeq: 0
         });
         const arr = list.group_get_memeber_info_list_result_info_array
-        const atAllItem = {group_member_info_identifier:'__kImSDK_MesssageAtALL__', group_member_info_nick_name: '所有人'};
+        const atAllItem = {group_member_info_identifier:'__kImSDK_MessageAtALL__', group_member_info_nick_name: '所有人'};
         setList([atAllItem,...arr])
         setDisplayList( [atAllItem,...arr]);
     }

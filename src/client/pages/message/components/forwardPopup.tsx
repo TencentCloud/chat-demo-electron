@@ -21,7 +21,7 @@ interface ForwardPopupProps {
 }
 const getId = (item) => {
     if(!item) return false
-    return item.conv_id ? item.conv_id : (item.user_profile_identifier || item.friend_profile_identifier || item.group_detial_info_group_id || item.friendship_friend_info_get_result_identifier)
+    return item.conv_id ? item.conv_id : (item.user_profile_identifier || item.friend_profile_identifier || item.group_detail_info_group_id || item.friendship_friend_info_get_result_identifier)
 }
 const getType = (item) => {
     if(!item) return false
@@ -184,8 +184,8 @@ export const UserItem: FC<UserItemProps> = ({ onItemClick, onRemove, seleted, it
     let name
     let url
     if(item.conv_profile){
-        const { user_profile_face_url,user_profile_identifier,user_profile_nick_name,group_base_info_face_url,group_detial_info_group_name,group_detial_info_owener_identifier } = item.conv_profile
-        name = user_profile_identifier||user_profile_nick_name||group_detial_info_group_name||group_detial_info_owener_identifier
+        const { user_profile_face_url,user_profile_identifier,user_profile_nick_name,group_base_info_face_url,group_detail_info_group_name,group_detail_info_owener_identifier } = item.conv_profile
+        name = user_profile_identifier||user_profile_nick_name||group_detail_info_group_name||group_detail_info_owener_identifier
         url = user_profile_face_url || group_base_info_face_url || ""
     }else {
         if(item.friendship_friend_info_get_result_error_code === 0){
@@ -193,7 +193,7 @@ export const UserItem: FC<UserItemProps> = ({ onItemClick, onRemove, seleted, it
             name = item.friendship_friend_info_get_result_field_info?.friend_profile_user_profile?.user_profile_nick_name|| item.friendship_friend_info_get_result_field_info?.friend_profile_user_profile?.user_profile_identifier
             url =  item.friendship_friend_info_get_result_field_info?.friend_profile_user_profile.user_profile_face_url
         }else{
-            name = item.group_detial_info_group_name || item.friend_profile_user_profile?.user_profile_nick_name || item.user_profile_nick_name || item.conv_profile?.group_detial_info_group_name
+            name = item.group_detail_info_group_name || item.friend_profile_user_profile?.user_profile_nick_name || item.user_profile_nick_name || item.conv_profile?.group_detail_info_group_name
             url = item.friend_profile_user_profile?.user_profile_face_url || "";
         }
         

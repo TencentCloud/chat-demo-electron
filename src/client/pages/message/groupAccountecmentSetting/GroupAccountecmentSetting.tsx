@@ -33,8 +33,8 @@ export const GroupAccountecmentSetting = (props: {
 
   const currentUserSetting = memberList?.[0] || {};
 
-  const accountecment = groupDetail?.group_detial_info_notification || "";
-  const groupType = groupDetail?.group_detial_info_group_type || 0;
+  const accountecment = groupDetail?.group_detail_info_notification || "";
+  const groupType = groupDetail?.group_detail_info_group_type || 0;
   const userIdentity = currentUserSetting?.group_member_info_member_role || 0;
 
   const [input, setInput] = useState(accountecment);

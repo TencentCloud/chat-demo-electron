@@ -1,4 +1,4 @@
-const { GETDEVICETOKEN,DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENSHOTWINDOWS,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE } = require("./const/const");
+const { GETDEVICETOKEN,DOWNLOADFILE, RENDERPROCESSCALL, SCREENSHOTMAC,SCREENSHOTWINDOWS,SCREENCAPTURE,SHOWDIALOG, GET_VIDEO_INFO, SELECT_FILES, DOWNLOAD_PATH, GET_FILE_INFO_CALLBACK, SUPPORT_IMAGE_TYPE, GET_FILE_PATH,CHOOSE_FILE_CALLBACK } = require("./const/const");
 const { ipcMain, BrowserWindow, dialog,pushNotifications, Notification } = require('electron')
 // const {  } = require('electron')
 const fs = require('fs')
@@ -55,6 +55,9 @@ class IPC {
                 case GETDEVICETOKEN:
                     this.getDeviceToken(event);
                     break;
+                case GET_FILE_PATH:
+                    this.chooseFiles(event,params);
+                    break;
             }
         });
 
@@ -88,14 +91,30 @@ class IPC {
         const newdate = new Date();
         const date = newdate.toISOString().replaceAll(":","");
         let url = path.resolve(__dirname, "../Snipaste-2.8.2-Beta-x64/Snipaste.exe");
+        let buildUrl = path.join(process.cwd(),'/resources/Snipaste.exe')
         let command = url+" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
-        // console.log(command);
+        console.log(buildUrl)
+        let buildCommand = buildUrl +" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
         var id = setInterval(dealFile, 300);
-        child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
-            console.log("done capture");
-            
-
-        }})
+        fs.stat(url,function(err){
+            if(err){
+                console.log("build")
+                child_process.exec(buildCommand,async (error,stdout,stderr)=>{if(!error){
+                    console.log("done capture");
+                    
+        
+                }})
+            }else{
+                console.log("run")
+                child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
+                    console.log("done capture");
+                    
+        
+                }})
+            }
+        })
+        
+        
         function dealFile(){
                 try{
                     var _img = fs.readFileSync("C:\\Users\\Public\\Desktop\\screenshot"+date+".png");
@@ -282,6 +301,20 @@ class IPC {
 
         event.reply(GET_FILE_INFO_CALLBACK, {
             triggerType: SELECT_FILES,
+            data
+        })
+    }
+
+    async chooseFiles(event,params){
+        const { extensions, fileType, multiSelections } = params
+        const [filePath] = dialog.showOpenDialogSync(this.win, {
+            properties: ['openDirectory'],
+        })
+        const data = {
+            path: filePath,
+        };     
+
+        event.reply(CHOOSE_FILE_CALLBACK, {
             data
         })
     }

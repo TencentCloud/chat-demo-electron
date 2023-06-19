@@ -20,7 +20,7 @@ export const useMessageDirect = () => {
 
     return (params: Params) => {
         const { profile, convType, beforeDirect } = params;
-        const convId = profile.group_detial_info_group_id ?? profile.user_profile_identifier;
+        const convId = profile.group_detail_info_group_id ?? profile.user_profile_identifier;
         const matchedConversation = getConversationList()?.conversationList.find(item => item.conv_id === convId);
         const hasConversation = !!matchedConversation;
         const emptyConv:State.conversationItem = {

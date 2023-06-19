@@ -11,8 +11,8 @@ export const getMessageId = (message: State.message): string => {
 }
 export const getConvId = (convItem: any): string => {
     const item = convItem as State.groupProfile
-    if (item.group_detial_info_group_id) {
-        return item.group_detial_info_group_id
+    if (item.group_detail_info_group_id) {
+        return item.group_detail_info_group_id
     }
     else if (convItem.user_profile_identifier) {
         return convItem.user_profile_identifier

@@ -433,7 +433,7 @@ const handleNotify = (messages: State.message[]) => {
     if(conv_recv_opt === 2){
         return;
     }
-    const nickName = convProfile.user_profile_nick_name ?? convProfile.group_detial_info_group_name;
+    const nickName = convProfile.user_profile_nick_name ?? convProfile.group_detail_info_group_name;
     const firstMsg = message_elem_array[0] || {};
     const displayTextMsg = firstMsg && firstMsg.text_elem_content;
 

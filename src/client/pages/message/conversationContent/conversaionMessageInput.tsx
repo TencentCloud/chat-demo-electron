@@ -44,7 +44,7 @@ export const ConversationMessageInput = (props: { currentSelectedConversation })
             convType
         })
     }
-    const isShutUpAll = convType === 2 && convProfile?.group_detial_info_is_shutup_all;
+    const isShutUpAll = convType === 2 && convProfile?.group_detail_info_is_shutup_all;
     const getDisplayConvInfo = () => {
         const info: Info = {
             faceUrl: "",
@@ -59,9 +59,9 @@ export const ConversationMessageInput = (props: { currentSelectedConversation })
         }
 
         if (convType === 2) {
-            info.faceUrl = currentSelectedConversation?.conv_profile?.group_detial_info_face_url;
-            info.nickName = currentSelectedConversation?.conv_profile?.group_detial_info_group_name;
-            info.id = currentSelectedConversation.conv_profile.group_detial_info_group_id;
+            info.faceUrl = currentSelectedConversation?.conv_profile?.group_detail_info_face_url;
+            info.nickName = currentSelectedConversation?.conv_profile?.group_detail_info_group_name;
+            info.id = currentSelectedConversation.conv_profile.group_detail_info_group_id;
         }
         return info;
     };

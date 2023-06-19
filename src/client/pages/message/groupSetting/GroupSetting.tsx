@@ -40,34 +40,34 @@ export const GroupSetting = (props: {
 
   const currentUserSetting: any = memberList?.[0] || {};
   const groupDetail: Partial<State.conversationItem['conv_profile']> = value ? value[1][0] || conversationInfo.conv_profile || {} : {};
-  const memberCount = value?value[1][0].group_detial_info_member_num : 0
+  const memberCount = value?value[1][0].group_detail_info_member_num : 0
   if(!Object.keys(groupDetail).length){
     return null
   }
   return (
     <LoadingContainer loading={loading}>
       <GroupBaseInfo
-        groupAvatar={groupDetail.group_detial_info_face_url}
-        groupId={groupDetail.group_detial_info_group_id}
-        groupName={groupDetail.group_detial_info_group_name}
-        groupType={groupDetail.group_detial_info_group_type}
+        groupAvatar={groupDetail.group_detail_info_face_url}
+        groupId={groupDetail.group_detail_info_group_id}
+        groupName={groupDetail.group_detail_info_group_name}
+        groupType={groupDetail.group_detail_info_group_type}
         userIdentity={currentUserSetting.group_member_info_member_role}
         onRefresh={retry}
       />
       <Divider />
       <GroupIntroduction
-        introduction={groupDetail.group_detial_info_introduction}
-        groupId={groupDetail.group_detial_info_group_id}
+        introduction={groupDetail.group_detail_info_introduction}
+        groupId={groupDetail.group_detail_info_group_id}
         onRefresh={retry}
         userIdentity={currentUserSetting.group_member_info_member_role}
-        groupType={groupDetail.group_detial_info_group_type}
+        groupType={groupDetail.group_detail_info_group_type}
       />
       <Divider />
       <GroupAccountecment
-        accountecment={groupDetail.group_detial_info_notification}
-        groupId={groupDetail.group_detial_info_group_id}
+        accountecment={groupDetail.group_detail_info_notification}
+        groupId={groupDetail.group_detail_info_group_id}
         userIdentity={currentUserSetting.group_member_info_member_role}
-        groupType={groupDetail.group_detial_info_group_type}
+        groupType={groupDetail.group_detail_info_group_type}
         onRefresh={retry}
       />
       <Divider />
@@ -75,40 +75,40 @@ export const GroupSetting = (props: {
         onRefresh={retry}
         userId={userId}
         memberCount={memberCount}
-        groupId={groupDetail.group_detial_info_group_id}
-        groupType={groupDetail.group_detial_info_group_type}
-        groupAddOption={groupDetail.group_detial_info_add_option}
+        groupId={groupDetail.group_detail_info_group_id}
+        groupType={groupDetail.group_detail_info_group_type}
+        groupAddOption={groupDetail.group_detail_info_add_option}
         userIdentity={currentUserSetting.group_member_info_member_role}
       />
       <Divider />
       <GroupFlagMessage
         flagMsg={groupDetail.group_base_info_msg_flag}
-        groupId={groupDetail.group_detial_info_group_id}
+        groupId={groupDetail.group_detail_info_group_id}
         userId={userId}
         onRefresh={retry}
       />
       <Divider />
       <GroupNameCard
         nameCard={currentUserSetting.group_member_info_name_card}
-        groupId={groupDetail.group_detial_info_group_id}
+        groupId={groupDetail.group_detail_info_group_id}
         userId={userId}
         onRefresh={retry}
       />
       <Divider />
       <GroupAllMute
-        muteFlag={groupDetail.group_detial_info_is_shutup_all}
-        groupId={groupDetail.group_detial_info_group_id}
+        muteFlag={groupDetail.group_detail_info_is_shutup_all}
+        groupId={groupDetail.group_detail_info_group_id}
         onRefresh={retry}
         userIdentity={currentUserSetting.group_member_info_member_role}
-        groupType={groupDetail.group_detial_info_group_type}
+        groupType={groupDetail.group_detail_info_group_type}
       />
       <Divider />
       <GroupOperator
         userId={userId}
-        groupId={groupDetail.group_detial_info_group_id}
+        groupId={groupDetail.group_detail_info_group_id}
         onRefresh={retry}
-        groupOwner={groupDetail.group_detial_info_owener_identifier}
-        groupType={groupDetail.group_detial_info_group_type}
+        groupOwner={groupDetail.group_detail_info_owener_identifier}
+        groupType={groupDetail.group_detail_info_group_type}
         close={close}
       />
     </LoadingContainer>

@@ -44,16 +44,16 @@ export const ConversationContentHeader = (props: {
         }
 
         if (conv_type === 2) {
-            info.faceUrl = currentSelectedConversation?.conv_profile?.group_detial_info_face_url;
-            info.nickName = currentSelectedConversation?.conv_profile?.group_detial_info_group_name;
+            info.faceUrl = currentSelectedConversation?.conv_profile?.group_detail_info_face_url;
+            info.nickName = currentSelectedConversation?.conv_profile?.group_detail_info_group_name;
         }
         return info;
     };
 
     const { faceUrl, nickName } = getDisplayConvInfo();
     const {
-        group_detial_info_group_type: groupType,
-        group_detial_info_add_option: addOption,
+        group_detail_info_group_type: groupType,
+        group_detail_info_add_option: addOption,
     } = conv_profile || {};
     // 可拉人进群条件为 当前选中聊天类型为群且群类型不为直播群且当前群没有设置禁止加入
     const canInviteMember = conv_type === 2 && [0, 1, 2].includes(groupType);

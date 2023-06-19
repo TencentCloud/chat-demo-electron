@@ -80,8 +80,8 @@ export const FriendApply = () => {
       render: (record: any) => {
         return (
           <ListItem
-            key={record.friend_add_pendency_info_idenitifer}
-            userId={record.friend_add_pendency_info_idenitifer}
+            key={record.friend_add_pendency_info_identifier}
+            userId={record.friend_add_pendency_info_identifier}
             userName={record.user_profile_nick_name}
             faceUrl={record.user_profile_face_url}
             depName={record.friend_add_pendency_info_add_source}

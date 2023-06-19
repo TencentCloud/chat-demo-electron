@@ -22,7 +22,7 @@ export const GroupSettingDrawer = (props: {
     useDialog<GroupSettingRecordsType>(dialogRef, {});
 
   const memberNum =
-    defaultForm.conversationInfo?.conv_profile?.group_detial_info_member_num ||
+    defaultForm.conversationInfo?.conv_profile?.group_detail_info_member_num ||
     0;
 
   const close = () => {

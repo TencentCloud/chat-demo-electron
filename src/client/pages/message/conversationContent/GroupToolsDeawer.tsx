@@ -33,7 +33,7 @@ export const GroupToolsDrawer = (props: {
     let title = "";
     let subTitle = "";
     const memberNum =
-      conversationInfo?.conv_profile?.group_detial_info_member_num || 0;
+      conversationInfo?.conv_profile?.group_detail_info_member_num || 0;
     switch (toolsId) {
       case "setting":
         title = "设置";

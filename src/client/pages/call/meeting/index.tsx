@@ -33,7 +33,7 @@ export const Meeting = (props: Props) => {
         const getGroupInfo = async () => {
             const groupInfo = await getGroupInfoList([groupId]);
             setGroupInfo({
-                groupOwner: groupInfo[0].group_detial_info_owener_identifier,
+                groupOwner: groupInfo[0].group_detail_info_owener_identifier,
                 groupName: groupInfo[0].group_base_info_group_name
             });
             setLoading(false);
