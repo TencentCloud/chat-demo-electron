@@ -86,8 +86,8 @@ export const friendshipHandleFriendAddRequest = async (params: {
 }) => {
   const data  = await timRenderInstance.TIMFriendshipHandleFriendAddRequest({
     params: {
-      friend_respone_identifier: params.userId,
-      friend_respone_action: params.action,
+      friend_response_identifier: params.userId,
+      friend_response_action: params.action,
     },
   });
   const { code, desc } = data;

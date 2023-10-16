@@ -143,6 +143,7 @@ export const ConversationList = (): JSX.Element => {
         timRenderInstance.TIMMsgReportReaded({
             conv_id,
             conv_type,
+            json_msg_param: undefined
         })
     }
     const handleClickMenuItem = (e, id) => {

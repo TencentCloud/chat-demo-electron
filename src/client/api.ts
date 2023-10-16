@@ -1,6 +1,6 @@
 import { APASSSERVER, APASSSERVERBASE, HISTORY_MESSAGE_COUNT, LOGINSMS, USEERVERIFYBYPICTURE } from "./constants";
 import timRenderInstance from "./utils/timRenderInstance";
-import { FriendProfile, GroupInfoCustemString, GroupMemberInfoCustemString,MsgSendMessageParamsV2 } from "im_electron_sdk/dist/interfaces"
+import { FriendProfile, GroupInfoCustomString, GroupMemberInfoCustemString,MsgSendMessageParamsV2 } from "im_electron_sdk/dist/interfaces"
 import axios from 'axios'
 type SendMsgParams<T> = {
   convId: string;
@@ -83,7 +83,7 @@ type MsgResponse = {
 };
 
 type MemberInfo = {
-  group_get_memeber_info_list_result_info_array: {
+  group_get_member_info_list_result_info_array: {
     group_member_info_identifier: string;
   }[];
   group_get_member_info_list_result_next_seq: number;
@@ -269,7 +269,7 @@ export const getMsgList = async (convId, convType, lastMsg = null, isForward = f
     params: {
       msg_getmsglist_param_last_msg: lastMsg,
       msg_getmsglist_param_count: count,
-      msg_getmsglist_param_is_remble: true,
+      msg_getmsglist_param_is_ramble: true,
       msg_getmsglist_param_is_forward: isForward,
     },
   });
@@ -280,13 +280,21 @@ export const getMsgList = async (convId, convType, lastMsg = null, isForward = f
 export const markMessageAsRead = async (
   conv_id,
   conv_type,
-  last_message_id
+  msgId
 ) => {
-  const { code, json_param, desc } = await timRenderInstance.TIMMsgReportReaded({
+  const res = await timRenderInstance.TIMMsgFindMessages({
+    json_message_id_array:[msgId]
+  })
+  const {code,desc,json_params} = res;
+  if(code == 0){
+    const { code, json_param, desc } = await timRenderInstance.TIMMsgReportReaded({
     conv_type: conv_type,
     conv_id: conv_id,
+    json_msg_param: json_params[0]
   });
   return { code, desc, json_param };
+  }
+  return {code,desc,json_params}
 };
 
 export const sendMsg = async ({
@@ -441,26 +449,40 @@ export const getConversionList = async () => {
 };
 
 export const revokeMsg = async ({ convId, convType, msgId }) => {
-  const { code } = await timRenderInstance.TIMMsgRevoke({
-    conv_id: convId,
-    conv_type: convType,
-    message_id: msgId,
-    user_data: "123",
-  });
-
+  const res = await timRenderInstance.TIMMsgFindMessages({
+    json_message_id_array:[msgId]
+  })
+  const {code,desc,json_params} = res;
+  if(code == 0){
+    const { code } = await timRenderInstance.TIMMsgRevoke({
+      conv_id: convId,
+      conv_type: convType,
+      json_msg_param: json_params[0],
+      user_data: "123",
+    });
+    return code
+  }
   return code;
 };
 
 export const deleteMsg = async ({ convId, convType, msgId }) => {
-  const  { code } = await timRenderInstance.TIMMsgDelete({
+  const res = await timRenderInstance.TIMMsgFindMessages({
+    json_message_id_array:[msgId]
+  })
+  const {code,desc,json_params} = res;
+  if(code == 0){
+    const  { code } = await timRenderInstance.TIMMsgDelete({
     conv_id: convId,
     conv_type: convType,
     params: {
-      msg_delete_param_msg: msgId,
-      msg_delete_param_is_remble: true,
+      msg_delete_param_msg: json_params[0],
+      msg_delete_param_is_ramble: true,
     },
     user_data: "123",
   });
+  return code
+  }
+  
 
   return code;
 };
@@ -562,7 +584,7 @@ export const getGroupMemberList = async (params: {
   console.log('getGroupMemberList', data)
   const { code, json_param } = data;
   if (code === 0) {
-    const result = json_param;
+    let result = json_param;
     return result;
   }
   return {} as any;
@@ -576,7 +598,7 @@ export const getGroupMemberInfoList = async (params: {
   try {
     const { groupId, nextSeq, userIds } = params;
     const res = await getGroupMemberList({ groupId, nextSeq, userIds });
-    const { group_get_memeber_info_list_result_info_array: memberList, group_get_member_info_list_result_next_seq: seq } = res;
+    const { group_get_member_info_list_result_info_array: memberList, group_get_member_info_list_result_next_seq: seq } = res;
     const userIdList = memberList?.map((v) => v.group_member_info_identifier) || [];
     if (userIdList.length) {
       const result = await getUserInfoList(userIdList);
