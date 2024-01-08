@@ -85,14 +85,17 @@
         {
           "from": "node_modules/trtc-electron-sdk/build/Release/",
           "to": "./resources",
-          "filter": ["**/*"]
+          "filter": [
+            "**/*"
+          ]
         },
         {
-          "from":"./src/Snipaste-2.8.2-Beta-x64/",
-          "to":"./resources",
-          "filter":["**/*"]
-        } 
-
+          "from": "./src/Snipaste-2.8.2-Beta-x64/",
+          "to": "./resources",
+          "filter": [
+            "**/*"
+          ]
+        }
       ]
     },
     "linux": {
@@ -128,6 +131,7 @@
   "dependencies": {
     "@electron/remote": "^2.0.7",
     "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "electron-log": "^5.0.3",
     "electron-store": "^8.0.0",
     "ffmpeg-extract-frame": "^1.0.2",
     "ffprobe": "^1.1.2",
@@ -135,7 +139,7 @@
     "file-type": "^16.5.2",
     "fluent-ffmpeg": "^2.1.2",
     "get-video-duration": "^3.1.0",
-    "im_electron_sdk": "^2.0.19",
+    "im_electron_sdk": "^3.0.0",
     "image-size": "^1.0.0",
     "install": "^0.13.0",
     "json-bigint": "^1.0.0",

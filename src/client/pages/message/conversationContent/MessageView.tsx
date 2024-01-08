@@ -547,7 +547,6 @@ export const MessageView = (props: Props): JSX.Element => {
                     const seleted = seletedMessage.findIndex(i => getMessageId(i) === getMessageId(item)) > -1
                     const elemType = message_elem_array?.[0]?.elem_type; // 取message array的第一个判断消息类型
                     const isNotGroupSysAndGroupTipsMessage =  ![5,8].includes(elemType); // 5,8作为群系统消息 不需要多选转发
-                    
                     const profile = {
                         userId: user_profile_identifier,
                         nickName: user_profile_nick_name,
@@ -563,7 +562,6 @@ export const MessageView = (props: Props): JSX.Element => {
                         const displayName = group_member_info_name_card || group_member_info_nick_name || user_profile_nick_name || group_member_info_identifier;
                         return displayName
                     }
-
                     return (
                         <React.Fragment key={index}>
                             {
@@ -597,8 +595,10 @@ export const MessageView = (props: Props): JSX.Element => {
                                                         return (
                                                             <div ref={setRef(message_msg_id)} className="message-view__item--element" key={index} onContextMenu={(e) => { handleContextMenuEvent(e, item, elment) }}>
                                                                 {
+                                                                    
                                                                     //@ts-ignore
-                                                                    item.message_cloud_custom_str !== "" && item.message_cloud_custom_str.includes("messageReply") && tryparse(item.message_cloud_custom_str) && <ReplyElem convId={message_conv_id} convType={message_conv_type} originalMsg={ JSON.parse(item.message_cloud_custom_str)} getRef={getRef} />
+                                                                    item.message_cloud_custom_str!=null && item.message_cloud_custom_str !== "" && item.message_cloud_custom_str.includes("messageReply") && tryparse(item.message_cloud_custom_str) && JSON.parse(item.message_cloud_custom_str).messageReply != null
+                                                                    && <ReplyElem convId={message_conv_id} convType={message_conv_type} originalMsg={ JSON.parse(item.message_cloud_custom_str)} getRef={getRef} />
                                                                 }
                                                                 {
                                                                     displayDiffMessage(item, elment, index,mergeElemShowModal,handleMergeMsgDialog)

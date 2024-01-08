@@ -87,7 +87,8 @@ export default function initListeners(callback:InitListenersCallback){
     */
     timRenderInstance.TIMSetMsgElemUploadProgressCallback({
         callback:(args)=>{
-            const [message, index, cur_size, total_size, user_data] = args 
+            try{
+                const [message, index, cur_size, total_size, user_data] = JSON.parse(args) 
             callback({
                 type: 'TIMSetMsgElemUploadProgressCallback',
                 data: {
@@ -98,6 +99,11 @@ export default function initListeners(callback:InitListenersCallback){
                     user_data
                 }
             })
+            }catch(err){
+                throw err;
+            }
+
+            
         },
         user_data: "test"
     })
@@ -403,10 +409,10 @@ export default function initListeners(callback:InitListenersCallback){
             })
         }
     })
-    timRenderInstance.TIMOnCanceled({
+    timRenderInstance.TIMOnCancelled({
         callback:(data)=>{
             callback({
-                type: 'TIMOnCanceled',
+                type: 'TIMOnCancelled',
                 data: data
             })
         }

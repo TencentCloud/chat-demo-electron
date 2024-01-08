@@ -26,6 +26,7 @@ import { notification } from "tea-component/lib/notification/Notification";
 import { AddFriendsNotification } from '../../components/addFriendsNotification/addFriendsNotification'
 import React from "react";
 import { message } from 'tea-component';
+import { TIMOfflinePushFlag } from 'im_electron_sdk/dist/enumbers';
 
 let isInited = false;
 let joinedUserList = [];
@@ -172,7 +173,7 @@ const initSdk = async (directToMsgPage, routeHistory, forceUpdate = false) => {
                         /**
                          * 收到的音视频邀请被取消
                          */
-                        case "TIMOnCanceled":
+                        case "TIMOnCancelled":
                             _onCanceled(data)
                             break;
                         /**
@@ -247,7 +248,7 @@ const _onInvited = (data) => {
     // 如果正在通话，拒绝对方通话。
     if (callingId) {
         timRenderInstance.TIMRejectInvite({
-            inviteID: inviteID,
+            invite_id: inviteID,
             data: JSON.stringify({ "version": 4, "businessID": "av_call", "call_type": callType })
         });
         return;
@@ -590,7 +591,7 @@ const callWindowLisitiner = () => {
     acceptCallListiner((inviteID) => {
         const { callType } = getCallingStatus();
         timRenderInstance.TIMAcceptInvite({
-            inviteID: inviteID,
+            invite_id: inviteID,
             data: JSON.stringify({ "version": 4, "businessID": "av_call", "call_type": callType })
         }).then(data => {
             console.log('接收返回', data)
@@ -599,7 +600,7 @@ const callWindowLisitiner = () => {
     refuseCallListiner((inviteID) => {
         const { callType } = getCallingStatus();
         timRenderInstance.TIMRejectInvite({
-            inviteID: inviteID,
+            invite_id: inviteID,
             data: JSON.stringify({ "version": 4, "businessID": "av_call", "call_type": callType })
         }).then(data => {
             console.log('接收返回', data)
@@ -618,7 +619,7 @@ const callWindowLisitiner = () => {
             // 如果点击挂断，此时没有用户接听，需要取消邀请
             if (!isAllUserRejectOrTimeout) {
                 timRenderInstance.TIMCancelInvite({
-                    inviteID: inviteId,
+                    invite_id: inviteId,
                     data: JSON.stringify({ "version": 4, "businessID": "av_call", "call_type": callingType })
                 }).then(data => {
                     console.log('关闭邀请===', data)
@@ -629,17 +630,25 @@ const callWindowLisitiner = () => {
             if (callingUserList.length === 0) {
                 if (callingType === 1) {
                     timRenderInstance.TIMInvite({
-                        userID: callingId,
+                        invitee: callingId,
                         timeout: 0,
-                        senderID: userId,
+                        // senderID: userId,
+                        online_user_only: true,
+                        json_offline_push_info: {
+                            offline_push_config_desc: '',
+                            offline_push_config_ext: '',
+                            offline_push_config_flag: TIMOfflinePushFlag.kTIMOfflinePushFlag_Default
+                        },
                         data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4 })
                     })
                 } else {
                     timRenderInstance.TIMInviteInGroup({
-                        userIDs: callingUserList,
-                        groupID: callingId,
+                        json_invitee_array: callingUserList,
+                        group_id: callingId,
                         timeout: 0,
-                        senderID: userId,
+
+                        online_user_only: true,
+
                         data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4 }),
                     }).then(() => {
                         console.log('===========data======');
