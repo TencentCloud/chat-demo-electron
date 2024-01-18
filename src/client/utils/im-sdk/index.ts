@@ -26,7 +26,6 @@ import { notification } from "tea-component/lib/notification/Notification";
 import { AddFriendsNotification } from '../../components/addFriendsNotification/addFriendsNotification'
 import React from "react";
 import { message } from 'tea-component';
-import { TIMOfflinePushFlag } from 'im_electron_sdk/dist/enumbers';
 
 let isInited = false;
 let joinedUserList = [];
@@ -637,7 +636,7 @@ const callWindowLisitiner = () => {
                         json_offline_push_info: {
                             offline_push_config_desc: '',
                             offline_push_config_ext: '',
-                            offline_push_config_flag: TIMOfflinePushFlag.kTIMOfflinePushFlag_Default
+                            offline_push_config_flag: 0
                         },
                         data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4 })
                     })
