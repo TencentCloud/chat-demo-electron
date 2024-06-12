@@ -109,53 +109,6 @@ const createWindow = () => {
   // });
   // capture.setMultiScreen(true);
   // capture.updateShortCutKey('shift+option+c');
-  globalShortcut.register('Shift+CommandOrControl+C',function(){
-    console.log("i am shortcut~~~~~~~~~");
-    const newdate = new Date();
-    const date = newdate.toISOString().replaceAll(":","");
-        // console.log(date.toISOString());
-        if (process.platform == "darwin") {
-          let ex = "screencapture -i ~/desktop/screenshot"+date+".png"
-          child_process.exec(`screencapture -i ~/desktop/screenshot`+date+`.png`,(error, stdout, stderr) => {　　　　　　if (!error) {
-              var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
-              // console.log(_img);
-              mainWindow.webContents.send(GET_FILE_INFO_CALLBACK, {
-                  triggerType: SCREENSHOTMAC,
-                  data:{_img:_img,date}
-              })
-            }
-    　　　　});
-        }else{
-          let url = path.resolve(__dirname, "../Snipaste-2.8.2-Beta-x64/Snipaste.exe");
-          let command = url+" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
-          // console.log(command);
-          var id = setInterval(dealFile, 300);
-          child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
-              console.log("done capture");
-          }})
-          function dealFile(){
-                  try{
-                      var _img = fs.readFileSync("C:\\Users\\Public\\Desktop\\screenshot"+date+".png");
-                      clearInterval(id);
-                      console.log("file exists");
-                      console.log(_img);
-                      event.reply(GET_FILE_INFO_CALLBACK, {
-                          triggerType: SCREENSHOTMAC,
-                          data:{_img:_img,date}
-                      })
-                  } catch(err){
-                      if(err.code == 'ENOENT'){
-                          // console.log("file doesn't exist yet")
-                      } else{
-                          throw err;
-                      }
-                  }
-                  
-              
-          }
-        }
-        
-  })
   // mainWindow.loadURL(`http://localhost:3000`);
   // mainWindow.webContents.openDevTools();
 };

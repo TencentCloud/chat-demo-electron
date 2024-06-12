@@ -13,6 +13,7 @@ export const Chat = (): JSX.Element=> {
     const hasConv = !!(currentSelectedConversation && currentSelectedConversation.conv_id);
 
     return <Fragment>
+        
         <EmptyResult
             isEmpty={!hasConv}
             contentText="暂无历史消息"

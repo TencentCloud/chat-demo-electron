@@ -26,6 +26,8 @@ import { notification } from "tea-component/lib/notification/Notification";
 import { AddFriendsNotification } from '../../components/addFriendsNotification/addFriendsNotification'
 import React from "react";
 import { message } from 'tea-component';
+import { useSelector } from 'react-redux';
+
 
 let isInited = false;
 let joinedUserList = [];
@@ -216,21 +218,24 @@ const notifiClick = (userID,isAccept) =>{
  */
 const _TIMSetFriendAddRequestCallback = (data) => {
     for (let i = 0; i < data.length; i++) {
-        const { friend_add_pendency_identifier, friend_add_pendency_nick_name, friend_add_pendency_add_wording } = data[i];
-        const { destroy } = notification.success({
+        const { friend_add_pendency_add_source,friend_add_pendency_identifier, friend_add_pendency_nick_name, friend_add_pendency_add_wording } = data[i];
+        if(friend_add_pendency_add_source != "AddSource_Type_electron"){
+            const { destroy } = notification.success({
             title: "通知",
             description: `${friend_add_pendency_nick_name ? friend_add_pendency_nick_name : friend_add_pendency_identifier}请求加您为好友，附言：${friend_add_pendency_add_wording ? friend_add_pendency_add_wording : "无"}`,
             footer: React.createElement(
                 AddFriendsNotification,
                 { userID: friend_add_pendency_identifier, onClick: notifiClick },
             ),
-            unique: true
-        })
-        destroyCacheMethod(friend_add_pendency_identifier,destroy)
+                unique: true
+            })
+            destroyCacheMethod(friend_add_pendency_identifier,destroy)
+        }
+        
     }
 
 }
-const _onInvited = (data) => {
+const _onInvited = (data1) => {
     // actionType: 1
     // businessID: 1
     // data: "{\"version\":0,\"call_type\":1,\"room_id\":30714513}"
@@ -239,25 +244,38 @@ const _onInvited = (data) => {
     // inviteeList: ["3708"]
     // inviter: "109442"
     // timeout: 30
-
-    const formatedData = JSON.parse(JSON.parse(data)[0].message_elem_array[0].custom_elem_data)
-    const { room_id, call_type, call_end } = JSON.parse(formatedData.data)
-    const { inviter, groupID, inviteID, inviteeList } = formatedData;
+    console.log(`==============oninvited===============`)
+    console.log(`oninvited ${data1}`)
+    const invite_id = data1[0];
+    const inviter = data1[1];
+    const group_id = data1[2];
+    const json_invitee_list = JSON.parse(data1[3]);
+    const data = JSON.parse(data1[4]);
+    console.log(`json_invitee_list ${json_invitee_list} ${data}`)
+    const formatedData = data1
+    const {call_type,room_id} = data;
+    const cmd = data.data.cmd;
+    
+    // console.log(`data.data ${data1}`)
+    // const cmd = data1.data.cmd;
+    // const { room_id, call_type, call_end } = JSON.parse(formatedData.data)
+    // const { inviter, group_id, invite_id, inviteeList,data } = formatedData;
     const { callingId, callType } = getCallingStatus();
     // 如果正在通话，拒绝对方通话。
+    console.log(`callingId ${callingId}`)
     if (callingId) {
         timRenderInstance.TIMRejectInvite({
-            invite_id: inviteID,
+            invite_id: invite_id,
             data: JSON.stringify({ "version": 4, "businessID": "av_call", "call_type": callType })
         });
         return;
     }
-    if (call_end >= 0) {
-        return
-    }
+    // if (call_end >= 0) {
+    //     return
+    // }
     timRenderInstance.TIMProfileGetUserProfileList({
         json_get_user_profile_list_param: {
-            friendship_getprofilelist_param_identifier_array: [inviter, ...inviteeList],
+            friendship_getprofilelist_param_identifier_array: [inviter, ...json_invitee_list],
             friendship_getprofilelist_param_force_update: false
         },
         user_data: ''
@@ -271,29 +289,30 @@ const _onInvited = (data) => {
             const inviteListWithInfo = json_param;
             const inviterInfo = inviteListWithInfo.find(item => item.user_profile_identifier === inviter);
             dispatch(updateCallingStatus({
-                callingId: groupID ? groupID : inviter, //
-                callingType: groupID ? 2 : 1,
-                inviteeList: [inviter, ...inviteeList],
-                callType: call_type
+                callingId: group_id ? group_id : inviter, //
+                callingType: group_id ? 2 : 1,
+                inviteeList: [inviter, ...json_invitee_list],
+                callType: cmd == "audioCall"? 1:2
             }))
-            openCallWindow({
-                windowType: 'notificationWindow',
-                callType: call_type + '',
-                convId: groupID ? groupID : inviter,
-                convInfo: {
-                    faceUrl: inviterInfo.user_profile_face_url,
-                    nickName: inviterInfo.user_profile_nick_name || inviter,
-                    convType: groupID ? 2 : 1,
-                    id: inviter
-                },
-                roomId: room_id,
-                inviteID,
-                userID: userId,
-                inviteList: [inviter, ...inviteeList],
-                inviteListWithInfo: [...inviteListWithInfo],
-                userSig: userSig,
-                isInviter: false
-            });
+            dispatch({ type: 'SET_IS_OPEN', payload: true });
+            // openCallWindow({
+            //     windowType: 'notificationWindow',
+            //     callType: cmd == "audioCall"? 1:2,
+            //     convId: group_id ? group_id : inviter,
+            //     convInfo: {
+            //         faceUrl: inviterInfo.user_profile_face_url,
+            //         nickName: inviterInfo.user_profile_nick_name || inviter,
+            //         convType: group_id ? 2 : 1,
+            //         id: inviter
+            //     },
+            //     // roomId: room_id,
+            //     invite_id,
+            //     userID: userId,
+            //     inviteList: [inviter, ...json_invitee_list],
+            //     inviteListWithInfo: [...inviteListWithInfo],
+            //     userSig: userSig,
+            //     isInviter: false
+            // });
         }
     })
 
@@ -309,6 +328,7 @@ const _onAccepted = (data) => {
 
 const _onCanceled = (data) => {
     // 关闭通知窗口
+    console.log("=====onCancelled====")
     closeCallWindow();
     clearCallStore();
 }
@@ -335,6 +355,7 @@ const _handleRemoteUserTimeOut = (message) => {
             inviteeList: newList,
             callType
         }));
+        dispatch({ type: 'SET_IS_OPEN', payload: false });
         if (isEmpty) {
             closeCallWindow();
         } else {
@@ -356,6 +377,7 @@ const _handleRemoteUserReject = (message) => {
             inviteeList: newInviteeList,
             callType
         }));
+        dispatch({ type: 'SET_IS_OPEN', payload: false });
         if (isEmpty) {
             closeCallWindow();
         } else {
@@ -638,7 +660,7 @@ const callWindowLisitiner = () => {
                             offline_push_config_ext: '',
                             offline_push_config_flag: 0
                         },
-                        data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4 })
+                        data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4,"cmd":callType == 1? "audioCall":"videoCall"  })
                     })
                 } else {
                     timRenderInstance.TIMInviteInGroup({
@@ -648,7 +670,7 @@ const callWindowLisitiner = () => {
 
                         online_user_only: true,
 
-                        data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4 }),
+                        data: JSON.stringify({ "businessID": "av_call", "call_end": realCallTime, "call_type": Number(callType), "version": 4,"cmd":callType == 1? "audioCall":"videoCall"  }),
                     }).then(() => {
                         console.log('===========data======');
                     })

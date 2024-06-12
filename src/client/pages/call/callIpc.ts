@@ -4,11 +4,14 @@ import eventEmiter from './event';
 
 export const eventListiner = {
     init: () => {
+        console.log("eventListener init");
         ipcRenderer.on('pass-call-data', (event, data) => {
+            console.log(`useCallData ${data}`);
             eventEmiter.emit('getData', JSON.parse(data));
         });
 
         ipcRenderer.on('exit-room', () => {
+            console.log("exit-room")
             eventEmiter.emit('exitRoom');
         });
 

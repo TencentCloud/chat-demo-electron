@@ -8,14 +8,14 @@ export const ListItem = (props: {
   userId: string;
   userName: string;
   depName: string;
-  onRefresh: () => Promise<any>;
+  onRefresh: (userid:string[]) => Promise<any>;
 }) => {
   const { faceUrl, userId, userName, depName, onRefresh } = props;
 
   const handleApprove = async () => {
     try {
       await friendshipHandleFriendAddRequest({ userId: userId, action: 1 });
-      await onRefresh();
+      await onRefresh([userId]);
     } catch (e) {
       console.log(e);
     }
@@ -24,7 +24,7 @@ export const ListItem = (props: {
   const handleRefuse = async () => {
     try {
       await friendshipHandleFriendAddRequest({ userId: userId, action: 2 });
-      await onRefresh();
+      await onRefresh([userId]);
     } catch (e) {
       console.log(e);
     }

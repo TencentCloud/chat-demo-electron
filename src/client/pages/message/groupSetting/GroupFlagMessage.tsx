@@ -31,7 +31,7 @@ export const GroupFlagMessage = (props: {
   return (
     <div className="group-flag-message">
       <div className="group-flag-message--title">
-        <span className="group-flag-message--title__text">消息免打扰</span><Switch value={revMessageOpt!==0} onChange={(value)=>{setRevMessageOpt(value?1:0)}} />
+        <span className="group-flag-message--title__text">消息免打扰</span><Switch value={revMessageOpt!==0} onChange={(value)=>{setRevMessageOpt(value?2:0)}} />
       </div>
       {/* <Select
         size="full"

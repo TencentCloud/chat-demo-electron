@@ -40,7 +40,7 @@ export const GroupMemberListDrawer = (props: {
         nextSeq: seq,
       });
       const {
-        group_get_memeber_info_list_result_info_array: userList,
+        group_get_member_info_list_result_info_array: userList,
         group_get_member_info_list_result_next_seq: newNextSeq,
       } = res;
       if(newNextSeq === 0){
@@ -105,7 +105,6 @@ export const GroupMemberListDrawer = (props: {
           <H3>群成员</H3>
         </div>
       }
-      className="member-list-drawer"
       popupContainer={popupContainer}
       onClose={onClose}
     >

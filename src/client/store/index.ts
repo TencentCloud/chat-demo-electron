@@ -6,8 +6,9 @@ import historyMessage from './reucers/historyMessage'
 import ui from './reucers/ui'
 import groupDrawer  from './reucers/groupDrawer';
 import settingConfig from "./reucers/config";
+import callkit from "./reucers/callkit"
 
-const appReducer = combineReducers({login, userInfo ,conversation, historyMessage, ui, groupDrawer, settingConfig});
+const appReducer = combineReducers({login, userInfo ,conversation, historyMessage, ui, groupDrawer, settingConfig,callkit});
 
 const rootReducer = (state, action) => {
     if (action.type === 'USER_LOGOUT') {

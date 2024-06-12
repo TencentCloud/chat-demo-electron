@@ -5,7 +5,6 @@ const log = require('electron-log');
 
 const { OPEN_CALL_WINDOW, CLOSE_CALL_WINDOW, END_CALL_WINDOW, CALL_WINDOW_CLOSE_REPLY, SDK_APP_ID } = require("./const/const");
 
-
 const getSrceenSize = () => {
     const display = screen.getPrimaryDisplay();
     return display.size;
@@ -39,8 +38,9 @@ class CallWindowIpc {
             height: 600,
             width: 800,
             show: false,
-            frame: false,
+            // frame: false,
             resizable: false,
+            devTools:true,
             webPreferences: {
                 parent: this.win,
                 webSecurity: true,
@@ -48,13 +48,16 @@ class CallWindowIpc {
                 nodeIntegrationInWorker: true,
                 enableRemoteModule: true,
                 contextIsolation: false,
+                devTools:true
             },
         });
         this.timMianInstance.enable(callWindow.webContents)
         callWindow.removeMenu();
+        // callWindow.webContents.openDevTools();
         if (isDev) {
+            console.log("isDev");
             callWindow.loadURL(`http://localhost:3000/call.html`);
-            callWindow.webContents.openDevTools(); // Formal production does not need to be turned on
+            // callWindow.webContents.openDevTools();  // Formal production does not need to be turned on
         } else {
             
             callWindow.loadURL(
@@ -107,6 +110,7 @@ class CallWindowIpc {
 
         // When the recipient rejects the call, call this method to close the window and exit the room
         ipcMain.on(CLOSE_CALL_WINDOW, () => {
+            console.log("Close call window")
             this.callWindow.webContents.send('exit-room');
         });
 
@@ -133,50 +137,56 @@ class CallWindowIpc {
             this.callWindow.webContents.send('update-invite-list', inviteList);
         });
 
-        ipcMain.on(OPEN_CALL_WINDOW, (event, data) => {
-            const addSdkAppid = {
-                ...data,
-                sdkAppid: SDK_APP_ID
-            };
-            const convType = data?.convInfo?.convType;
-            const callType = data?.callType;
-            const params = JSON.stringify(addSdkAppid);
-            if (data.windowType === 'notificationWindow') {
-                this.callWindow.setMinimumSize(320, 150);
-                this.callWindow.setSize(320, 150);
-                this.callWindow.setPosition(screenSize.width - 340, screenSize.height - 200);
-                this.callWindow.setAlwaysOnTop(true);
-            } else if (convType === 1 && Number(callType) === 1) {
-                this.callWindow.setMinimumSize(400, 650);
-                this.callWindow.setSize(400, 650);
-                this.callWindow.setPosition(Math.floor((screenSize.width - 400) / 2), Math.floor((screenSize.height - 650) / 2));
-            }
+        // ipcMain.on(OPEN_CALL_WINDOW, (event, data) => {
+        //     console.log("open call window");
+        //     const addSdkAppid = {
+        //         ...data,
+        //         sdkAppid: SDK_APP_ID
+        //     };
+        //     const convType = data?.convInfo?.convType;
+        //     const callType = data?.callType;
+        //     console.log(`callType ${callType}`)
+        //     const params = JSON.stringify(addSdkAppid);
+        //     console.log(`params ${params}`)
+        //     if (data.windowType === 'notificationWindow') {
+        //         this.callWindow.setMinimumSize(320, 150);
+        //         this.callWindow.setSize(320, 150);
+        //         this.callWindow.setPosition(screenSize.width - 340, screenSize.height - 200);
+        //         this.callWindow.setAlwaysOnTop(true);
+        //     } else if (convType === 1 && Number(callType) === 1) {
+        //         this.callWindow.setMinimumSize(600, 800);
+        //         this.callWindow.setSize(600, 800);
+        //         this.callWindow.setPosition(Math.floor((screenSize.width - 400) / 2), Math.floor((screenSize.height - 650) / 2));
+        //     }
 
-            if(data.windowType === 'meetingWindow') {
-                this.callWindow.setMinimumSize(1240, 640);
-                this.callWindow.setSize(1240, 640);
-                this.callWindow.setResizable(true);
-                this.callWindow.setPosition(Math.floor((screenSize.width - 1240) / 2), Math.floor((screenSize.height - 640) / 2));
-            }
+        //     if(data.windowType === 'meetingWindow') {
+        //         this.callWindow.setMinimumSize(1240, 640);
+        //         this.callWindow.setSize(1240, 640);
+        //         this.callWindow.setResizable(true);
+        //         this.callWindow.setPosition(Math.floor((screenSize.width - 1240) / 2), Math.floor((screenSize.height - 640) / 2));
+        //     }
 
-            const showWindow = (timer) => {
-                this.callWindow.show();
-                this.callWindow.webContents.send('pass-call-data', params);
-                isDev && this.callWindow.webContents.openDevTools();
-                timer && clearInterval(timer);
-            }
+        //     const showWindow = (timer) => {
+        //         this.callWindow.show();
+        //         console.log("pass-call-data2")
+        //         this.callWindow.webContents.send('pass-call-data', params);
+        //         console.log("pass-call-data");
+        //         isDev && this.callWindow.webContents.openDevTools();
+        //         timer && clearInterval(timer);
+        //     }
 
-            if(this.readyToShowWindow) {
-                showWindow();
-            } else {
-                const timer = setInterval(() => {
-                    if(this.readyToShowWindow) {
-                        showWindow(timer);
-                    }
-                }, 10);
+        //     if(this.readyToShowWindow) {
+        //         showWindow();
+        //     } else {
+        //         const timer = setInterval(() => {
+                    
+        //             if(this.readyToShowWindow) {
+        //                 showWindow(timer);
+        //             }
+        //         }, 10);
 
-            }
-        });
+        //     }
+        // });
 
         this.callWindow.on('close', () => {
             try {
@@ -187,6 +197,7 @@ class CallWindowIpc {
         });
 
         this.callWindow.on('closed', () => {
+            console.log("closed here");
             try {
                 this.imWindow?.webContents.send(CALL_WINDOW_CLOSE_REPLY);
                 this.destroy();

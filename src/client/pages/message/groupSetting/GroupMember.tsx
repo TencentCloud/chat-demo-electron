@@ -40,7 +40,7 @@ export const GroupMember = (props: {
         nextSeq: 0,
       })
   }, []);
-  const userList: any = value?.group_get_memeber_info_list_result_info_array || [];
+  const userList: any = value?.group_get_member_info_list_result_info_array || [];
 
   const popupContainer = document.getElementById("messageInfo");
 

@@ -320,6 +320,7 @@ export const MessageView = (props: Props): JSX.Element => {
               userId,
             });
             if (code === 0) {
+                console.log("json_params",json_params);
               dispatch(
                 reciMessage({
                   convId: getConvId(convItem),
@@ -340,28 +341,6 @@ export const MessageView = (props: Props): JSX.Element => {
         setForwardType(type)
     }
 
-    const deleteSelectedMessage = async () => {
-        if(!seletedMessage.length) return;
-        const { message_conv_id, message_conv_type} = seletedMessage[0];
-        const messageList = seletedMessage.map(item => item.message_msg_id);
-        const params = {
-            convId: message_conv_id,
-            convType: message_conv_type,
-            messageList
-        }
-        const  {code} = await deleteMsgList(params);
-
-        if(code === 0) {
-            dispatch(deleteMessage({
-                convId: message_conv_id,
-                messageIdArray: messageList
-            }));
-            setMultiSelect(false);
-            setSeletedMessage([]);
-        } else {
-            message.warning({content: '删除消息失败'})
-        }
-    };
 
     const handleMultiSelectMsg = (params) => {
         setMultiSelect(true)
@@ -527,7 +506,7 @@ export const MessageView = (props: Props): JSX.Element => {
         return data
     }
     return (
-        <div className="message-view" ref={messageViewRef} onScroll={throttle(onScroll, 300)}>
+        <div className="message-view" id="messageView" ref={messageViewRef} onScroll={throttle(onScroll, 300)}>
             {
                messageList && messageList.length > 0 &&
                 messageList.map((item, index) => {
@@ -608,7 +587,7 @@ export const MessageView = (props: Props): JSX.Element => {
                                                     })
                                                 }
                                                 {
-                                                    shouldShowPerReadIcon ? <span className={`message-view__item--element-icon ${message_is_peer_read ? 'is-read' : ''}`}></span> :
+                                                    // shouldShowPerReadIcon ? <span className={`message-view__item--element-icon ${message_is_peer_read ? 'is-read' : ''}`}></span> :
                                                     isMessageSendFailed &&  <Icon className="message-view__item--element-icon-error" type="error" onClick={() => handleMessageReSend(item)} />
                                                 }
                                             </div>
@@ -648,9 +627,6 @@ export const MessageView = (props: Props): JSX.Element => {
                     </div>
                     <div className="forward-type-popup__divide" onClick={() => handleForwardTypePopup(ForwardType.divide)}>
                         <p>逐条转发</p>
-                    </div>
-                    <div className="forward-type-popup__delete" onClick={deleteSelectedMessage}>
-                        <p>删除</p>
                     </div>
                 </div>   
             }

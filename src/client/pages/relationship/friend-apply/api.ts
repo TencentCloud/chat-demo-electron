@@ -92,6 +92,7 @@ export const friendshipHandleFriendAddRequest = async (params: {
   });
   const { code, desc } = data;
   if (code === 0) {
+    console.log("add/delete friend pendency success");
     return {};
   }
   throw new Error(desc);

@@ -58,15 +58,19 @@ export const GroupToolsDrawer = (props: {
   return (
     <Drawer
       visible={visible}
-      title={
-        <div className="tool-drawer--title">
-          <H3>{title}</H3>
-          <span className="tool-drawer--title__sub">{subTitle}</span>
-        </div>
-      }
-      outerClickClosable={false}
-      className="tool-drawer"
+      // title={
+      //   <div className="tool-drawer--title">
+      //     <H3>{title}</H3>
+      //     <span className="tool-drawer--title__sub">{subTitle}</span>
+      //   </div>
+      // }
+      title={title}
+      // @ts-ignore
+      // placement="right"
+      // outerClickClosable={false}
+      // className="tool-drawer"
       popupContainer={popupContainer}
+      
       onClose={close}
     >
       {toolId === "setting" && (

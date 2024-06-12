@@ -24,12 +24,12 @@ export const Menu = (props: Props) => {
         onSelect('');
     };
 
-    useEffect(() => {
-        document.addEventListener('click', handleClick);
-        return () => {
-            document.removeEventListener('click', handleClick);
-        }
-    }, []);
+    // useEffect(() => {
+    //     document.addEventListener('click', handleClick);
+    //     return () => {
+    //         document.removeEventListener('click', handleClick);
+    //     }
+    // }, []);
 
     const handleRadioButtonClick = (item: OptionItem) => {
         console.log(item);

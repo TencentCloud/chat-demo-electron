@@ -8,7 +8,8 @@ declare namespace State {
         historyMessage: historyMessage,
         ui: ui
         groupDrawer: GroupDrawer,
-        settingConfig: SettingConfig
+        settingConfig: SettingConfig,
+        callkit:callkit,
     }
     export type SettingConfig = {
         sdkappId: string,
@@ -44,6 +45,9 @@ declare namespace State {
         conversationList: Array<conversationItem>,
         currentSelectedConversation: conversationItem,
         isLoading: boolean
+    }
+    export type callkit = {
+        isOpen:boolean,
     }
     export type messageElemTypeText  = {
         elem_type: number

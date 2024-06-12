@@ -47,14 +47,7 @@
             "**/*"
           ]
         },
-        {
-          "from": "node_modules/trtc-electron-sdk/build/Release/${arch}/trtc_electron_sdk.node",
-          "to": "./Resources"
-        },
-        {
-          "from": "node_modules/trtc-electron-sdk/build/mac-framework/${arch}/",
-          "to": "./Frameworks"
-        },
+        
         {
           "from": "./icon/",
           "to": "./Resources",
@@ -77,20 +70,6 @@
       "extraFiles": [
         {
           "from": "./node_modules/im_electron_sdk/lib/",
-          "to": "./resources",
-          "filter": [
-            "**/*"
-          ]
-        },
-        {
-          "from": "node_modules/trtc-electron-sdk/build/Release/",
-          "to": "./resources",
-          "filter": [
-            "**/*"
-          ]
-        },
-        {
-          "from": "./src/Snipaste-2.8.2-Beta-x64/",
           "to": "./resources",
           "filter": [
             "**/*"
@@ -139,7 +118,7 @@
     "file-type": "^16.5.2",
     "fluent-ffmpeg": "^2.1.2",
     "get-video-duration": "^3.1.0",
-    "im_electron_sdk": "^3.0.12",
+    "im_electron_sdk": "^7.9.5580",
     "image-size": "^1.0.0",
     "install": "^0.13.0",
     "json-bigint": "^1.0.0",
@@ -147,7 +126,6 @@
     "npm": "^7.23.0",
     "progress-stream": "^2.0.0",
     "save": "^2.5.0",
-    "trtc-electron-sdk": "^10.7.405",
     "vue-router": "^3.5.2"
   }
 }

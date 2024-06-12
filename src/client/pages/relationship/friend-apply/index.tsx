@@ -20,10 +20,10 @@ export const FriendApply = () => {
   const [startTime, setStartTime] = useState(0);
   const [preSeq, setPreSeq] = useState(0);
   const [preTime, setPreTime] = useState(0);
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   const getFriendApplyList = async (seq: number, time: number) => {
-    setLoading(true);
+    // setLoading(true);
     try {
       const res = await getFriendShipPendencyList({
         startSeq: seq,
@@ -39,7 +39,7 @@ export const FriendApply = () => {
       console.log(e);
     }
     // setTimeout(() => {
-      setLoading(false);
+      // setLoading(false);
     // }, 1000)
   };
 
@@ -51,7 +51,7 @@ export const FriendApply = () => {
     getFriendApplyList(startSeq, startTime)
   };
 
-  const refreshList = async (seq: number, time: number) => {
+  const refreshList = async (seq: number, time: number,userid:string[]) => {
     setLoading(true);
     try {
       const res = await getFriendShipPendencyList({
@@ -59,7 +59,8 @@ export const FriendApply = () => {
         startTime: time,
       });
       const { applyList = [] } = res;
-      setFriendApplyList(pre => [...pre.slice(0,pre.length - LIMITE_SIZE), ...applyList]);
+      const list = applyList.filter(item => !userid.includes(item.friend_add_pendency_info_identifier));
+      setFriendApplyList(pre => [...pre.slice(0,pre.length - LIMITE_SIZE), ...list]);
     } catch (e) {
       console.log(e);
     }
@@ -85,7 +86,7 @@ export const FriendApply = () => {
             userName={record.user_profile_nick_name}
             faceUrl={record.user_profile_face_url}
             depName={record.friend_add_pendency_info_add_source}
-            onRefresh={() => refreshList(startSeq, startTime)}
+            onRefresh={(userid:string[]) => refreshList(startSeq, startTime,userid)}
           />
         );
       },

@@ -1,4 +1,4 @@
-import React, { useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense, useMemo } from "react";
 import { useSelector } from "react-redux";
 import ReactDOM from "react-dom";
 import "tea-component/dist/tea.css";
@@ -20,7 +20,7 @@ import "./app.scss";
 import { ipcRenderer } from "electron";
 import { LoadingContainer } from "./components/loadingContainer";
 import { useMessageDirect } from "./utils/react-use/useDirectMsgPage";
-
+import { TUICallKit, TUIGlobal } from "@tencentcloud/call-uikit-react";
 const Home = lazy(() => import(/* webpackChunkName: "home" */'./pages/home'));
 const Login = lazy(() => import(/* webpackChunkName: "login" */'./pages/login'));
 
@@ -47,17 +47,19 @@ export const App = () => {
             initSdk(directToMsgPage, history, true);
         }
     }, [sdkappId, shouldCallExperimentalAPI]);
-
     return (
+        <>
         <div id="app-container">
             <ToolsBar></ToolsBar>
-            <Suspense fallback={<LoadingContainer loading={true} style={{height:'100%'}}>{}</LoadingContainer>}>
+            <Suspense fallback={<LoadingContainer loading={true} style={{ height: '100%' }} children={""}>{}</LoadingContainer>}>
                 <Switch>
                     <Route path="/home" component={Home}></Route>
                     <Route path="/" component={Login} />
                 </Switch>
             </Suspense>
         </div>
+        </>
+        
     );
 };
 

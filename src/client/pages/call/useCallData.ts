@@ -4,6 +4,7 @@ import eventEmiter from './event';
 
 export const useCallData = () => {
     const [data, setData] = useState({
+
         convInfo: {
             faceUrl: '',
             nickName: '',
@@ -69,6 +70,30 @@ export const useCallData = () => {
             eventEmiter.off('updateInviteList');
         }
     }, []);
+
+    const initData = (params) => {
+        setData({
+            windowType:params.windowType,
+            callType: Number(params.callType),
+            convInfo: {
+                faceUrl: params.convInfo?.faceUrl,
+                nickName: params.convInfo?.nickName,
+                convType: params.convInfo?.convType,
+                id: params.convInfo?.id
+            },
+            convId: params.convId,
+            roomId: params.roomId,
+            inviteID: params.inviteID,
+            userID: params.userID,
+            inviteList: params.inviteList,
+            sdkAppid: Number(params.sdkAppid) ,
+            userSig: params.userSig,
+            inviteListWithInfo: params.inviteListWithInfo,
+            isInviter:params.isInviter,
+            isVoiceOpen:params.isVoiceOpen,
+            isVideoOpen:params.isVideoOpen,
+        })
+    }
 
     return data;
 }

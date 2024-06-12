@@ -1,3 +1,5 @@
+import timRenderInstance from "./timRenderInstance"
+
 const TEMP_PATH_NAME_GROUP = "TEMP_PATH_NAME_GROUP"
 export enum TIMConvType {
     kTIMConv_Invalid, // 无效会话
@@ -33,7 +35,7 @@ export const getConvType = (convItem: any): TIMConvType => {
 }
 export const getMergeMessageTitle = (message: State.message): string => {
     const groupTitle: string = "群聊"
-    const c2cTitle: string = `${message.message_sender}和${message.message_conv_id}的聊天记录`
+    const c2cTitle: string = `和${message.message_conv_id}的聊天记录`
     return message.message_conv_type === TIMConvType.kTIMConv_C2C ? c2cTitle : groupTitle
 }
 export const getMergeMessageAbstactArray = (messageGroup: State.message[]): string[] => {

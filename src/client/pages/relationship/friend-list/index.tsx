@@ -3,7 +3,7 @@ import { debounce } from "lodash";
 import { Button } from "tea-component";
 import useAsyncRetryFunc from "../../../utils/react-use/useAsyncRetryFunc";
 import { useDialogRef } from "../../../utils/react-use/useDialog";
-import { getFriendList } from '../../../api';;
+import { getBlackList, getFriendList } from '../../../api';;
 import { ListItem } from "./ListItem";
 import "./friend-list.scss";
 import { Table } from "tea-component";
@@ -22,7 +22,28 @@ export const FriendList = () => {
 
   const addFriendDialogRef = useDialogRef();
   const { value, loading, retry } = useAsyncRetryFunc(async () => {
-    return await getFriendList();
+    let blocklist = await getBlackList();
+    let friendlist = await getFriendList();
+    let list = [];
+    for(let i=0;i<friendlist.length;i++)
+    {
+      let friend = friendlist[i]
+      let found = false
+      for(let j=0;j<blocklist.length;j++)
+      {
+        let block = blocklist[j]
+        if(block.friend_profile_identifier == friend.friend_profile_identifier)
+        {
+          found = true
+          break
+        }
+      }
+      if(!found)
+      {
+        list.push(friend)
+      }
+    }
+    return list;
   }, []);
   const friendList = value || [];
   const columns = [

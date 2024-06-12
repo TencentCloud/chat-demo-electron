@@ -4,7 +4,6 @@ import { Link, Switch, Route, useLocation } from 'react-router-dom';
 import { Message } from '../message/index';
 import { RelationShip } from '../relationship/relationship';
 import { Setting } from '../settings/Setting';
-import { Meeting } from '../meeting/Meeting' 
 
 import './home.scss';
 import { UnreadCount } from './unreadCount';
@@ -26,11 +25,6 @@ const navList = [
         title: '通讯录',
         address: '/home/connection',
 
-    },
-    {
-        id: 'meeting',
-        title: '会议',
-        address: '/home/meeting',
     }
 ]
 
@@ -86,7 +80,6 @@ const Home = (): JSX.Element => {
                 <Route path="/home/message" component={Message}></Route>
                 <Route path="/home/connection" component={RelationShip}></Route>
                 <Route path="/home/setting" component={Setting}></Route>
-                <Route path="/home/meeting" component={Meeting}></Route>
             </Switch>
         </div> : <Myloader/>
         }

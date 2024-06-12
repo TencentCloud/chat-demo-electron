@@ -66,75 +66,10 @@ class IPC {
 
     async getDeviceToken(){
         
-        pushNotifications.registerForAPNSNotifications().then((token) => {
-            // forward token to your remote notification server
-            console.log(token,"device token");
-          })
-    }
-    async screenshotMac(event) {
-        const newdate = new Date();
-        const date = newdate.toISOString().replaceAll(":","");
-        // console.log(date.toISOString());
-        let ex = "screencapture -i ~/desktop/screenshot"+date+".png"
-        child_process.exec(`screencapture -i ~/desktop/screenshot`+date+`.png`,(error, stdout, stderr) => {　　　　　　if (!error) {
-            var _img = fs.readFileSync(process.env.HOME+"/desktop/screenshot"+date+".png");
-            // console.log(_img);
-            event.reply(GET_FILE_INFO_CALLBACK, {
-                triggerType: SCREENSHOTMAC,
-                data:{_img:_img,date}
-            })
-        }
-　　　　});
-    }
-
-    async screenshotWindows(event){
-        const newdate = new Date();
-        const date = newdate.toISOString().replaceAll(":","");
-        let url = path.resolve(__dirname, "../Snipaste-2.8.2-Beta-x64/Snipaste.exe");
-        let buildUrl = path.join(process.cwd(),'/resources/Snipaste.exe')
-        let command = url+" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
-        console.log(buildUrl)
-        let buildCommand = buildUrl +" snip -o C:\\Users\\Public\\Desktop\\screenshot"+date+".png";
-        var id = setInterval(dealFile, 300);
-        fs.stat(url,function(err){
-            if(err){
-                console.log("build")
-                child_process.exec(buildCommand,async (error,stdout,stderr)=>{if(!error){
-                    console.log("done capture");
-                    
-        
-                }})
-            }else{
-                console.log("run")
-                child_process.exec(command,async (error,stdout,stderr)=>{if(!error){
-                    console.log("done capture");
-                    
-        
-                }})
-            }
-        })
-        
-        
-        function dealFile(){
-                try{
-                    var _img = fs.readFileSync("C:\\Users\\Public\\Desktop\\screenshot"+date+".png");
-                    clearInterval(id);
-                    console.log("file exists");
-                    console.log(_img);
-                    event.reply(GET_FILE_INFO_CALLBACK, {
-                        triggerType: SCREENSHOTMAC,
-                        data:{_img:_img,date}
-                    })
-                } catch(err){
-                    if(err.code == 'ENOENT'){
-                        // console.log("file doesn't exist yet")
-                    } else{
-                        throw err;
-                    }
-                }
-                
-            
-        }
+        // pushNotifications.registerForAPNSNotifications().then((token) => {
+        //     // forward token to your remote notification server
+        //     console.log(token,"device token");
+        //   })
     }
 
     showDialog() {

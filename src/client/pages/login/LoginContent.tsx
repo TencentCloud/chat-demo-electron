@@ -17,10 +17,13 @@ import { useSettingConfig } from '../../utils/react-use/useSettingConfig';
 import { getApassConfig, loginSms, reloginSms, userVerifyByPicture } from '../../api';
 import { ipcRenderer } from 'electron';
 import { RENDERPROCESSCALL,GETDEVICETOKEN } from '../../../app/const/const';
+import { TUICallKit, TUICallKitServer, TUIGlobal } from "@tencentcloud/call-uikit-react";
+// import * as GenerateTestUserSig from "../debug/GenerateTestUserSig-es";
+
 const store = new Store();
 
 const tabs = [
-    { id: 'verifyCodeLogin', label: '验证码登录' },
+    // { id: 'verifyCodeLogin', label: '验证码登录' },
     { id: 'passwordLogin', label: '密码登录' },
 ]
 
@@ -32,7 +35,7 @@ export const LoginContent = (): JSX.Element => {
     const dispatch = useDispatch();
     const history = useHistory();
     const { userId, userSig, sdkappId } = useSettingConfig();
-    const [activedTab, setActivedTab] = useState('verifyCodeLogin');
+    const [activedTab, setActivedTab] = useState('passwordLogin');
     const [isAutoLogin, setAutoLogin] = useState(!!autoLoginFromStore);
     const [userID, setUserID] = useState(userId);
     const [usersig, setUserSig] = useState(userSig);
@@ -82,7 +85,7 @@ export const LoginContent = (): JSX.Element => {
             sessionId,
             phone: `+86${phone}`,
             code: captceh,
-            apaasAppId: "1026227964"
+            apaasAppId: ""
         })
         console.log(response)
 
@@ -118,7 +121,7 @@ export const LoginContent = (): JSX.Element => {
         const response: any = await reloginSms({
             userId: smsLoginUserId,
             token: smsLoginToken,
-            apaasAppId: "1026227964"
+            apaasAppId: ""
         });
         const { errorCode, errorMessage, data } = response.data;
         if (errorCode === 0) {
@@ -202,6 +205,7 @@ export const LoginContent = (): JSX.Element => {
         const  { code,  desc, json_param } = await timRenderInstance.TIMLogin(params);
         console.log(code, desc, json_param);
         if (code === 0) {
+            // TUICallKit Login
             const storeKey = `${sdkappId}-${userID}`;
             const catchedMessage = store.get(storeKey);
             if (catchedMessage) {
@@ -230,6 +234,9 @@ export const LoginContent = (): JSX.Element => {
         window.aegis.report("tim_login_secret")
         
     }
+
+    
+    
 
     const startCountDown = () => {
         const newCount = count - 1;

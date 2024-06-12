@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Button, message } from 'tea-component';
 import {  sendMsg, getGroupMemberList, setConvDraft, deleteConvDraft } from '../../../api'
@@ -15,11 +15,13 @@ import { ipcRenderer } from 'electron';
 import { SUPPORT_IMAGE_TYPE } from '../../../../app/const/const';
 import { blockRendererFn, blockExportFn } from './CustomBlock';
 import { bufferToBase64Url, fileImgToBase64Url, getMessageElemArray, getPasteText, fileReaderAsBuffer, generateTemplateElement, getFileByPath } from '../../../utils/message-input-util';
-import { SUPPORT_VIDEO_TYPE,getVideoInfo, selectImageMessage, selectFileMessage, selectVideoMessage,readScreenShot,readScreenShotWindows } from '../../../utils/tools';
+import { SUPPORT_VIDEO_TYPE,getVideoInfo, selectImageMessage, selectFileMessage, selectVideoMessage } from '../../../utils/tools';
 import { getGlobal } from '@electron/remote'
 import { execFile } from "child_process";
 const path = require("path");
 import { clipboard } from "electron"; 
+import { TUICallKit, TUICallKitServer, TUIGlobal } from '@tencentcloud/call-uikit-react';
+import { useLocation } from 'react-router-dom';
 const fs = require('fs');
 var JSONbig = require('json-bigint');
 type Props = {
@@ -33,6 +35,8 @@ type Props = {
     },
     handleOpenCallWindow: (callType: string,convType:number,windowType:string) => void;
 }
+
+
 
 const differenceBetweenTwoString = (str1, str2) => {
     const array1 = str1.split('');
@@ -60,13 +64,11 @@ const FEATURE_LIST_GROUP = [{
     id: 'file',
     title: '发送文件'
 }
-,{
-    id: 'phone',
-    title: '通话'
-}, {
-    id: 'screenShot',
-    title: '截图 (Shift+CommandOrControl+C)'
-}]
+// ,{
+//     id: 'phone',
+//     title: '通话'
+// }
+]
 const FEATURE_LIST_C2C = [{
     id: 'face',
     title: '表情'
@@ -77,13 +79,11 @@ const FEATURE_LIST_C2C = [{
     id: 'file',
     title: '发送文件'
 }
-,{
-    id: 'phone',
-    title: '通话'
-}, {
-    id: 'screenShot',
-    title: '截图 (Shift+CommandOrControl+C)'
-}]
+// ,{
+//     id: 'phone',
+//     title: '通话'
+// }
+]
 const FEATURE_LIST = {
     1: FEATURE_LIST_C2C, 2: FEATURE_LIST_GROUP
 }
@@ -353,7 +353,7 @@ export const MessageInput = (props: Props): JSX.Element => {
         setEmojiPopup(true)
     }
     const handleSendPhoneMessage = ()=> {
-        setShowCallMenu(true);
+        setShowCallMenu(!shouldShowCallMenu);
     }
     const dataURLtoBlob = (data)=>{
         // console.log(typeof(data))
@@ -372,17 +372,17 @@ export const MessageInput = (props: Props): JSX.Element => {
         blob.name = 'screenshot';
         return blob;
     }
-    const handleScreenShot = async () => {
-        // const captureView = getGlobal('captureView');
-        // captureView.open();
-        let file;
-    　　if (process.platform == "darwin") {  //判断当前操作系统，"darwin" 是mac系统     "win32" 是window系统
-            readScreenShot();
-    　　} else {
-            readScreenShotWindows();
-        }
-        console.log('========screenshot====')
-    };
+    // const handleScreenShot = async () => {
+    //     // const captureView = getGlobal('captureView');
+    //     // captureView.open();
+    //     let file;
+    // 　　if (process.platform == "darwin") {  //判断当前操作系统，"darwin" 是mac系统     "win32" 是window系统
+    //         readScreenShot();
+    // 　　} else {
+    //         readScreenShotWindows();
+    //     }
+    //     console.log('========screenshot====')
+    // };
     const handleFeatureClick = (featureId) => {
         switch (featureId) {
             case "face":
@@ -405,9 +405,6 @@ export const MessageInput = (props: Props): JSX.Element => {
                 break;
             case "phone":
                 handleSendPhoneMessage()
-                break;
-            case "screenShot":
-                handleScreenShot()
                 break;
             case "more":
                 selectVideoMessage()
@@ -583,25 +580,12 @@ export const MessageInput = (props: Props): JSX.Element => {
             nextSeq: 0,
         });
 
-        const memberList = result ? result.group_get_memeber_info_list_result_info_array || [] : [];
+        const memberList = result ? result.group_get_member_info_list_result_info_array || [] : [];
 
         const currentUserSetting: any = memberList?.[0] || {};
         setGroupSenderProfile(currentUserSetting);
     }
 
-    const processScreenShotImage=(data)=>{
-        console.log("in processcreenshotimage")
-        const imgUrl = bufferToBase64Url(data._img, "image/png");
-        const blob = dataURLtoBlob(imgUrl);
-        const fileimg = blobToFile(blob);
-        console.log(fileimg)
-        if (process.platform == "darwin") {  //判断当前操作系统，"darwin" 是mac系统     "win32" 是window系统
-            setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
-    　　} else {
-        setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:"C:\\Users\\Public\\Desktop\\screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
-        }
-        // setEditorState( preEditorState => ContentUtils.insertAtomicBlock(preEditorState, 'block-image', true, { name: 'image.png',path:process.env.HOME+"/desktop/screenshot"+data.date+".png",size: imgUrl.length, base64URL: imgUrl }));
-    }
 
     useEffect(() => {
         // setGroupSenderProfile(undefined);
@@ -618,11 +602,6 @@ export const MessageInput = (props: Props): JSX.Element => {
                 case 'GET_VIDEO_INFO': {
                     setAnalysizeVideoInfoStatus(false);
                     setVideoInfos(pre => [...pre, data]);
-                    break;
-                }
-                case 'SCREENSHOTMAC':{
-                    console.log("messageinputscreenshot");
-                    processScreenShotImage(data);
                     break;
                 }
             }
@@ -750,12 +729,34 @@ export const MessageInput = (props: Props): JSX.Element => {
     const shutUpStyle = isShutUpAll ? 'disabled-style' : '';
     const dragEnterStyle = isDraging ? 'draging-style' : '';
 
+    // const call = async () => {
+    //     await TUICallKitServer.call({ userID: "10058198", type: 2 });
+    //   };
+    const location =  useLocation();
+    const path = location?.pathname;
+    const openWindow = () => {
+        window.open('/Call', '_blank');
+        console.log("pushed menu");
+      };
+
+      const [isFloatingWindowOpen, setIsFloatingWindowOpen] = useState(false);
+
+      const openFloatingWindow = () => {
+        console.log("open");
+        setIsFloatingWindowOpen(true);
+      };
+    
+      const closeFloatingWindow = () => {
+        setIsFloatingWindowOpen(false);
+      };
     return (
+        <>
         <div className={`message-input ${shutUpStyle} ${dragEnterStyle}`} onDrop={handleDropFile} onDragLeaveCapture={handleDragLeave} onDragOver={handleDragEnter} >
             {
                 atPopup && <AtPopup callback={(userId, name) => onAtPopupCallback(userId, name)} atUserNameInput={atUserNameInput} group_id={convId} />
             }
             <div className="message-input__feature-area">
+                
                 {
                     isEmojiPopup && <EmojiPopup callback={onEmojiPopupCallback} />
                 }
@@ -802,6 +803,9 @@ export const MessageInput = (props: Props): JSX.Element => {
                 isRecordPopup && <RecordPopup onSend={handleRecordPopupCallback} onCancel={() => setRecordPopup(false)} />
             }
         </div>
+        </>
+        
     )
 
 }
+

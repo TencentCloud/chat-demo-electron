@@ -36,8 +36,10 @@ export const GroupSetting = (props: {
         getGroupInfoList([groupId])
       ])
   }, []);
-  const memberList = value ? value[0]?.group_get_memeber_info_list_result_info_array || [] : [];
-
+  const memberList = value ? value[0]?.group_get_member_info_list_result_info_array || [] : [];
+  
+  console.log("memberlist")
+  console.log(memberList)
   const currentUserSetting: any = memberList?.[0] || {};
   const groupDetail: Partial<State.conversationItem['conv_profile']> = value ? value[1][0] || conversationInfo.conv_profile || {} : {};
   const memberCount = value?value[1][0].group_detail_info_member_num : 0
